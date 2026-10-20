@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "id": "E15",
+    "name": "sequence_L512",
+    "title": "Target-attention модель над историей (val)",
+    "status": "ok",
+    "started_utc": "2026-10-20T18:25:34+00:00",
+    "finished_utc": "2026-10-20T19:22:57+00:00",
+    "wall_seconds": 3443.76,
+    "cpu_seconds_process": 2772.08,
+    "peak_rss_gb": 5.96,
+    "stages": [
+      {
+        "stage": "load_history_gpu",
+        "wall_seconds": 9.59,
+        "cpu_seconds": 34.45,
+        "rss_gb_after": 4.19
+      },
+      {
+        "stage": "load_groups",
+        "wall_seconds": 2.98,
+        "cpu_seconds": 6.41,
+        "rss_gb_after": 3.66
+      },
+      {
+        "stage": "epoch_0",
+        "wall_seconds": 785.44,
+        "cpu_seconds": 573.89,
+        "rss_gb_after": 4.51
+      },
+      {
+        "stage": "eval_val_ep0",
+        "wall_seconds": 82.2,
+        "cpu_seconds": 65.25,
+        "rss_gb_after": 5.96
+      },
+      {
+        "stage": "epoch_1",
+        "wall_seconds": 1118.19,
+        "cpu_seconds": 840.59,
+        "rss_gb_after": 2.56
+      },
+      {
+        "stage": "eval_val_ep1",
+        "wall_seconds": 96.06,
+        "cpu_seconds": 73.81,
+        "rss_gb_after": 2.58
+      },
+      {
+        "stage": "epoch_2",
+        "wall_seconds": 1217.63,
+        "cpu_seconds": 1085.23,
+        "rss_gb_after": 1.79
+      },
+      {
+        "stage": "eval_val_ep2",
+        "wall_seconds": 129.03,
+        "cpu_seconds": 90.17,
+        "rss_gb_after": 1.0
+      }
+    ]
+  },
+  "results": {
+    "val_by_epoch": [
+      {
+        "ndcg@10": 0.252530085554893,
+        "recall@10": 0.14591077912443545,
+        "ndcg@100": 0.2835044848509481,
+        "recall@100": 0.36168314568982723,
+        "auc": 0.7907304495528406,
+        "logloss": 0.19707542657852173,
+        "n_groups": 31688,
+        "epoch": 0,
+        "train_loss": 0.4297557953198494,
+        "gpu_peak_mb": 1954.4140625
+      },
+      {
+        "ndcg@10": 0.25583360352431533,
+        "recall@10": 0.14627787987611968,
+        "ndcg@100": 0.28676082185108276,
+        "recall@100": 0.364618924810759,
+        "auc": 0.7922043022532399,
+        "logloss": 0.18304745852947235,
+        "n_groups": 31688,
+        "epoch": 1,
+        "train_loss": 0.4068453191323826,
+        "gpu_peak_mb": 1954.4140625
+      },
+      {
+        "ndcg@10": 0.2580786575733661,
+        "recall@10": 0.1477774108577212,
+        "ndcg@100": 0.28832824996960954,
+        "recall@100": 0.36475340130125083,
+        "auc": 0.7906949939887797,
+        "logloss": 0.1955346167087555,
+        "n_groups": 31688,
+        "epoch": 2,
+        "train_loss": 0.3946943038767511,
+        "gpu_peak_mb": 1954.4140625
+      }
+    ],
+    "val_metrics_final": {
+      "ndcg@10": 0.2580786575733661,
+      "recall@10": 0.1477774108577212,
+      "ndcg@100": 0.28832824996960954,
+      "recall@100": 0.36475340130125083,
+      "auc": 0.7906949939887797,
+      "logloss": 0.1955346167087555,
+      "n_groups": 31688,
+      "epoch": 2,
+      "train_loss": 0.3946943038767511,
+      "gpu_peak_mb": 1954.4140625
+    }
+  }
+}

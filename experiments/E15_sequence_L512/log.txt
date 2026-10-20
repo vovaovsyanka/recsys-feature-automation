@@ -1,0 +1,26 @@
+[E11v2_L512] Target-attention модель над историей (val)
+  start (UTC): 2026-10-20T18:25:34+00:00
+  code hash: 650982589139886f
+[E11v2_L512] -> stage 'load_history_gpu'
+vocab 436403 56692 gpu MB 1421.162109375
+[E11v2_L512] <- stage 'load_history_gpu' 9.59s
+[E11v2_L512] -> stage 'load_groups'
+train groups 123752 rows 13964725 | val groups 31688 rows 8563178
+[E11v2_L512] <- stage 'load_groups' 2.98s
+params 15.863641 M
+[E11v2_L512] -> stage 'epoch_0'
+[E11v2_L512] <- stage 'epoch_0' 785.44s
+[E11v2_L512] -> stage 'eval_val_ep0'
+{'ndcg@10': 0.2525, 'recall@10': 0.1459, 'ndcg@100': 0.2835, 'recall@100': 0.3617, 'auc': 0.7907, 'logloss': 0.1971, 'n_groups': 31688, 'epoch': 0, 'train_loss': 0.4298, 'gpu_peak_mb': 1954.4141}
+[E11v2_L512] <- stage 'eval_val_ep0' 82.2s
+[E11v2_L512] -> stage 'epoch_1'
+[E11v2_L512] <- stage 'epoch_1' 1118.19s
+[E11v2_L512] -> stage 'eval_val_ep1'
+{'ndcg@10': 0.2558, 'recall@10': 0.1463, 'ndcg@100': 0.2868, 'recall@100': 0.3646, 'auc': 0.7922, 'logloss': 0.183, 'n_groups': 31688, 'epoch': 1, 'train_loss': 0.4068, 'gpu_peak_mb': 1954.4141}
+[E11v2_L512] <- stage 'eval_val_ep1' 96.06s
+[E11v2_L512] -> stage 'epoch_2'
+[E11v2_L512] <- stage 'epoch_2' 1217.63s
+[E11v2_L512] -> stage 'eval_val_ep2'
+{'ndcg@10': 0.2581, 'recall@10': 0.1478, 'ndcg@100': 0.2883, 'recall@100': 0.3648, 'auc': 0.7907, 'logloss': 0.1955, 'n_groups': 31688, 'epoch': 2, 'train_loss': 0.3947, 'gpu_peak_mb': 1954.4141}
+[E11v2_L512] <- stage 'eval_val_ep2' 129.03s
+[E11v2_L512] ok; wall 3443.8s, cpu 2772.1s, peak RSS 5.96 GB
