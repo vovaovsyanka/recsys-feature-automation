@@ -1,0 +1,12 @@
+{
+  "dataset": "yambda-50m flat",
+  "files": [
+    "album_item_mapping.parquet",
+    "artist_item_mapping.parquet",
+    "dislikes.parquet",
+    "likes.parquet",
+    "listens.parquet",
+    "undislikes.parquet",
+    "unlikes.parquet"
+  ]
+}

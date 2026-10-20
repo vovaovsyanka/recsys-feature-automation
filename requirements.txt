@@ -1,0 +1,11 @@
+# Проверено на Python 3.11 (Windows 11). Установка: python -m venv .venv && .venv\Scripts\activate
+#   pip install torch --index-url https://download.pytorch.org/whl/cu128   (с поддержкой CUDA; без GPU - обычный pip install torch)
+#   pip install -r requirements.txt && pip install -e .
+polars==2.0.0
+pyarrow==26.0.0
+numpy==2.4.6
+scipy==1.17.1
+scikit-learn==1.9.1
+lightgbm==4.7.0
+implicit==0.7.3
+psutil==7.2.2

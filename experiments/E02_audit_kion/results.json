@@ -1,0 +1,268 @@
+{
+  "meta": {
+    "id": "E02",
+    "name": "audit_kion",
+    "title": "Аудит данных KION",
+    "status": "ok",
+    "started_utc": "2026-10-20T15:37:31+00:00",
+    "finished_utc": "2026-10-20T15:37:33+00:00",
+    "wall_seconds": 1.41,
+    "cpu_seconds_process": 8.59,
+    "peak_rss_gb": 1.47,
+    "stages": [
+      {
+        "stage": "load",
+        "wall_seconds": 0.36,
+        "cpu_seconds": 2.25,
+        "rss_gb_after": 0.52
+      },
+      {
+        "stage": "stats",
+        "wall_seconds": 0.82,
+        "cpu_seconds": 4.58,
+        "rss_gb_after": 1.38
+      },
+      {
+        "stage": "metadata",
+        "wall_seconds": 0.22,
+        "cpu_seconds": 1.77,
+        "rss_gb_after": 1.47
+      }
+    ]
+  },
+  "results": {
+    "integrity": {
+      "data_en_rows": 5476251,
+      "repo_claim_rows": 5476251,
+      "root_file_rows": 1594787,
+      "root_file_bytes": 52428800,
+      "root_is_exactly_50MiB": true
+    },
+    "basic": {
+      "rows": 5476251,
+      "users": 962179,
+      "items": 15706,
+      "repo_claim": {
+        "users": 962179,
+        "items": 15706
+      },
+      "date_min": "2021-03-13",
+      "date_max": "2021-08-22",
+      "days": 162
+    },
+    "pair_uniqueness": {
+      "unique_pairs": 5476251,
+      "rows": 5476251,
+      "duplicates": 0
+    },
+    "nulls": {
+      "user_id": 0,
+      "item_id": 0,
+      "last_watch_dt": 0,
+      "total_dur": 0,
+      "watched_pct": 828
+    },
+    "watched_pct_quantiles": {
+      "0.1": 0.0,
+      "0.25": 4.0,
+      "0.5": 32.0,
+      "0.75": 100.0,
+      "0.9": 100.0
+    },
+    "total_dur_quantiles": {
+      "0.1": 42.0,
+      "0.25": 371.0,
+      "0.5": 2898.0,
+      "0.75": 7116.0,
+      "0.9": 15112.0
+    },
+    "share_watched_pct_ge_50": 0.4413175018624132,
+    "share_watched_pct_null_or_neg": 0.0001511983289297733,
+    "events_per_user": [
+      {
+        "statistic": "count",
+        "len": 962179.0
+      },
+      {
+        "statistic": "null_count",
+        "len": 0.0
+      },
+      {
+        "statistic": "mean",
+        "len": 5.691509583975539
+      },
+      {
+        "statistic": "std",
+        "len": 10.88626206322874
+      },
+      {
+        "statistic": "min",
+        "len": 1.0
+      },
+      {
+        "statistic": "25%",
+        "len": 1.0
+      },
+      {
+        "statistic": "50%",
+        "len": 2.0
+      },
+      {
+        "statistic": "75%",
+        "len": 6.0
+      },
+      {
+        "statistic": "max",
+        "len": 1341.0
+      }
+    ],
+    "users_with_ge_5_events": 302486,
+    "users_with_ge_20_events": 54014,
+    "events_per_day": [
+      {
+        "statistic": "count",
+        "len": 163.0
+      },
+      {
+        "statistic": "null_count",
+        "len": 0.0
+      },
+      {
+        "statistic": "mean",
+        "len": 33596.63190184049
+      },
+      {
+        "statistic": "std",
+        "len": 16164.119138707621
+      },
+      {
+        "statistic": "min",
+        "len": 12275.0
+      },
+      {
+        "statistic": "25%",
+        "len": 20578.0
+      },
+      {
+        "statistic": "50%",
+        "len": 29978.0
+      },
+      {
+        "statistic": "75%",
+        "len": 46642.0
+      },
+      {
+        "statistic": "max",
+        "len": 71171.0
+      }
+    ],
+    "last_14_days": [
+      {
+        "last_watch_dt": "2021-08-09",
+        "len": 52794
+      },
+      {
+        "last_watch_dt": "2021-08-10",
+        "len": 53712
+      },
+      {
+        "last_watch_dt": "2021-08-11",
+        "len": 55617
+      },
+      {
+        "last_watch_dt": "2021-08-12",
+        "len": 56497
+      },
+      {
+        "last_watch_dt": "2021-08-13",
+        "len": 55843
+      },
+      {
+        "last_watch_dt": "2021-08-14",
+        "len": 61644
+      },
+      {
+        "last_watch_dt": "2021-08-15",
+        "len": 66546
+      },
+      {
+        "last_watch_dt": "2021-08-16",
+        "len": 54546
+      },
+      {
+        "last_watch_dt": "2021-08-17",
+        "len": 54311
+      },
+      {
+        "last_watch_dt": "2021-08-18",
+        "len": 56789
+      },
+      {
+        "last_watch_dt": "2021-08-19",
+        "len": 58640
+      },
+      {
+        "last_watch_dt": "2021-08-20",
+        "len": 60145
+      },
+      {
+        "last_watch_dt": "2021-08-21",
+        "len": 68834
+      },
+      {
+        "last_watch_dt": "2021-08-22",
+        "len": 71171
+      }
+    ],
+    "items_file": {
+      "rows": 15963,
+      "unique": 15963,
+      "interaction_items_covered": 1.0
+    },
+    "users_file": {
+      "rows": 840197,
+      "unique": 840197,
+      "interaction_users_covered": 0.7735442157852125
+    },
+    "item_null_share": {
+      "item_id": 0.0,
+      "content_type": 0.0,
+      "title": 0.0,
+      "title_orig": 0.297,
+      "release_year": 0.006,
+      "genres": 0.0,
+      "countries": 0.0,
+      "for_kids": 0.965,
+      "age_rating": 0.0,
+      "studios": 0.933,
+      "description": 0.0,
+      "keywords": 0.027,
+      "actors_translated": 0.164,
+      "actors_transliterated": 0.164,
+      "directors_translated": 0.095,
+      "transliterated": 0.095
+    },
+    "user_null_share": {
+      "user_id": 0.0,
+      "age": 0.017,
+      "income": 0.018,
+      "sex": 0.016,
+      "kids_flg": 0.0
+    },
+    "content_type": [
+      {
+        "content_type": "series",
+        "count": 3961
+      },
+      {
+        "content_type": "film",
+        "count": 12002
+      }
+    ],
+    "item_popularity_top_share": {
+      "top10": 0.1873356425773764,
+      "top100": 0.3989344169944,
+      "top1000": 0.7684717154126062
+    }
+  }
+}

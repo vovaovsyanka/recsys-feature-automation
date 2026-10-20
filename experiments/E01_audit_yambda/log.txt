@@ -1,0 +1,23 @@
+[E01] Аудит данных Yambda-50M
+  start (UTC): 2026-10-20T15:35:01+00:00
+  code hash: c4214b8e6a221e86
+[E01] -> stage 'load'
+[E01] <- stage 'load' 0.22s
+Schema([('uid', UInt32), ('timestamp', UInt32), ('item_id', UInt32), ('is_organic', UInt8), ('played_ratio_pct', UInt16), ('track_length_seconds', UInt32)])
+[E01] -> stage 'basic_stats'
+{'listens': {'rows': 46467212, 'users': 9238, 'items': 877168, 'ts_min': 0, 'ts_max': 26000000, 'days': 1504.63, 'organic_share': 0.5166}, 'likes': {'rows': 881456, 'users': 8283, 'items': 181304, 'ts_min': 80, 'ts_max': 25999970, 'days': 1504.62, 'organic_share': 0.5697}, 'dislikes': {'rows': 107776, 'users': 5951, 'items': 53413, 'ts_min': 75, 'ts_max': 25999945, 'days': 1504.62, 'organic_share': 0.5195}, 'unlikes': {'rows': 312972, 'users': 6406, 'items': 117953, 'ts_min': 250, 'ts_max': 25999945, 'days': 1504.61, 'organic_share': 0.9472}, 'undislikes': {'rows': 21033, 'users': 2911, 'items': 15399, 'ts_min': 15950, 'ts_max': 25993175, 'days': 1503.31, 'organic_share': 0.8895}}
+[E01] <- stage 'basic_stats' 0.3s
+[E01] -> stage 'timeline'
+[E01] <- stage 'timeline' 0.92s
+[E01] -> stage 'timestamp_unit_check'
+[E01] <- stage 'timestamp_unit_check' 1.22s
+[E01] -> stage 'played_ratio'
+[E01] <- stage 'played_ratio' 0.99s
+[E01] -> stage 'repeat_consumption'
+[E01] <- stage 'repeat_consumption' 12.56s
+[E01] -> stage 'mappings'
+[E01] <- stage 'mappings' 2.71s
+[E01] -> stage 'popularity_concentration'
+[E01] <- stage 'popularity_concentration' 0.48s
+done
+[E01] ok; wall 19.4s, cpu 58.7s, peak RSS 5.72 GB

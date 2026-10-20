@@ -1,0 +1,402 @@
+{
+  "meta": {
+    "id": "E01",
+    "name": "audit_yambda",
+    "title": "Аудит данных Yambda-50M",
+    "status": "ok",
+    "started_utc": "2026-10-20T15:35:01+00:00",
+    "finished_utc": "2026-10-20T15:35:20+00:00",
+    "wall_seconds": 19.39,
+    "cpu_seconds_process": 58.72,
+    "peak_rss_gb": 5.72,
+    "stages": [
+      {
+        "stage": "load",
+        "wall_seconds": 0.22,
+        "cpu_seconds": 1.28,
+        "rss_gb_after": 1.18
+      },
+      {
+        "stage": "basic_stats",
+        "wall_seconds": 0.3,
+        "cpu_seconds": 1.28,
+        "rss_gb_after": 1.35
+      },
+      {
+        "stage": "timeline",
+        "wall_seconds": 0.92,
+        "cpu_seconds": 3.94,
+        "rss_gb_after": 3.62
+      },
+      {
+        "stage": "timestamp_unit_check",
+        "wall_seconds": 1.22,
+        "cpu_seconds": 2.83,
+        "rss_gb_after": 3.77
+      },
+      {
+        "stage": "played_ratio",
+        "wall_seconds": 0.99,
+        "cpu_seconds": 2.12,
+        "rss_gb_after": 2.34
+      },
+      {
+        "stage": "repeat_consumption",
+        "wall_seconds": 12.56,
+        "cpu_seconds": 29.08,
+        "rss_gb_after": 4.83
+      },
+      {
+        "stage": "mappings",
+        "wall_seconds": 2.71,
+        "cpu_seconds": 15.09,
+        "rss_gb_after": 5.29
+      },
+      {
+        "stage": "popularity_concentration",
+        "wall_seconds": 0.48,
+        "cpu_seconds": 3.09,
+        "rss_gb_after": 5.72
+      }
+    ]
+  },
+  "results": {
+    "schemas": {
+      "listens": {
+        "uid": "UInt32",
+        "timestamp": "UInt32",
+        "item_id": "UInt32",
+        "is_organic": "UInt8",
+        "played_ratio_pct": "UInt16",
+        "track_length_seconds": "UInt32"
+      },
+      "likes": {
+        "uid": "UInt32",
+        "timestamp": "UInt32",
+        "item_id": "UInt32",
+        "is_organic": "UInt8"
+      },
+      "dislikes": {
+        "uid": "UInt32",
+        "timestamp": "UInt32",
+        "item_id": "UInt32",
+        "is_organic": "UInt8"
+      },
+      "unlikes": {
+        "uid": "UInt32",
+        "timestamp": "UInt32",
+        "item_id": "UInt32",
+        "is_organic": "UInt8"
+      },
+      "undislikes": {
+        "uid": "UInt32",
+        "timestamp": "UInt32",
+        "item_id": "UInt32",
+        "is_organic": "UInt8"
+      },
+      "artist": {
+        "artist_id": "UInt32",
+        "item_id": "UInt32"
+      },
+      "album": {
+        "album_id": "UInt32",
+        "item_id": "UInt32"
+      }
+    },
+    "basic": {
+      "listens": {
+        "rows": 46467212,
+        "users": 9238,
+        "items": 877168,
+        "ts_min": 0,
+        "ts_max": 26000000,
+        "days": 1504.63,
+        "organic_share": 0.5166
+      },
+      "likes": {
+        "rows": 881456,
+        "users": 8283,
+        "items": 181304,
+        "ts_min": 80,
+        "ts_max": 25999970,
+        "days": 1504.62,
+        "organic_share": 0.5697
+      },
+      "dislikes": {
+        "rows": 107776,
+        "users": 5951,
+        "items": 53413,
+        "ts_min": 75,
+        "ts_max": 25999945,
+        "days": 1504.62,
+        "organic_share": 0.5195
+      },
+      "unlikes": {
+        "rows": 312972,
+        "users": 6406,
+        "items": 117953,
+        "ts_min": 250,
+        "ts_max": 25999945,
+        "days": 1504.61,
+        "organic_share": 0.9472
+      },
+      "undislikes": {
+        "rows": 21033,
+        "users": 2911,
+        "items": 15399,
+        "ts_min": 15950,
+        "ts_max": 25993175,
+        "days": 1503.31,
+        "organic_share": 0.8895
+      }
+    },
+    "paper_table2_recommendation_ratio_5B": {
+      "listens": 0.4874,
+      "likes": 0.423,
+      "dislikes": 0.4847,
+      "unlikes": 0.0501,
+      "undislikes": 0.0982
+    },
+    "n_days_total": 1504.6296296296296,
+    "listens_per_day_describe": [
+      {
+        "statistic": "count",
+        "n": 1505.0,
+        "users": 1505.0
+      },
+      {
+        "statistic": "null_count",
+        "n": 0.0,
+        "users": 0.0
+      },
+      {
+        "statistic": "mean",
+        "n": 30875.22392026578,
+        "users": 1401.03853820598
+      },
+      {
+        "statistic": "std",
+        "n": 14635.267963066384,
+        "users": 598.7758732498827
+      },
+      {
+        "statistic": "min",
+        "n": 6314.0,
+        "users": 281.0
+      },
+      {
+        "statistic": "25%",
+        "n": 16880.0,
+        "users": 852.0
+      },
+      {
+        "statistic": "50%",
+        "n": 32355.0,
+        "users": 1459.0
+      },
+      {
+        "statistic": "75%",
+        "n": 41303.0,
+        "users": 1841.0
+      },
+      {
+        "statistic": "max",
+        "n": 65116.0,
+        "users": 2772.0
+      }
+    ],
+    "first_days": [
+      {
+        "day": 0,
+        "n": 9534,
+        "users": 494
+      },
+      {
+        "day": 1,
+        "n": 26466,
+        "users": 1279
+      },
+      {
+        "day": 2,
+        "n": 32137,
+        "users": 1339
+      },
+      {
+        "day": 3,
+        "n": 30396,
+        "users": 1382
+      },
+      {
+        "day": 4,
+        "n": 15714,
+        "users": 694
+      }
+    ],
+    "last_days": [
+      {
+        "day": 1495,
+        "n": 18274,
+        "users": 1081
+      },
+      {
+        "day": 1496,
+        "n": 54994,
+        "users": 2576
+      },
+      {
+        "day": 1497,
+        "n": 58626,
+        "users": 2502
+      },
+      {
+        "day": 1498,
+        "n": 58678,
+        "users": 2601
+      },
+      {
+        "day": 1499,
+        "n": 26462,
+        "users": 1225
+      },
+      {
+        "day": 1500,
+        "n": 19077,
+        "users": 1023
+      },
+      {
+        "day": 1501,
+        "n": 55811,
+        "users": 2570
+      },
+      {
+        "day": 1502,
+        "n": 59485,
+        "users": 2533
+      },
+      {
+        "day": 1503,
+        "n": 62425,
+        "users": 2613
+      },
+      {
+        "day": 1504,
+        "n": 29652,
+        "users": 1098
+      }
+    ],
+    "listens_nonmonotonic_within_user_in_file_order": 0,
+    "gap_over_track_length_median_if_ts_in_seconds": 1.0,
+    "gap_over_track_length_n": 20569809,
+    "share_ts_multiple_of_5": 1.0,
+    "share_track_length_multiple_of_5": 1.0,
+    "max_timestamp_in_days_if_seconds": 300.9259259259259,
+    "max_timestamp_in_days_if_5s_ticks": 1504.6296296296296,
+    "played_ratio_quantiles": {
+      "0.1": 1.0,
+      "0.25": 7.0,
+      "0.5": 100.0,
+      "0.75": 100.0,
+      "0.9": 100.0,
+      "0.99": 100.0
+    },
+    "share_listen_plus_ge50": 0.6335494800075373,
+    "share_ratio_gt100": 0.004694600571258719,
+    "share_listen_plus_by_organic": [
+      {
+        "is_organic": 0,
+        "ge50": 0.681884412329215,
+        "n": 22463555
+      },
+      {
+        "is_organic": 1,
+        "ge50": 0.5883157720509005,
+        "n": 24003657
+      }
+    ],
+    "repeat_share_by_listen_plus": [
+      {
+        "played_ratio_pct": false,
+        "repeat_share": 0.6898957325063628,
+        "n": 17027934
+      },
+      {
+        "played_ratio_pct": true,
+        "repeat_share": 0.7286464022657078,
+        "n": 29439278
+      }
+    ],
+    "repeat_share_by_organic": [
+      {
+        "is_organic": 0,
+        "repeat_share": 0.6161550119738394,
+        "n": 22463555
+      },
+      {
+        "is_organic": 1,
+        "repeat_share": 0.8064309117564877,
+        "n": 24003657
+      }
+    ],
+    "user_history_listens": [
+      {
+        "statistic": "count",
+        "n": 9238.0
+      },
+      {
+        "statistic": "null_count",
+        "n": 0.0
+      },
+      {
+        "statistic": "mean",
+        "n": 5030.0077938947825
+      },
+      {
+        "statistic": "std",
+        "n": 5520.145409550636
+      },
+      {
+        "statistic": "min",
+        "n": 6.0
+      },
+      {
+        "statistic": "25%",
+        "n": 937.0
+      },
+      {
+        "statistic": "50%",
+        "n": 3024.0
+      },
+      {
+        "statistic": "75%",
+        "n": 7182.0
+      },
+      {
+        "statistic": "max",
+        "n": 27617.0
+      }
+    ],
+    "user_unique_items_ratio_median": 0.3974170000860158,
+    "artist_map": {
+      "rows": 9271906,
+      "items": 9270506,
+      "artists": 1293394,
+      "dup_items": 1400
+    },
+    "album_map": {
+      "rows": 9651644,
+      "items": 8653783,
+      "albums": 3367691,
+      "dup_items": 997861
+    },
+    "coverage_listen_items_with_artist": 0.9936078379512249,
+    "coverage_listen_items_with_album": 0.9988782080513653,
+    "coverage_listen_events_with_artist": 0.9998215300715696,
+    "top_share": {
+      "top10": 0.007995401144359596,
+      "top100": 0.042174340048634726,
+      "top1000": 0.17593515186579303,
+      "top10000": 0.5158927761794704
+    },
+    "items_with_le2_listens_share": 0.480708370574394
+  }
+}

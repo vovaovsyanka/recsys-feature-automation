@@ -1,0 +1,10 @@
+[E02] Аудит данных KION
+  start (UTC): 2026-10-20T15:37:31+00:00
+  code hash: 3efaf21b7bb10226
+[E02] -> stage 'load'
+[E02] <- stage 'load' 0.36s
+[E02] -> stage 'stats'
+[E02] <- stage 'stats' 0.82s
+[E02] -> stage 'metadata'
+[E02] <- stage 'metadata' 0.22s
+[E02] ok; wall 1.4s, cpu 8.6s, peak RSS 1.47 GB
