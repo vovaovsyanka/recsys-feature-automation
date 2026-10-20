@@ -1,0 +1,26 @@
+[E10] Расчёт пула грамматики (3.6 тыс. признаков) на подвыборке
+  start (UTC): 2026-10-20T17:14:31+00:00
+  code hash: a30c911589605160
+[E10] -> stage 'load'
+[E10] <- stage 'load' 0.43s
+[E10] -> stage 'compute_pool'
+  [daily] built B: 10706660 rows in 13s
+  val day 285: 88s rows=245528
+  val day 286: 72s rows=245810
+  val day 287: 74s rows=263622
+  val day 288: 69s rows=232484
+  val day 289: 69s rows=225373
+  val day 290: 69s rows=236166
+  val day 291: 71s rows=244658
+  train day 163: 36s rows=142196
+  train day 175: 41s rows=164306
+  train day 187: 42s rows=164048
+  train day 199: 45s rows=166616
+  train day 211: 49s rows=171112
+  train day 223: 51s rows=188102
+  train day 235: 56s rows=200264
+  train day 247: 55s rows=188161
+  train day 259: 62s rows=219286
+  train day 271: 65s rows=224079
+[E10] <- stage 'compute_pool' 1013.62s
+[E10] ok; wall 1014.1s, cpu 7451.9s, peak RSS 19.55 GB
