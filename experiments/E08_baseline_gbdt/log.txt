@@ -1,0 +1,44 @@
+[E08] LightGBM на ручных признаках (базлайн), val
+  start (UTC): 2026-10-20T16:32:04+00:00
+  code hash: e5c3c319877958d2
+[E08] -> stage 'load_matrices'
+    build_mat 10/34 (6s)
+    build_mat 20/34 (13s)
+    build_mat 30/34 (21s)
+train (10818545, 123) pos rate 0.126 | val (8563178, 123)
+[E08] <- stage 'load_matrices' 31.63s
+[E08] -> stage 'train_lambdarank'
+[100]	val's ndcg@10: 0.424036
+[200]	val's ndcg@10: 0.429168
+[300]	val's ndcg@10: 0.43126
+[400]	val's ndcg@10: 0.432144
+[500]	val's ndcg@10: 0.43268
+[600]	val's ndcg@10: 0.433114
+[700]	val's ndcg@10: 0.433382
+[800]	val's ndcg@10: 0.43377
+[900]	val's ndcg@10: 0.433643
+[E08] <- stage 'train_lambdarank' 1078.16s
+[E08] -> stage 'eval_lambdarank'
+lambdarank {'ndcg@10': 0.2894, 'recall@10': 0.1655, 'ndcg@100': 0.3198, 'recall@100': 0.3997, 'auc': 0.8255, 'n_groups': 31688, 'best_iteration': 806, 'train_seconds': 1078.0462}
+[E08] <- stage 'eval_lambdarank' 108.63s
+[E08] -> stage 'train_binary'
+[100]	val's binary_logloss: 0.163384
+[200]	val's binary_logloss: 0.16012
+[300]	val's binary_logloss: 0.158863
+[400]	val's binary_logloss: 0.158162
+[500]	val's binary_logloss: 0.157537
+[600]	val's binary_logloss: 0.157168
+[700]	val's binary_logloss: 0.156683
+[800]	val's binary_logloss: 0.156423
+[900]	val's binary_logloss: 0.15614
+[1000]	val's binary_logloss: 0.155901
+[1100]	val's binary_logloss: 0.155562
+[1200]	val's binary_logloss: 0.155392
+[1300]	val's binary_logloss: 0.155197
+[1400]	val's binary_logloss: 0.155066
+[1500]	val's binary_logloss: 0.154893
+[E08] <- stage 'train_binary' 1070.82s
+[E08] -> stage 'eval_binary'
+binary {'ndcg@10': 0.2875, 'recall@10': 0.1641, 'ndcg@100': 0.3187, 'recall@100': 0.3991, 'auc': 0.8448, 'logloss': 0.1285, 'n_groups': 31688, 'best_iteration': 1500, 'train_seconds': 1070.6857}
+[E08] <- stage 'eval_binary' 225.4s
+[E08] ok; wall 2514.6s, cpu 25377.3s, peak RSS 16.85 GB

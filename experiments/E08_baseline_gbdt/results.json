@@ -1,0 +1,285 @@
+{
+  "meta": {
+    "id": "E08",
+    "name": "baseline_gbdt",
+    "title": "LightGBM на ручных признаках (базлайн), val",
+    "status": "ok",
+    "started_utc": "2026-10-20T16:32:04+00:00",
+    "finished_utc": "2026-10-20T17:13:58+00:00",
+    "wall_seconds": 2514.63,
+    "cpu_seconds_process": 25377.27,
+    "peak_rss_gb": 16.85,
+    "stages": [
+      {
+        "stage": "load_matrices",
+        "wall_seconds": 31.63,
+        "cpu_seconds": 87.47,
+        "rss_gb_after": 16.85
+      },
+      {
+        "stage": "train_lambdarank",
+        "wall_seconds": 1078.16,
+        "cpu_seconds": 11511.7,
+        "rss_gb_after": 11.64
+      },
+      {
+        "stage": "eval_lambdarank",
+        "wall_seconds": 108.63,
+        "cpu_seconds": 1154.75,
+        "rss_gb_after": 11.71
+      },
+      {
+        "stage": "train_binary",
+        "wall_seconds": 1070.82,
+        "cpu_seconds": 10787.09,
+        "rss_gb_after": 11.64
+      },
+      {
+        "stage": "eval_binary",
+        "wall_seconds": 225.4,
+        "cpu_seconds": 1836.23,
+        "rss_gb_after": 11.77
+      }
+    ]
+  },
+  "results": {
+    "shapes": {
+      "train": [
+        10818545,
+        123
+      ],
+      "val": [
+        8563178,
+        123
+      ],
+      "train_pos_rate": 0.1264381670548119
+    },
+    "val_metrics": {
+      "lambdarank": {
+        "ndcg@10": 0.2894129125030195,
+        "recall@10": 0.16552720709079333,
+        "ndcg@100": 0.31977962130346443,
+        "recall@100": 0.3996600124829875,
+        "auc": 0.8254695955970756,
+        "n_groups": 31688,
+        "best_iteration": 806,
+        "train_seconds": 1078.046198129654,
+        "top_features_gain": [
+          [
+            "d:urank(UI.plus.cnt.7)",
+            0.17746408547520368
+          ],
+          [
+            "s1_rank",
+            0.06944368512736618
+          ],
+          [
+            "d:urank(UI.listen.last.all)",
+            0.0599776484567524
+          ],
+          [
+            "UI.listen.cnt.7",
+            0.049443701753389746
+          ],
+          [
+            "d:ratio(U.listen.nuniq.30|U.listen.cnt.30)",
+            0.045881369538817544
+          ],
+          [
+            "s1_score",
+            0.025820537756668992
+          ],
+          [
+            "UI.listen.last.all",
+            0.024260924559813636
+          ],
+          [
+            "d:ratio(U.rec.cnt.30|U.listen.cnt.30)",
+            0.023110775238041507
+          ],
+          [
+            "UI.plus.last.all",
+            0.02307037753380533
+          ],
+          [
+            "d:urank(UI.plus.cnt.30)",
+            0.021201896491091263
+          ],
+          [
+            "UI.listen.first.all",
+            0.02119302200519624
+          ],
+          [
+            "d:diff(UI.like.cnt.all|UI.unlike.cnt.all)",
+            0.01813235944463913
+          ],
+          [
+            "d:ratio(U.rec.cnt.7|U.listen.cnt.7)",
+            0.01764869049571799
+          ],
+          [
+            "UI.plus.cnt.7",
+            0.016528631403239073
+          ],
+          [
+            "d:ratio(UI.listen.cnt.30|U.listen.cnt.30)",
+            0.016280284983576764
+          ],
+          [
+            "UI.like.cnt.all",
+            0.015004239259886188
+          ],
+          [
+            "d:urank(UI.plus.cnt.all)",
+            0.013556813599019668
+          ],
+          [
+            "UI.plus.cnt.all",
+            0.010919673337160197
+          ],
+          [
+            "UB.plus.cnt.30",
+            0.01016180398404562
+          ],
+          [
+            "I.listen.first.all",
+            0.009614871762207065
+          ],
+          [
+            "d:ratio(UA.listen.cnt.30|U.listen.cnt.30)",
+            0.009595457418290015
+          ],
+          [
+            "UA.listen.last.all",
+            0.009011422723410113
+          ],
+          [
+            "d:ratio(I.listen.cnt.30|A.listen.cnt.30)",
+            0.00892486302517638
+          ],
+          [
+            "s2_rank",
+            0.008044778007338787
+          ],
+          [
+            "UA.plus.cnt.7",
+            0.0078483933008294
+          ]
+        ]
+      },
+      "binary": {
+        "ndcg@10": 0.28752557203681534,
+        "recall@10": 0.16405836696449508,
+        "ndcg@100": 0.31869883816011296,
+        "recall@100": 0.39912120532104056,
+        "auc": 0.8447548092729424,
+        "logloss": 0.12850253066540948,
+        "n_groups": 31688,
+        "best_iteration": 1500,
+        "train_seconds": 1070.6856808662415,
+        "top_features_gain": [
+          [
+            "s1_score",
+            0.2513982156747283
+          ],
+          [
+            "UI.plus.cnt.30",
+            0.08640665547592757
+          ],
+          [
+            "d:urank(UI.listen.last.all)",
+            0.03536020759234527
+          ],
+          [
+            "UI.listen.cnt.30",
+            0.033977734962335054
+          ],
+          [
+            "UI.plus.last.all",
+            0.03266846378845202
+          ],
+          [
+            "UI.listen.cnt.7",
+            0.024059414447571436
+          ],
+          [
+            "UI.plus.cnt.7",
+            0.021245499434961724
+          ],
+          [
+            "d:ratio(U.listen.nuniq.30|U.listen.cnt.30)",
+            0.020902866607006323
+          ],
+          [
+            "UI.listen.last.all",
+            0.019337526957694428
+          ],
+          [
+            "U.rec.cnt.30",
+            0.017435988531421562
+          ],
+          [
+            "d:ratio(U.rec.cnt.30|U.listen.cnt.30)",
+            0.016591406684788295
+          ],
+          [
+            "d:ratio(U.rec.cnt.7|U.listen.cnt.7)",
+            0.016417268146227744
+          ],
+          [
+            "UI.plus.cnt.all",
+            0.015770832300275463
+          ],
+          [
+            "U.listen.last.all",
+            0.014987785067999129
+          ],
+          [
+            "U.rec.cnt.7",
+            0.01470806249985944
+          ],
+          [
+            "U.listen.nuniq.30",
+            0.014639846350779808
+          ],
+          [
+            "d:diff(UI.like.cnt.all|UI.unlike.cnt.all)",
+            0.014169181209851172
+          ],
+          [
+            "U.like.cnt.all",
+            0.013779391951377985
+          ],
+          [
+            "U.listen.nuniq.7",
+            0.01256600787207629
+          ],
+          [
+            "U.listen.cnt.1",
+            0.012551623587711802
+          ],
+          [
+            "U.like.cnt.30",
+            0.011389220660825799
+          ],
+          [
+            "U.listen.cnt.7",
+            0.011074650745412867
+          ],
+          [
+            "d:ratio(UI.listen.cnt.all|U.listen.cnt.all)",
+            0.010857552846585693
+          ],
+          [
+            "U.listen.cnt.all",
+            0.01078620019512271
+          ],
+          [
+            "d:urank(UI.plus.cnt.7)",
+            0.010679944446789312
+          ]
+        ]
+      }
+    }
+  }
+}
