@@ -1,0 +1,56 @@
+[E07] Расчёт ручных признаков (123) и их стоимость
+  start (UTC): 2026-10-20T16:01:27+00:00
+  code hash: 6e1e677b2dfc9974
+[E07] -> stage 'load'
+[E07] <- stage 'load' 0.38s
+[E07] -> stage 'compute'
+  val day 285: 15.5s
+  val day 286: 13.5s
+  val day 287: 13.8s
+  val day 288: 12.8s
+  val day 289: 12.2s
+  val day 290: 12.9s
+  val day 291: 13.1s
+  train day 151: 7.2s
+  train day 155: 7.2s
+  train day 159: 7.6s
+  train day 163: 6.9s
+  train day 167: 7.6s
+  train day 171: 7.6s
+  train day 175: 8.1s
+  train day 179: 7.9s
+  train day 183: 7.8s
+  train day 187: 8.1s
+  train day 191: 7.8s
+  train day 195: 8.5s
+  train day 199: 8.4s
+  train day 203: 9.2s
+  train day 207: 8.8s
+  train day 211: 8.9s
+  train day 215: 9.5s
+  train day 219: 8.9s
+  train day 223: 9.7s
+  train day 227: 10.1s
+  train day 231: 10.8s
+  train day 235: 10.3s
+  train day 239: 10.6s
+  train day 243: 10.8s
+  train day 247: 9.8s
+  train day 251: 11.0s
+  train day 255: 11.5s
+  train day 259: 11.7s
+  train day 263: 11.7s
+  train day 267: 11.6s
+  train day 271: 11.9s
+  train day 275: 11.1s
+  train day 279: 12.8s
+  train day 283: 13.1s
+  test day 293: 13.1s
+  test day 294: 13.0s
+  test day 295: 12.6s
+  test day 296: 12.5s
+  test day 297: 13.3s
+  test day 298: 13.1s
+  test day 299: 12.9s
+[E07] <- stage 'compute' 508.74s
+[E07] ok; wall 509.1s, cpu 3856.5s, peak RSS 17.87 GB
