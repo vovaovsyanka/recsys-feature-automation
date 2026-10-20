@@ -1,0 +1,23 @@
+[E04] Построение кандидатных строк и меток для всех якорей
+  start (UTC): 2026-10-20T15:48:18+00:00
+  code hash: d5684e5cfff70e55
+[E04] -> stage 'load'
+[E04] <- stage 'load' 0.38s
+[E04] -> stage 'build'
+  10/148 anchors, last {'day': 159, 'users': 3209, 'rows': 848129, 'pos': 86301, 'pos_in': 36361}
+  20/148 anchors, last {'day': 169, 'users': 3045, 'rows': 802549, 'pos': 84119, 'pos_in': 34870}
+  30/148 anchors, last {'day': 179, 'users': 3323, 'rows': 879360, 'pos': 87344, 'pos_in': 37302}
+  40/148 anchors, last {'day': 189, 'users': 3383, 'rows': 899919, 'pos': 92919, 'pos_in': 38824}
+  50/148 anchors, last {'day': 199, 'users': 3286, 'rows': 876344, 'pos': 86426, 'pos_in': 36453}
+  60/148 anchors, last {'day': 209, 'users': 3487, 'rows': 927876, 'pos': 92197, 'pos_in': 37791}
+  70/148 anchors, last {'day': 219, 'users': 3294, 'rows': 873103, 'pos': 85553, 'pos_in': 37180}
+  80/148 anchors, last {'day': 229, 'users': 3754, 'rows': 1001484, 'pos': 100154, 'pos_in': 45397}
+  90/148 anchors, last {'day': 239, 'users': 3816, 'rows': 1004972, 'pos': 105418, 'pos_in': 46057}
+  100/148 anchors, last {'day': 249, 'users': 4038, 'rows': 1070258, 'pos': 105023, 'pos_in': 43241}
+  110/148 anchors, last {'day': 259, 'users': 4301, 'rows': 1145645, 'pos': 117122, 'pos_in': 46561}
+  120/148 anchors, last {'day': 269, 'users': 4264, 'rows': 1145429, 'pos': 110413, 'pos_in': 45162}
+  130/148 anchors, last {'day': 279, 'users': 4430, 'rows': 1193565, 'pos': 116321, 'pos_in': 46097}
+  140/148 anchors, last {'day': 290, 'users': 4429, 'rows': 1204501, 'pos': 120436, 'pos_in': 47349}
+[E04] <- stage 'build' 538.02s
+{'train': {'anchors': 134, 'groups': 486646, 'rows': 129219760, 'recall': 0.41855858929232653, 'pos_rate': 0.041682433089180786}, 'val': {'anchors': 7, 'groups': 31688, 'rows': 8563178, 'recall': 0.3941078370320048, 'pos_rate': 0.039022078018231085}, 'test': {'anchors': 7, 'groups': 30516, 'rows': 8363029, 'recall': 0.3883556909083721, 'pos_rate': 0.038760716960326215}}
+[E04] ok; wall 538.4s, cpu 3960.0s, peak RSS 5.12 GB

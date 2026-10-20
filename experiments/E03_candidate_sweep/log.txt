@@ -1,0 +1,39 @@
+[E03] Подбор кандидатной стадии (recall vs размер)
+  start (UTC): 2026-10-20T15:44:01+00:00
+  code hash: a3c746edf3195ab9
+[E03] -> stage 'load'
+[E03] <- stage 'load' 0.42s
+[E03] -> stage 'cfg:base'
+base {'train': {'recall': 0.31902649344165096, 'cand_per_user': 169.13106581306397, 'rows_per_anchor': 624086.0}, 'val': {'recall': 0.304125769422725, 'cand_per_user': 171.63669064748203, 'rows_per_anchor': 763440.0}}
+[E03] <- stage 'cfg:base' 18.57s
+[E03] -> stage 'cfg:s1_200'
+s1_200 {'train': {'recall': 0.4015025432455766, 'cand_per_user': 248.12479958605073, 'rows_per_anchor': 915092.0}, 'val': {'recall': 0.3815920811844951, 'cand_per_user': 249.87769784172662, 'rows_per_anchor': 1111456.0}}
+[E03] <- stage 'cfg:s1_200' 19.68s
+[E03] -> stage 'cfg:s1_300'
+s1_300 {'train': {'recall': 0.4719358831667308, 'cand_per_user': 326.2235843654043, 'rows_per_anchor': 1202738.0}, 'val': {'recall': 0.44608218266511396, 'cand_per_user': 326.6924460431655, 'rows_per_anchor': 1453128.0}}
+[E03] <- stage 'cfg:s1_300' 22.12s
+[E03] -> stage 'cfg:s1_200_hl7'
+s1_200_hl7 {'train': {'recall': 0.38830003016528497, 'cand_per_user': 252.1852186615896, 'rows_per_anchor': 930073.5}, 'val': {'recall': 0.37027948760605556, 'cand_per_user': 253.84644784172662, 'rows_per_anchor': 1129109.0}}
+[E03] <- stage 'cfg:s1_200_hl7' 21.79s
+[E03] -> stage 'cfg:s1_200_hl30'
+s1_200_hl30 {'train': {'recall': 0.40669825353401917, 'cand_per_user': 242.45076058083157, 'rows_per_anchor': 894098.75}, 'val': {'recall': 0.3852021294293795, 'cand_per_user': 243.8212679856115, 'rows_per_anchor': 1084517.0}}
+[E03] <- stage 'cfg:s1_200_hl30' 20.6s
+[E03] -> stage 'cfg:s1_200_s2_100'
+s1_200_s2_100 {'train': {'recall': 0.41948469371833946, 'cand_per_user': 265.3544673217912, 'rows_per_anchor': 979236.5}, 'val': {'recall': 0.39780402595242054, 'cand_per_user': 268.892535971223, 'rows_per_anchor': 1196034.0}}
+[E03] <- stage 'cfg:s1_200_s2_100' 19.72s
+[E03] -> stage 'cfg:s1_150_s2_100_s3big'
+s1_150_s2_100_s3big {'train': {'recall': 0.40052737239564373, 'cand_per_user': 257.2945343102413, 'rows_per_anchor': 949549.25}, 'val': {'recall': 0.3811761770088172, 'cand_per_user': 261.14321043165467, 'rows_per_anchor': 1161565.0}}
+[E03] <- stage 'cfg:s1_150_s2_100_s3big' 19.4s
+[E03] -> stage 'cfg:no_s3'
+no_s3 {'train': {'recall': 0.386105245639036, 'cand_per_user': 226.1478499171937, 'rows_per_anchor': 834055.0}, 'val': {'recall': 0.36709366162036267, 'cand_per_user': 227.56070143884892, 'rows_per_anchor': 1012190.0}}
+[E03] <- stage 'cfg:no_s3' 18.16s
+[E03] -> stage 'cfg:no_s4'
+no_s4 {'train': {'recall': 0.39451251859325753, 'cand_per_user': 222.03311757194845, 'rows_per_anchor': 818871.75}, 'val': {'recall': 0.37497088670770257, 'cand_per_user': 223.11128597122303, 'rows_per_anchor': 992399.0}}
+[E03] <- stage 'cfg:no_s4' 17.37s
+[E03] -> stage 'cfg:no_s2'
+no_s2 {'train': {'recall': 0.3888877331308445, 'cand_per_user': 237.83184107562596, 'rows_per_anchor': 876472.0}, 'val': {'recall': 0.36853269006820827, 'cand_per_user': 237.39725719424462, 'rows_per_anchor': 1055943.0}}
+[E03] <- stage 'cfg:no_s2' 17.9s
+[E03] -> stage 'cfg:only_s1_200'
+only_s1_200 {'train': {'recall': 0.3646566878517116, 'cand_per_user': 188.9822722311592, 'rows_per_anchor': 696317.25}, 'val': {'recall': 0.34579936782565296, 'cand_per_user': 187.53799460431654, 'rows_per_anchor': 834169.0}}
+[E03] <- stage 'cfg:only_s1_200' 17.23s
+[E03] ok; wall 213.0s, cpu 1484.4s, peak RSS 7.82 GB
