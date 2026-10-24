@@ -55,13 +55,15 @@ STAGES = [
     ("17-seeds", "17_final_model.py --set=manual --seed=1", "E17_final_manual_s1", 25, "extended", "шум обучения на полных данных"),
     ("17-seeds2", "17_final_model.py --set=A2_B --seed=1", "E17_final_A2_B_s1", 25, "extended", "шум обучения на полных данных"),
     ("18", "18_evaluate_models.py --split=test --extra=SEQ=experiments/E15_sequence_final/per_group_test.npz",
-     "E18test_evaluate_models", 60, "extended", "ЕДИНСТВЕННАЯ оценка на test; запускать, когда все модели готовы"),
+     "E18test_evaluate_models", 60, "extended", "оценка на test с парными сравнениями; запускать, когда все модели готовы"),
+    ("21", "21_llm_agent_repeat.py", "E21_llm_agent_repeat", 35, "extended", "повторы A5 на сидах: нужен OLLAMA_API_KEY"),
     ("19", "19_scaling.py", "E19_scaling", 60, "extended", ""),
     ("20", "20_feature_cost.py", "E20_feature_cost", 6, "extended", "замер стоимости признаков"),
     ("30", "30_kion_rows.py", "E30_kion_rows", 10, "core", ""),
     ("31", "31_kion_baseline.py", "E31_kion_baseline", 15, "core", ""),
     ("32", "32_kion_search.py", "E32_kion_search", 40, "core", ""),
     ("33", "33_kion_final.py", "E33_kion_final", 90, "core", "включает оценку KION на test"),
+    ("98", "98_make_figures.py", None, 1, "core", "рисунки статьи"),
     ("99", "99_make_index.py", None, 1, "core", "индекс экспериментов"),
 ]
 

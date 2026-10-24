@@ -1,0 +1,37 @@
+{
+  "model": "gpt-oss:120b",
+  "runs": [
+    [
+      0,
+      "oneshot"
+    ],
+    [
+      1,
+      "oneshot"
+    ],
+    [
+      1,
+      "iterative"
+    ],
+    [
+      2,
+      "oneshot"
+    ],
+    [
+      2,
+      "iterative"
+    ]
+  ],
+  "scenarios": {
+    "A": {
+      "max_total": 60,
+      "rounds": 6,
+      "per_round": 20
+    },
+    "B": {
+      "max_total": 115,
+      "rounds": 8,
+      "per_round": 25
+    }
+  }
+}

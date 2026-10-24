@@ -4,6 +4,9 @@
 учитывается, что один пользователь даёт несколько групп (якорей). Разности считаются относительно ручного базлайна.
 Каждое обращение к test пишется в experiments/test_access_log.jsonl.
 
+Помимо разностей с ручным базлайном считаются парные разности методов друг с другом (PAIRS): без них нельзя сказать, что отбор по
+важности лучше случайного, а не просто лучше ручного набора.
+
 Запуск: python scripts/18_evaluate_models.py --split=val|test [--sets=manual,A2_B,A2_B@1] [--extra=имя=путь_к_per_group.npz]
 Суффикс @N у набора - модель, обученная с сидом N (scripts/17_final_model.py --seed=N).
 """
@@ -42,12 +45,15 @@ SETS = [s for s in SETS if s not in missing]
 EXTRA = dict(e.split("=", 1) for e in (arg("extra", "") or "").split(",") if e)    # модели не из LightGBM (по группам)
 N_BOOT = int(arg("boot", "1000"))
 DAYS = list(VAL if SPLIT == "val" else TEST)
+# (метод, с чем сравниваем): отбор против случайного, против OpenFE и агента, сценарий B против A
+PAIRS = [("A2_A", "A1_A"), ("A2_B", "A1_B"), ("A2_A", "A3_A"), ("A2_B", "A3_B"), ("A2_A", "A5_A"), ("A2_B", "A5_B"),
+         ("A2_A", "A4"), ("A2_B", "A2_A"), ("A1_B", "A1_A"), ("H_als", "H_gcn")]
 
 with Experiment(f"E18{SPLIT}", "evaluate_models", f"Оценка моделей на {SPLIT} с доверительными интервалами",
                 goal=f"Единообразно оценить все финальные модели на {SPLIT} (7 суточных якорей) и сравнить с ручным базлайном "
                      "с учётом неопределённости выборки пользователей.",
                 hypothesis="Автоматические наборы не хуже ручного, разности значимы при учёте бутстреп-интервалов.",
-                config={"split": SPLIT, "days": DAYS, "sets": SETS, "extra": EXTRA, "n_boot": N_BOOT}, data_files=[D.EVENTS]) as exp:
+                config={"split": SPLIT, "days": DAYS, "sets": SETS, "extra": EXTRA, "n_boot": N_BOOT, "pairs": PAIRS}, data_files=[D.EVENTS]) as exp:
     store = F.FeatureStore(YAMBDA_TAG, F.Engine(D.load_events()))
     metrics, packs = {}, {}
     for name in SETS:
@@ -81,3 +87,11 @@ with Experiment(f"E18{SPLIT}", "evaluate_models", f"Оценка моделей 
                 d = ci[name]["vs_manual"]["ndcg@10"]
                 print(f"{name:10s} ΔNDCG@10 к ручному: {d['mean']:+.4f} [{d['lo']:+.4f}; {d['hi']:+.4f}]")
         exp.record("bootstrap_ci", ci)
+        pairwise = {}
+        for a, b in PAIRS:
+            if a in packs and b in packs:
+                assert np.array_equal(packs[a][0], packs[b][0]), "множества пользователей не совпали"
+                pairwise[f"{a} - {b}"] = M.bootstrap_ci(packs[a][1], packs[a][2], packs[b][2], N_BOOT)
+                d = pairwise[f"{a} - {b}"]["ndcg@10"]
+                print(f"{a} - {b:8s} ΔNDCG@10: {d['mean']:+.4f} [{d['lo']:+.4f}; {d['hi']:+.4f}]")
+        exp.record("pairwise_ci", pairwise)

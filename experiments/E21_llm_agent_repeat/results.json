@@ -1,0 +1,4552 @@
+{
+  "meta": {
+    "id": "E21",
+    "name": "llm_agent_repeat",
+    "title": "Поиск признаков ИИ-агентом: повторы на разных сидах",
+    "status": "ok",
+    "started_utc": "2026-10-24T08:00:37+00:00",
+    "finished_utc": "2026-10-24T08:30:54+00:00",
+    "wall_seconds": 1816.9,
+    "cpu_seconds_process": 9778.03,
+    "peak_rss_gb": 11.76,
+    "stages": [
+      {
+        "stage": "setup",
+        "wall_seconds": 0.42,
+        "cpu_seconds": 2.56,
+        "rss_gb_after": 2.1
+      },
+      {
+        "stage": "oneshot_A_seed0: агент",
+        "wall_seconds": 37.08,
+        "cpu_seconds": 176.45,
+        "rss_gb_after": 2.55
+      },
+      {
+        "stage": "oneshot_A_seed0: итоговое обучение",
+        "wall_seconds": 28.71,
+        "cpu_seconds": 180.72,
+        "rss_gb_after": 3.51
+      },
+      {
+        "stage": "oneshot_B_seed0: агент",
+        "wall_seconds": 42.11,
+        "cpu_seconds": 137.28,
+        "rss_gb_after": 2.92
+      },
+      {
+        "stage": "oneshot_B_seed0: итоговое обучение",
+        "wall_seconds": 22.07,
+        "cpu_seconds": 138.83,
+        "rss_gb_after": 2.96
+      },
+      {
+        "stage": "oneshot_A_seed1: агент",
+        "wall_seconds": 37.14,
+        "cpu_seconds": 184.33,
+        "rss_gb_after": 3.03
+      },
+      {
+        "stage": "oneshot_A_seed1: итоговое обучение",
+        "wall_seconds": 29.08,
+        "cpu_seconds": 182.75,
+        "rss_gb_after": 3.31
+      },
+      {
+        "stage": "oneshot_B_seed1: агент",
+        "wall_seconds": 29.32,
+        "cpu_seconds": 126.95,
+        "rss_gb_after": 2.93
+      },
+      {
+        "stage": "oneshot_B_seed1: итоговое обучение",
+        "wall_seconds": 20.18,
+        "cpu_seconds": 128.67,
+        "rss_gb_after": 3.01
+      },
+      {
+        "stage": "iterative_A_seed1: агент",
+        "wall_seconds": 326.98,
+        "cpu_seconds": 1869.97,
+        "rss_gb_after": 3.52
+      },
+      {
+        "stage": "iterative_A_seed1: итоговое обучение",
+        "wall_seconds": 23.4,
+        "cpu_seconds": 148.91,
+        "rss_gb_after": 3.6
+      },
+      {
+        "stage": "iterative_B_seed1: агент",
+        "wall_seconds": 367.52,
+        "cpu_seconds": 1872.83,
+        "rss_gb_after": 11.0
+      },
+      {
+        "stage": "iterative_B_seed1: итоговое обучение",
+        "wall_seconds": 13.1,
+        "cpu_seconds": 82.08,
+        "rss_gb_after": 11.12
+      },
+      {
+        "stage": "oneshot_A_seed2: агент",
+        "wall_seconds": 45.13,
+        "cpu_seconds": 175.12,
+        "rss_gb_after": 11.51
+      },
+      {
+        "stage": "oneshot_A_seed2: итоговое обучение",
+        "wall_seconds": 27.74,
+        "cpu_seconds": 176.66,
+        "rss_gb_after": 11.76
+      },
+      {
+        "stage": "oneshot_B_seed2: агент",
+        "wall_seconds": 32.69,
+        "cpu_seconds": 114.78,
+        "rss_gb_after": 11.44
+      },
+      {
+        "stage": "oneshot_B_seed2: итоговое обучение",
+        "wall_seconds": 18.84,
+        "cpu_seconds": 113.48,
+        "rss_gb_after": 11.12
+      },
+      {
+        "stage": "iterative_A_seed2: агент",
+        "wall_seconds": 336.6,
+        "cpu_seconds": 1875.7,
+        "rss_gb_after": 11.65
+      },
+      {
+        "stage": "iterative_A_seed2: итоговое обучение",
+        "wall_seconds": 23.51,
+        "cpu_seconds": 149.75,
+        "rss_gb_after": 11.46
+      },
+      {
+        "stage": "iterative_B_seed2: агент",
+        "wall_seconds": 319.21,
+        "cpu_seconds": 1717.58,
+        "rss_gb_after": 11.61
+      },
+      {
+        "stage": "iterative_B_seed2: итоговое обучение",
+        "wall_seconds": 13.02,
+        "cpu_seconds": 83.77,
+        "rss_gb_after": 11.56
+      }
+    ]
+  },
+  "results": {
+    "proxy_results": {
+      "ручной набор (123)": {
+        "tag": "ручной набор (123)",
+        "n_features": 123,
+        "ndcg10": 0.26996035063155066,
+        "ndcg100": 0.30506298672126364,
+        "auc": 0.8115434415958749,
+        "seconds": 16.52081799507141
+      },
+      "oneshot_A_seed0: ручной + принято 60": {
+        "tag": "oneshot_A_seed0: ручной + принято 60",
+        "n_features": 183,
+        "ndcg10": 0.27198199754883295,
+        "ndcg100": 0.30772681623540976,
+        "auc": 0.8147478538100532,
+        "seconds": 21.82816982269287
+      },
+      "oneshot_B_seed0: принято 107": {
+        "tag": "oneshot_B_seed0: принято 107",
+        "n_features": 115,
+        "ndcg10": 0.2652477530071927,
+        "ndcg100": 0.29939740568897916,
+        "auc": 0.806009900776141,
+        "seconds": 16.421483516693115
+      },
+      "oneshot_A_seed1: ручной + принято 60": {
+        "tag": "oneshot_A_seed1: ручной + принято 60",
+        "n_features": 183,
+        "ndcg10": 0.27203228976799676,
+        "ndcg100": 0.3066710236980337,
+        "auc": 0.8110188189375696,
+        "seconds": 21.984939098358154
+      },
+      "oneshot_B_seed1: принято 88": {
+        "tag": "oneshot_B_seed1: принято 88",
+        "n_features": 96,
+        "ndcg10": 0.25685699601747153,
+        "ndcg100": 0.2944797418394786,
+        "auc": 0.8035463652774502,
+        "seconds": 15.233539819717407
+      },
+      "iterative_A_seed1: ручной + принято 12": {
+        "tag": "iterative_A_seed1: ручной + принято 12",
+        "n_features": 135,
+        "ndcg10": 0.2773284053678565,
+        "ndcg100": 0.3104495349787905,
+        "auc": 0.815654206576141,
+        "seconds": 17.698728799819946
+      },
+      "iterative_B_seed1: принято 39": {
+        "tag": "iterative_B_seed1: принято 39",
+        "n_features": 47,
+        "ndcg10": 0.2679728851553577,
+        "ndcg100": 0.30193121675982226,
+        "auc": 0.8088460777506212,
+        "seconds": 9.640337228775024
+      },
+      "oneshot_A_seed2: ручной + принято 60": {
+        "tag": "oneshot_A_seed2: ручной + принято 60",
+        "n_features": 183,
+        "ndcg10": 0.2734827400619314,
+        "ndcg100": 0.3080762023939417,
+        "auc": 0.8165076174645505,
+        "seconds": 20.69527292251587
+      },
+      "oneshot_B_seed2: принято 115": {
+        "tag": "oneshot_B_seed2: принято 115",
+        "n_features": 123,
+        "ndcg10": 0.26526364692880067,
+        "ndcg100": 0.29923578319725375,
+        "auc": 0.8027707045862589,
+        "seconds": 13.173388481140137
+      },
+      "iterative_A_seed2: ручной + принято 12": {
+        "tag": "iterative_A_seed2: ручной + принято 12",
+        "n_features": 135,
+        "ndcg10": 0.2706815838195081,
+        "ndcg100": 0.306029658985184,
+        "auc": 0.8139539150770033,
+        "seconds": 17.732667446136475
+      },
+      "iterative_B_seed2: принято 34": {
+        "tag": "iterative_B_seed2: принято 34",
+        "n_features": 42,
+        "ndcg10": 0.2666417767923007,
+        "ndcg100": 0.3014413211735664,
+        "auc": 0.8099489374273487,
+        "seconds": 9.818214654922485
+      }
+    },
+    "rounds": {
+      "oneshot_A_seed0": {
+        "rounds": [
+          {
+            "round": 1,
+            "ndcg": 0.27198199754883295,
+            "n_features": 183,
+            "n_proposed": 60,
+            "n_valid": 60,
+            "accepted": [
+              [
+                "U.org.cnt.7",
+                0.0
+              ],
+              [
+                "U.org.cnt.30",
+                0.0
+              ],
+              [
+                "U.org.cnt.all",
+                0.0
+              ],
+              [
+                "U.plus_org.cnt.7",
+                0.0
+              ],
+              [
+                "U.plus_org.cnt.30",
+                0.0
+              ],
+              [
+                "U.plus_org.cnt.all",
+                0.0
+              ],
+              [
+                "U.plus_rec.cnt.7",
+                0.0
+              ],
+              [
+                "U.plus_rec.cnt.30",
+                0.0
+              ],
+              [
+                "U.plus_rec.cnt.all",
+                0.0
+              ],
+              [
+                "U.full.cnt.7",
+                0.0
+              ],
+              [
+                "U.full.cnt.30",
+                0.0
+              ],
+              [
+                "U.full.cnt.all",
+                0.0
+              ],
+              [
+                "U.org.mean.7",
+                0.0
+              ],
+              [
+                "U.org.mean.30",
+                0.0
+              ],
+              [
+                "U.rec.mean.7",
+                0.0
+              ],
+              [
+                "U.rec.mean.30",
+                0.0
+              ],
+              [
+                "U.listen.decay.h5",
+                0.0
+              ],
+              [
+                "U.listen.decay.h10",
+                0.0
+              ],
+              [
+                "U.plus.decay.h5",
+                0.0
+              ],
+              [
+                "U.plus.decay.h10",
+                0.0
+              ],
+              [
+                "U.rec.decay.h5",
+                0.0
+              ],
+              [
+                "U.rec.decay.h10",
+                0.0
+              ],
+              [
+                "U.org.decay.h5",
+                0.0
+              ],
+              [
+                "U.org.decay.h10",
+                0.0
+              ],
+              [
+                "U.listen.last.7",
+                0.0
+              ],
+              [
+                "U.plus.last.7",
+                0.0
+              ],
+              [
+                "U.rec.last.7",
+                0.0
+              ],
+              [
+                "U.org.last.7",
+                0.0
+              ],
+              [
+                "U.listen.first.7",
+                0.0
+              ],
+              [
+                "U.plus.first.7",
+                0.0
+              ],
+              [
+                "I.org.cnt.7",
+                0.0
+              ],
+              [
+                "I.org.cnt.30",
+                0.0
+              ],
+              [
+                "I.org.cnt.all",
+                0.0
+              ],
+              [
+                "I.full.cnt.7",
+                0.0
+              ],
+              [
+                "I.full.cnt.30",
+                0.0
+              ],
+              [
+                "I.full.cnt.all",
+                0.0
+              ],
+              [
+                "I.rec.cnt.7",
+                0.0
+              ],
+              [
+                "I.rec.cnt.30",
+                0.0
+              ],
+              [
+                "I.rec.cnt.all",
+                0.0
+              ],
+              [
+                "I.org.mean.7",
+                0.0
+              ],
+              [
+                "I.org.mean.30",
+                0.0
+              ],
+              [
+                "UI.org.cnt.7",
+                0.0
+              ],
+              [
+                "UI.org.cnt.30",
+                0.0
+              ],
+              [
+                "UI.org.cnt.all",
+                0.0
+              ],
+              [
+                "UI.full.cnt.7",
+                0.0
+              ],
+              [
+                "UI.full.cnt.all",
+                0.0
+              ],
+              [
+                "UI.rec.cnt.7",
+                0.0
+              ],
+              [
+                "UI.rec.cnt.all",
+                0.0
+              ],
+              [
+                "UI.plus_org.cnt.7",
+                0.0
+              ],
+              [
+                "UI.plus_org.cnt.all",
+                0.0
+              ],
+              [
+                "UA.org.cnt.7",
+                0.0
+              ],
+              [
+                "UA.org.cnt.all",
+                0.0
+              ],
+              [
+                "UB.org.cnt.7",
+                0.0
+              ],
+              [
+                "UB.org.cnt.all",
+                0.0
+              ],
+              [
+                "A.org.cnt.7",
+                0.0
+              ],
+              [
+                "A.org.cnt.all",
+                0.0
+              ],
+              [
+                "B.org.cnt.7",
+                0.0
+              ],
+              [
+                "B.org.cnt.all",
+                0.0
+              ],
+              [
+                "d:ratio(U.org.cnt.7|U.listen.cnt.7)",
+                0.0
+              ],
+              [
+                "d:ratio(UI.org.cnt.7|U.org.cnt.7)",
+                0.0
+              ]
+            ],
+            "rejected": []
+          }
+        ],
+        "invalid": 0,
+        "duplicates": 0
+      },
+      "oneshot_B_seed0": {
+        "rounds": [
+          {
+            "round": 1,
+            "ndcg": 0.2652477530071927,
+            "n_features": 115,
+            "n_proposed": 115,
+            "n_valid": 107,
+            "accepted": [
+              [
+                "UI.plus.cnt.1",
+                0.0
+              ],
+              [
+                "UI.plus.cnt.3",
+                0.0
+              ],
+              [
+                "UI.plus.cnt.7",
+                0.0
+              ],
+              [
+                "UI.plus.cnt.14",
+                0.0
+              ],
+              [
+                "UI.plus.cnt.30",
+                0.0
+              ],
+              [
+                "UI.listen.mean.7",
+                0.0
+              ],
+              [
+                "UI.listen.mean.14",
+                0.0
+              ],
+              [
+                "UI.listen.sec.7",
+                0.0
+              ],
+              [
+                "UI.listen.sec.14",
+                0.0
+              ],
+              [
+                "UI.listen.cnt.7",
+                0.0
+              ],
+              [
+                "UI.listen.cnt.14",
+                0.0
+              ],
+              [
+                "UI.listen.cnt.30",
+                0.0
+              ],
+              [
+                "UI.listen.last.7",
+                0.0
+              ],
+              [
+                "UI.plus.decay.h3",
+                0.0
+              ],
+              [
+                "U.listen.cnt.1",
+                0.0
+              ],
+              [
+                "U.listen.cnt.3",
+                0.0
+              ],
+              [
+                "U.listen.cnt.7",
+                0.0
+              ],
+              [
+                "U.listen.cnt.14",
+                0.0
+              ],
+              [
+                "U.listen.cnt.30",
+                0.0
+              ],
+              [
+                "U.plus.cnt.7",
+                0.0
+              ],
+              [
+                "U.plus.cnt.14",
+                0.0
+              ],
+              [
+                "U.org.mean.7",
+                0.0
+              ],
+              [
+                "U.org.mean.14",
+                0.0
+              ],
+              [
+                "U.listen.mean.7",
+                0.0
+              ],
+              [
+                "U.listen.mean.14",
+                0.0
+              ],
+              [
+                "U.listen.mean.30",
+                0.0
+              ],
+              [
+                "U.listen.sec.7",
+                0.0
+              ],
+              [
+                "U.listen.last.7",
+                0.0
+              ],
+              [
+                "U.like.cnt.7",
+                0.0
+              ],
+              [
+                "U.plus.decay.h3",
+                0.0
+              ],
+              [
+                "I.listen.cnt.1",
+                0.0
+              ],
+              [
+                "I.listen.cnt.3",
+                0.0
+              ],
+              [
+                "I.listen.cnt.7",
+                0.0
+              ],
+              [
+                "I.listen.cnt.14",
+                0.0
+              ],
+              [
+                "I.plus.cnt.7",
+                0.0
+              ],
+              [
+                "I.org.mean.7",
+                0.0
+              ],
+              [
+                "I.org.mean.14",
+                0.0
+              ],
+              [
+                "I.listen.mean.7",
+                0.0
+              ],
+              [
+                "I.listen.sec.7",
+                0.0
+              ],
+              [
+                "I.listen.last.7",
+                0.0
+              ],
+              [
+                "I.like.cnt.7",
+                0.0
+              ],
+              [
+                "I.plus.decay.h3",
+                0.0
+              ],
+              [
+                "UA.listen.cnt.7",
+                0.0
+              ],
+              [
+                "UA.listen.cnt.14",
+                0.0
+              ],
+              [
+                "UA.plus.cnt.7",
+                0.0
+              ],
+              [
+                "UA.listen.mean.7",
+                0.0
+              ],
+              [
+                "UA.listen.last.7",
+                0.0
+              ],
+              [
+                "UA.like.cnt.7",
+                0.0
+              ],
+              [
+                "UA.plus.decay.h3",
+                0.0
+              ],
+              [
+                "UA.plus.decay.h7",
+                0.0
+              ],
+              [
+                "UB.listen.cnt.7",
+                0.0
+              ],
+              [
+                "UB.listen.cnt.14",
+                0.0
+              ],
+              [
+                "UB.plus.cnt.7",
+                0.0
+              ],
+              [
+                "UB.listen.mean.7",
+                0.0
+              ],
+              [
+                "UB.listen.last.7",
+                0.0
+              ],
+              [
+                "UB.like.cnt.7",
+                0.0
+              ],
+              [
+                "UB.plus.decay.h3",
+                0.0
+              ],
+              [
+                "UB.plus.decay.h7",
+                0.0
+              ],
+              [
+                "A.listen.cnt.7",
+                0.0
+              ],
+              [
+                "A.listen.cnt.14",
+                0.0
+              ],
+              [
+                "A.plus.cnt.7",
+                0.0
+              ],
+              [
+                "A.plus.cnt.14",
+                0.0
+              ],
+              [
+                "A.listen.mean.7",
+                0.0
+              ],
+              [
+                "A.listen.mean.14",
+                0.0
+              ],
+              [
+                "A.listen.last.7",
+                0.0
+              ],
+              [
+                "A.plus.decay.h3",
+                0.0
+              ],
+              [
+                "B.listen.cnt.7",
+                0.0
+              ],
+              [
+                "B.listen.cnt.14",
+                0.0
+              ],
+              [
+                "B.plus.cnt.7",
+                0.0
+              ],
+              [
+                "B.plus.cnt.14",
+                0.0
+              ],
+              [
+                "B.listen.mean.7",
+                0.0
+              ],
+              [
+                "B.listen.mean.14",
+                0.0
+              ],
+              [
+                "B.listen.last.7",
+                0.0
+              ],
+              [
+                "B.plus.decay.h3",
+                0.0
+              ],
+              [
+                "UI.listen.cnt.5",
+                0.0
+              ],
+              [
+                "UI.listen.cnt.10",
+                0.0
+              ],
+              [
+                "UI.plus.cnt.5",
+                0.0
+              ],
+              [
+                "UI.listen.mean.5",
+                0.0
+              ],
+              [
+                "UI.listen.last.14",
+                0.0
+              ],
+              [
+                "UI.plus.decay.h14",
+                0.0
+              ],
+              [
+                "UI.listen.decay.h14",
+                0.0
+              ],
+              [
+                "U.listen.last.14",
+                0.0
+              ],
+              [
+                "U.listen.last.30",
+                0.0
+              ],
+              [
+                "U.plus.cnt.30",
+                0.0
+              ],
+              [
+                "U.plus.decay.h7",
+                0.0
+              ],
+              [
+                "d:ratio(UI.plus.cnt.7|U.plus.cnt.7)",
+                0.0
+              ],
+              [
+                "d:ratio(UI.plus.cnt.14|U.plus.cnt.14)",
+                0.0
+              ],
+              [
+                "d:ratio(I.plus.cnt.7|U.plus.cnt.7)",
+                0.0
+              ],
+              [
+                "d:ratio(A.plus.cnt.7|U.plus.cnt.7)",
+                0.0
+              ],
+              [
+                "d:ratio(B.plus.cnt.7|U.plus.cnt.7)",
+                0.0
+              ],
+              [
+                "d:diff(UI.plus.cnt.7|U.plus.cnt.7)",
+                0.0
+              ],
+              [
+                "d:diff(UI.plus.cnt.14|U.plus.cnt.14)",
+                0.0
+              ],
+              [
+                "d:diff(I.plus.cnt.7|U.plus.cnt.7)",
+                0.0
+              ],
+              [
+                "d:diff(A.plus.cnt.7|U.plus.cnt.7)",
+                0.0
+              ],
+              [
+                "d:urank(UI.plus.decay.h3)",
+                0.0
+              ],
+              [
+                "d:urank(UI.plus.decay.h7)",
+                0.0
+              ],
+              [
+                "d:urank(U.plus.decay.h3)",
+                0.0
+              ],
+              [
+                "d:urank(I.plus.decay.h3)",
+                0.0
+              ],
+              [
+                "d:urank(A.plus.decay.h3)",
+                0.0
+              ],
+              [
+                "d:ratio(UI.listen.mean.7|U.listen.mean.7)",
+                0.0
+              ],
+              [
+                "d:ratio(I.listen.mean.7|U.listen.mean.7)",
+                0.0
+              ],
+              [
+                "d:ratio(A.listen.mean.7|U.listen.mean.7)",
+                0.0
+              ],
+              [
+                "d:diff(UI.listen.mean.7|U.listen.mean.7)",
+                0.0
+              ],
+              [
+                "d:diff(I.listen.mean.7|U.listen.mean.7)",
+                0.0
+              ],
+              [
+                "d:urank(UI.listen.last.7)",
+                0.0
+              ],
+              [
+                "d:urank(I.listen.last.7)",
+                0.0
+              ],
+              [
+                "d:urank(A.listen.last.7)",
+                0.0
+              ]
+            ],
+            "rejected": []
+          }
+        ],
+        "invalid": 7,
+        "duplicates": 1
+      },
+      "oneshot_A_seed1": {
+        "rounds": [
+          {
+            "round": 1,
+            "ndcg": 0.27203228976799676,
+            "n_features": 183,
+            "n_proposed": 81,
+            "n_valid": 74,
+            "accepted": [
+              [
+                "U.full.cnt.7",
+                0.0
+              ],
+              [
+                "U.full.cnt.30",
+                0.0
+              ],
+              [
+                "U.org.cnt.7",
+                0.0
+              ],
+              [
+                "U.org.cnt.30",
+                0.0
+              ],
+              [
+                "U.rec.cnt.1",
+                0.0
+              ],
+              [
+                "U.plus_org.cnt.7",
+                0.0
+              ],
+              [
+                "U.plus_rec.cnt.7",
+                0.0
+              ],
+              [
+                "I.full.cnt.7",
+                0.0
+              ],
+              [
+                "I.full.cnt.30",
+                0.0
+              ],
+              [
+                "I.org.cnt.7",
+                0.0
+              ],
+              [
+                "I.org.cnt.30",
+                0.0
+              ],
+              [
+                "I.plus_org.cnt.7",
+                0.0
+              ],
+              [
+                "I.plus_rec.cnt.7",
+                0.0
+              ],
+              [
+                "I.listen.nuniq.1",
+                0.0
+              ],
+              [
+                "I.listen.nuniq.14",
+                0.0
+              ],
+              [
+                "I.listen.last.5",
+                0.0
+              ],
+              [
+                "I.listen.first.5",
+                0.0
+              ],
+              [
+                "I.listen.decay.h3",
+                0.0
+              ],
+              [
+                "I.plus.decay.h3",
+                0.0
+              ],
+              [
+                "I.plus.decay.h7",
+                0.0
+              ],
+              [
+                "I.plus.decay.h14",
+                0.0
+              ],
+              [
+                "I.skip.decay.h7",
+                0.0
+              ],
+              [
+                "I.like.decay.h7",
+                0.0
+              ],
+              [
+                "UI.plus.last.7",
+                0.0
+              ],
+              [
+                "UI.plus.first.7",
+                0.0
+              ],
+              [
+                "UI.plus.decay.h7",
+                0.0
+              ],
+              [
+                "UI.plus.decay.h14",
+                0.0
+              ],
+              [
+                "UI.skip.last.7",
+                0.0
+              ],
+              [
+                "UI.listen.mean.14",
+                0.0
+              ],
+              [
+                "UI.listen.sec.14",
+                0.0
+              ],
+              [
+                "UI.listen.last.5",
+                0.0
+              ],
+              [
+                "UI.listen.first.5",
+                0.0
+              ],
+              [
+                "UI.listen.decay.h7",
+                0.0
+              ],
+              [
+                "UI.listen.decay.h14",
+                0.0
+              ],
+              [
+                "UI.like.last.7",
+                0.0
+              ],
+              [
+                "UI.dislike.last.7",
+                0.0
+              ],
+              [
+                "UA.plus.last.7",
+                0.0
+              ],
+              [
+                "UA.plus.first.7",
+                0.0
+              ],
+              [
+                "UA.plus.decay.h7",
+                0.0
+              ],
+              [
+                "UA.skip.last.7",
+                0.0
+              ],
+              [
+                "UA.listen.nuniq.14",
+                0.0
+              ],
+              [
+                "UA.listen.mean.14",
+                0.0
+              ],
+              [
+                "UB.plus.last.7",
+                0.0
+              ],
+              [
+                "UB.plus.decay.h7",
+                0.0
+              ],
+              [
+                "A.plus.cnt.14",
+                0.0
+              ],
+              [
+                "A.listen.nuniq.14",
+                0.0
+              ],
+              [
+                "A.listen.last.14",
+                0.0
+              ],
+              [
+                "A.listen.first.14",
+                0.0
+              ],
+              [
+                "A.listen.decay.h7",
+                0.0
+              ],
+              [
+                "B.listen.cnt.7",
+                0.0
+              ],
+              [
+                "B.listen.cnt.30",
+                0.0
+              ],
+              [
+                "B.listen.nuniq.7",
+                0.0
+              ],
+              [
+                "B.listen.nuniq.30",
+                0.0
+              ],
+              [
+                "B.plus.cnt.7",
+                0.0
+              ],
+              [
+                "d:ratio(U.full.cnt.7|U.listen.cnt.7)",
+                0.0
+              ],
+              [
+                "d:ratio(I.full.cnt.7|I.listen.cnt.7)",
+                0.0
+              ],
+              [
+                "d:ratio(I.plus_org.cnt.7|I.plus.cnt.7)",
+                0.0
+              ],
+              [
+                "d:ratio(I.plus_rec.cnt.7|I.plus.cnt.7)",
+                0.0
+              ],
+              [
+                "d:ratio(UA.plus.cnt.7|U.plus.cnt.7)",
+                0.0
+              ],
+              [
+                "d:ratio(UB.plus.cnt.7|U.plus.cnt.7)",
+                0.0
+              ]
+            ],
+            "rejected": []
+          }
+        ],
+        "invalid": 7,
+        "duplicates": 0
+      },
+      "oneshot_B_seed1": {
+        "rounds": [
+          {
+            "round": 1,
+            "ndcg": 0.25685699601747153,
+            "n_features": 96,
+            "n_proposed": 114,
+            "n_valid": 88,
+            "accepted": [
+              [
+                "U.listen.cnt.7",
+                0.0
+              ],
+              [
+                "U.listen.mean.30",
+                0.0
+              ],
+              [
+                "U.plus.cnt.14",
+                0.0
+              ],
+              [
+                "U.skip.cnt.5",
+                0.0
+              ],
+              [
+                "U.full.cnt.3",
+                0.0
+              ],
+              [
+                "U.org.cnt.all",
+                0.0
+              ],
+              [
+                "U.rec.cnt.7",
+                0.0
+              ],
+              [
+                "U.plus.decay.h7",
+                0.0
+              ],
+              [
+                "U.listen.sec.30",
+                0.0
+              ],
+              [
+                "U.listen.last.3",
+                0.0
+              ],
+              [
+                "U.plus.first.7",
+                0.0
+              ],
+              [
+                "I.listen.cnt.7",
+                0.0
+              ],
+              [
+                "I.listen.mean.30",
+                0.0
+              ],
+              [
+                "I.plus.cnt.14",
+                0.0
+              ],
+              [
+                "I.skip.cnt.5",
+                0.0
+              ],
+              [
+                "I.full.cnt.3",
+                0.0
+              ],
+              [
+                "I.org.cnt.all",
+                0.0
+              ],
+              [
+                "I.rec.cnt.7",
+                0.0
+              ],
+              [
+                "I.plus.decay.h7",
+                0.0
+              ],
+              [
+                "I.listen.sec.30",
+                0.0
+              ],
+              [
+                "I.listen.last.3",
+                0.0
+              ],
+              [
+                "I.plus.first.7",
+                0.0
+              ],
+              [
+                "UI.listen.cnt.7",
+                0.0
+              ],
+              [
+                "UI.listen.mean.30",
+                0.0
+              ],
+              [
+                "UI.plus.cnt.14",
+                0.0
+              ],
+              [
+                "UI.skip.cnt.5",
+                0.0
+              ],
+              [
+                "UI.full.cnt.3",
+                0.0
+              ],
+              [
+                "UI.org.cnt.all",
+                0.0
+              ],
+              [
+                "UI.rec.cnt.7",
+                0.0
+              ],
+              [
+                "UI.plus.decay.h7",
+                0.0
+              ],
+              [
+                "UI.listen.sec.30",
+                0.0
+              ],
+              [
+                "UI.listen.last.3",
+                0.0
+              ],
+              [
+                "UI.plus.first.7",
+                0.0
+              ],
+              [
+                "UA.listen.cnt.7",
+                0.0
+              ],
+              [
+                "UA.listen.mean.30",
+                0.0
+              ],
+              [
+                "UA.plus.cnt.14",
+                0.0
+              ],
+              [
+                "UA.org.cnt.all",
+                0.0
+              ],
+              [
+                "UA.rec.cnt.7",
+                0.0
+              ],
+              [
+                "UA.plus.decay.h7",
+                0.0
+              ],
+              [
+                "UA.listen.sec.30",
+                0.0
+              ],
+              [
+                "UA.listen.last.3",
+                0.0
+              ],
+              [
+                "UA.plus.first.7",
+                0.0
+              ],
+              [
+                "UB.listen.cnt.7",
+                0.0
+              ],
+              [
+                "UB.listen.mean.30",
+                0.0
+              ],
+              [
+                "UB.plus.cnt.14",
+                0.0
+              ],
+              [
+                "UB.org.cnt.all",
+                0.0
+              ],
+              [
+                "UB.rec.cnt.7",
+                0.0
+              ],
+              [
+                "UB.plus.decay.h7",
+                0.0
+              ],
+              [
+                "UB.listen.sec.30",
+                0.0
+              ],
+              [
+                "UB.listen.last.3",
+                0.0
+              ],
+              [
+                "UB.plus.first.7",
+                0.0
+              ],
+              [
+                "A.listen.cnt.7",
+                0.0
+              ],
+              [
+                "A.listen.mean.30",
+                0.0
+              ],
+              [
+                "A.plus.cnt.14",
+                0.0
+              ],
+              [
+                "A.org.cnt.all",
+                0.0
+              ],
+              [
+                "A.rec.cnt.7",
+                0.0
+              ],
+              [
+                "A.plus.decay.h7",
+                0.0
+              ],
+              [
+                "A.listen.sec.30",
+                0.0
+              ],
+              [
+                "A.listen.last.3",
+                0.0
+              ],
+              [
+                "A.plus.first.7",
+                0.0
+              ],
+              [
+                "B.listen.cnt.7",
+                0.0
+              ],
+              [
+                "B.listen.mean.30",
+                0.0
+              ],
+              [
+                "B.plus.cnt.14",
+                0.0
+              ],
+              [
+                "B.org.cnt.all",
+                0.0
+              ],
+              [
+                "B.rec.cnt.7",
+                0.0
+              ],
+              [
+                "B.plus.decay.h7",
+                0.0
+              ],
+              [
+                "B.listen.sec.30",
+                0.0
+              ],
+              [
+                "B.listen.last.3",
+                0.0
+              ],
+              [
+                "B.plus.first.7",
+                0.0
+              ],
+              [
+                "d:ratio(UI.plus.cnt.14|U.plus.cnt.14)",
+                0.0
+              ],
+              [
+                "d:ratio(UI.plus.cnt.14|I.plus.cnt.14)",
+                0.0
+              ],
+              [
+                "d:ratio(UA.plus.cnt.14|U.plus.cnt.14)",
+                0.0
+              ],
+              [
+                "d:ratio(UB.plus.cnt.14|U.plus.cnt.14)",
+                0.0
+              ],
+              [
+                "d:ratio(A.plus.cnt.14|U.plus.cnt.14)",
+                0.0
+              ],
+              [
+                "d:ratio(B.plus.cnt.14|U.plus.cnt.14)",
+                0.0
+              ],
+              [
+                "d:ratio(UI.plus.decay.h7|U.plus.decay.h7)",
+                0.0
+              ],
+              [
+                "d:ratio(UI.plus.decay.h7|I.plus.decay.h7)",
+                0.0
+              ],
+              [
+                "d:diff(UI.plus.decay.h7|U.plus.decay.h7)",
+                0.0
+              ],
+              [
+                "d:diff(UI.plus.decay.h7|I.plus.decay.h7)",
+                0.0
+              ],
+              [
+                "d:urank(UI.plus.cnt.7)",
+                0.0
+              ],
+              [
+                "d:urank(UA.plus.cnt.7)",
+                0.0
+              ],
+              [
+                "d:urank(UB.plus.cnt.7)",
+                0.0
+              ],
+              [
+                "d:urank(A.plus.cnt.7)",
+                0.0
+              ],
+              [
+                "d:urank(B.plus.cnt.7)",
+                0.0
+              ],
+              [
+                "d:ratio(U.listen.cnt.30|U.listen.cnt.all)",
+                0.0
+              ],
+              [
+                "d:ratio(I.listen.cnt.30|I.listen.cnt.all)",
+                0.0
+              ],
+              [
+                "d:diff(U.listen.last.3|U.listen.last.all)",
+                0.0
+              ],
+              [
+                "d:diff(I.listen.last.3|I.listen.last.all)",
+                0.0
+              ]
+            ],
+            "rejected": []
+          }
+        ],
+        "invalid": 26,
+        "duplicates": 0
+      },
+      "iterative_A_seed1": {
+        "rounds": [
+          {
+            "round": 1,
+            "ndcg": 0.2700008648269246,
+            "n_features": 126,
+            "n_proposed": 20,
+            "n_valid": 19,
+            "accepted": [
+              [
+                "UI.plus_org.cnt.7",
+                3.9572970810336505e-05
+              ],
+              [
+                "UI.plus.decay.h14",
+                1.5262444116370677e-05
+              ],
+              [
+                "A.full.cnt.30",
+                1.3090822858469187e-05
+              ]
+            ],
+            "rejected": [
+              [
+                "d:diff(U.plus.cnt.30|U.plus_org.cnt.30)",
+                2.505456066365097e-06
+              ],
+              [
+                "UA.full.cnt.7",
+                -1.2645724698889804e-05
+              ],
+              [
+                "UI.org.cnt.30",
+                -1.3954367475116358e-05
+              ],
+              [
+                "U.plus_rec.cnt.7",
+                -2.9203951164846753e-05
+              ],
+              [
+                "I.full.cnt.30",
+                -3.118583736722025e-05
+              ],
+              [
+                "d:ratio(UI.plus_rec.cnt.7|UI.plus.cnt.7)",
+                -3.373664784353525e-05
+              ],
+              [
+                "I.rec.cnt.30",
+                -3.42625943499375e-05
+              ],
+              [
+                "UB.full.cnt.7",
+                -3.545525298043195e-05
+              ],
+              [
+                "UI.full.cnt.7",
+                -3.6006238004926416e-05
+              ],
+              [
+                "d:urank(I.listen.mean.30)",
+                -4.247199659529466e-05
+              ],
+              [
+                "U.full.cnt.30",
+                -4.372409374195363e-05
+              ],
+              [
+                "U.plus_org.cnt.7",
+                -4.8784086624870104e-05
+              ],
+              [
+                "I.org.cnt.7",
+                -5.5636999090280526e-05
+              ],
+              [
+                "U.org.cnt.7",
+                -6.017189339677098e-05
+              ],
+              [
+                "UI.rec.cnt.7",
+                -9.225845786120512e-05
+              ],
+              [
+                "UI.plus_rec.cnt.7",
+                -0.0001094319978166558
+              ]
+            ]
+          },
+          {
+            "round": 2,
+            "ndcg": 0.27210104174179567,
+            "n_features": 128,
+            "n_proposed": 20,
+            "n_valid": 16,
+            "accepted": [
+              [
+                "UI.rec.mean.30",
+                3.7883917586467586e-05
+              ],
+              [
+                "UI.listen.first.14",
+                2.5647558389241265e-05
+              ]
+            ],
+            "rejected": [
+              [
+                "A.listen.cnt.14",
+                -3.3922320346324586e-06
+              ],
+              [
+                "UI.listen.last.14",
+                -7.3311179807633575e-06
+              ],
+              [
+                "UI.plus.last.30",
+                -1.292396002680607e-05
+              ],
+              [
+                "UI.listen.last.7",
+                -2.0684579390750635e-05
+              ],
+              [
+                "UI.rec.mean.7",
+                -2.684589462509379e-05
+              ],
+              [
+                "UI.listen.first.7",
+                -2.8435482671007595e-05
+              ],
+              [
+                "A.plus.cnt.14",
+                -3.1125298009054836e-05
+              ],
+              [
+                "UI.plus_org.decay.h7",
+                -4.1108626556346506e-05
+              ],
+              [
+                "UI.plus.last.7",
+                -4.744000782141988e-05
+              ],
+              [
+                "d:urank(UI.plus_org.cnt.7)",
+                -5.207694139544583e-05
+              ],
+              [
+                "UI.plus_org.cnt.30",
+                -5.627013653775048e-05
+              ],
+              [
+                "d:diff(UI.listen.cnt.30|UI.listen.cnt.7)",
+                -5.991537514105083e-05
+              ],
+              [
+                "UI.rec.cnt.30",
+                -6.268734994560599e-05
+              ],
+              [
+                "d:ratio(UI.plus_org.cnt.7|U.plus.cnt.7)",
+                -0.00010773359115076597
+              ]
+            ]
+          },
+          {
+            "round": 3,
+            "ndcg": 0.2728453729726425,
+            "n_features": 129,
+            "n_proposed": 20,
+            "n_valid": 17,
+            "accepted": [
+              [
+                "UA.listen.mean.14",
+                2.3258829784683632e-05
+              ]
+            ],
+            "rejected": [
+              [
+                "UI.undislike.cnt.7",
+                0.0
+              ],
+              [
+                "UI.like.cnt.7",
+                -1.4549196306529177e-05
+              ],
+              [
+                "UI.plus.decay.h7",
+                -1.555770069541773e-05
+              ],
+              [
+                "UI.plus.last.14",
+                -2.477490566887841e-05
+              ],
+              [
+                "UI.unlike.cnt.7",
+                -3.326664333155871e-05
+              ],
+              [
+                "UA.plus.decay.h7",
+                -3.360262006504855e-05
+              ],
+              [
+                "UI.dislike.cnt.7",
+                -3.710284775509942e-05
+              ],
+              [
+                "UI.plus_org.decay.h14",
+                -3.813333677338271e-05
+              ],
+              [
+                "A.listen.mean.30",
+                -4.03281879087225e-05
+              ],
+              [
+                "UI.skip.last.14",
+                -5.4041908900792635e-05
+              ],
+              [
+                "UI.plus_rec.cnt.14",
+                -5.6935421362092065e-05
+              ],
+              [
+                "UI.listen.mean.14",
+                -5.9490960329394715e-05
+              ],
+              [
+                "UI.rec.cnt.14",
+                -6.141455705607757e-05
+              ],
+              [
+                "UI.skip.decay.h14",
+                -7.591624676406283e-05
+              ],
+              [
+                "UI.org.cnt.14",
+                -7.718115734461906e-05
+              ],
+              [
+                "UB.listen.nuniq.30",
+                -8.278417316487374e-05
+              ]
+            ]
+          },
+          {
+            "round": 4,
+            "ndcg": 0.2770582071648546,
+            "n_features": 132,
+            "n_proposed": 20,
+            "n_valid": 12,
+            "accepted": [
+              [
+                "U.plus.decay.h3",
+                9.487753970446877e-05
+              ],
+              [
+                "UI.rec.last.all",
+                4.985881092881006e-05
+              ],
+              [
+                "UI.like.last.all",
+                3.209546773866312e-05
+              ]
+            ],
+            "rejected": [
+              [
+                "UA.plus.decay.h14",
+                -2.2557566527442452e-05
+              ],
+              [
+                "UI.plus_rec.decay.h7",
+                -2.8569470466005553e-05
+              ],
+              [
+                "UI.dislike.last.all",
+                -3.1498880920355354e-05
+              ],
+              [
+                "A.listen.nuniq.14",
+                -4.726129897691944e-05
+              ],
+              [
+                "UB.plus.decay.h14",
+                -4.989043187331177e-05
+              ],
+              [
+                "I.plus.cnt.14",
+                -5.246879668757698e-05
+              ],
+              [
+                "I.plus.decay.h7",
+                -5.377705301812252e-05
+              ],
+              [
+                "U.org.cnt.14",
+                -7.701075642524424e-05
+              ],
+              [
+                "A.listen.mean.14",
+                -9.736296246626308e-05
+              ]
+            ]
+          },
+          {
+            "round": 5,
+            "ndcg": 0.2754482932439061,
+            "n_features": 134,
+            "n_proposed": 20,
+            "n_valid": 12,
+            "accepted": [
+              [
+                "A.full.cnt.all",
+                0.00013913421272745974
+              ],
+              [
+                "A.plus.cnt.all",
+                7.28993959148716e-05
+              ]
+            ],
+            "rejected": [
+              [
+                "B.listen.nuniq.30",
+                6.992522395693479e-06
+              ],
+              [
+                "UI.rec.mean.14",
+                -7.431647130295982e-06
+              ],
+              [
+                "B.listen.cnt.30",
+                -9.66237031635453e-06
+              ],
+              [
+                "A.full.cnt.7",
+                -1.872742989872389e-05
+              ],
+              [
+                "UI.dislike.last.7",
+                -3.203178248842309e-05
+              ],
+              [
+                "UI.rec.last.14",
+                -3.4746774831395655e-05
+              ],
+              [
+                "UI.rec.mean.all",
+                -3.509728420841851e-05
+              ],
+              [
+                "UI.rec.last.7",
+                -5.703742630450148e-05
+              ],
+              [
+                "UI.rec.cnt.all",
+                -8.054455638431546e-05
+              ],
+              [
+                "UI.plus_rec.cnt.all",
+                -8.140432513958906e-05
+              ]
+            ]
+          },
+          {
+            "round": 6,
+            "ndcg": 0.2773284053678565,
+            "n_features": 135,
+            "n_proposed": 20,
+            "n_valid": 13,
+            "accepted": [
+              [
+                "U.org.last.all",
+                2.0894998516901575e-05
+              ]
+            ],
+            "rejected": [
+              [
+                "U.org.mean.7",
+                -1.6237889405745776e-05
+              ],
+              [
+                "UI.plus.decay.h5",
+                -2.5538243137918082e-05
+              ],
+              [
+                "d:diff(I.listen.cnt.7|I.listen.cnt.30)",
+                -3.7113362414076256e-05
+              ],
+              [
+                "UI.rec.mean.5",
+                -4.542678492922003e-05
+              ],
+              [
+                "UI.plus_rec.decay.h14",
+                -4.6137358340359036e-05
+              ],
+              [
+                "d:ratio(UI.plus.cnt.7|UI.listen.cnt.7)",
+                -4.843111036301195e-05
+              ],
+              [
+                "d:urank(I.plus.cnt.7)",
+                -5.433334971613468e-05
+              ],
+              [
+                "UI.plus_org.cnt.all",
+                -7.457057705731462e-05
+              ],
+              [
+                "UI.plus_org.cnt.14",
+                -7.5171459050144e-05
+              ],
+              [
+                "UI.plus_rec.cnt.30",
+                -7.680033774060124e-05
+              ],
+              [
+                "I.listen.nuniq.14",
+                -7.734622868951768e-05
+              ],
+              [
+                "I.full.cnt.7",
+                -8.420914298784554e-05
+              ]
+            ]
+          }
+        ],
+        "invalid": 12,
+        "duplicates": 19
+      },
+      "iterative_B_seed1": {
+        "rounds": [
+          {
+            "round": 1,
+            "ndcg": 0.2535536669804649,
+            "n_features": 25,
+            "n_proposed": 25,
+            "n_valid": 25,
+            "accepted": [
+              [
+                "UI.plus.decay.h14",
+                0.0009357360740769038
+              ],
+              [
+                "UI.plus_org.decay.h7",
+                0.0008883263047572143
+              ],
+              [
+                "UI.listen.sec.30",
+                0.0008240545186064263
+              ],
+              [
+                "d:urank(UI.plus.cnt.7)",
+                0.0006888599606681145
+              ],
+              [
+                "UA.listen.nuniq.60",
+                0.00032766655466598404
+              ],
+              [
+                "UI.skip.cnt.3",
+                0.00025404527986228054
+              ],
+              [
+                "d:urank(UI.plus.decay.h14)",
+                0.00023629548372552933
+              ],
+              [
+                "UI.plus_rec.cnt.7",
+                0.00022062607455283767
+              ],
+              [
+                "UI.plus.cnt.7",
+                0.00020720382066835574
+              ],
+              [
+                "d:ratio(UA.listen.nuniq.all|U.listen.cnt.30)",
+                0.00018249233588685243
+              ],
+              [
+                "UI.listen.last.5",
+                0.00016337730800480843
+              ],
+              [
+                "d:diff(UI.listen.sec.30|U.listen.cnt.30)",
+                0.00011717876580566444
+              ],
+              [
+                "d:ratio(UI.plus.cnt.7|U.listen.cnt.30)",
+                0.00010764093498430438
+              ],
+              [
+                "UA.like.cnt.all",
+                9.62064492839032e-05
+              ],
+              [
+                "I.listen.mean.21",
+                7.775453254477149e-05
+              ],
+              [
+                "UI.full.cnt.14",
+                7.221364321707835e-05
+              ],
+              [
+                "UB.dislike.cnt.10",
+                1.8680155316641578e-05
+              ]
+            ],
+            "rejected": [
+              [
+                "U.plus.cnt.7",
+                -2.1420152600953868e-05
+              ],
+              [
+                "B.listen.nuniq.all",
+                -3.0019097907757475e-05
+              ],
+              [
+                "A.listen.mean.7",
+                -0.0001198936386719307
+              ],
+              [
+                "A.rec.cnt.30",
+                -0.00015179605103016192
+              ],
+              [
+                "B.org.cnt.14",
+                -0.00017443107068870756
+              ],
+              [
+                "d:diff(I.full.cnt.14|I.listen.cnt.14)",
+                -0.0002597685172432418
+              ],
+              [
+                "U.listen.cnt.30",
+                -0.0002808799563403519
+              ],
+              [
+                "I.full.cnt.14",
+                -0.00028792587514805956
+              ]
+            ]
+          },
+          {
+            "round": 2,
+            "ndcg": 0.25690355224418254,
+            "n_features": 29,
+            "n_proposed": 25,
+            "n_valid": 25,
+            "accepted": [
+              [
+                "U.like.cnt.30",
+                0.00019408039569085433
+              ],
+              [
+                "U.listen.last.1",
+                0.00013701009019398414
+              ],
+              [
+                "A.listen.nuniq.60",
+                0.0001266534781924622
+              ],
+              [
+                "UB.like.cnt.30",
+                1.0159727700492782e-05
+              ]
+            ],
+            "rejected": [
+              [
+                "UA.dislike.cnt.14",
+                -2.0556383495295982e-05
+              ],
+              [
+                "A.listen.cnt.30",
+                -4.780209266794233e-05
+              ],
+              [
+                "B.listen.mean.14",
+                -5.9212761315124984e-05
+              ],
+              [
+                "U.plus_org.cnt.7",
+                -6.105867784275687e-05
+              ],
+              [
+                "U.dislike.cnt.5",
+                -8.101769270055237e-05
+              ],
+              [
+                "I.listen.mean.7",
+                -9.644151699655934e-05
+              ],
+              [
+                "A.listen.mean.14",
+                -0.00010911279397129992
+              ],
+              [
+                "U.listen.decay.h3",
+                -0.0001590697722383405
+              ],
+              [
+                "U.listen.mean.7",
+                -0.00016711735087812651
+              ],
+              [
+                "A.plus.cnt.14",
+                -0.0001783307163447101
+              ],
+              [
+                "I.plus_rec.cnt.14",
+                -0.00020425899242412782
+              ],
+              [
+                "U.listen.cnt.14",
+                -0.0002174536817100836
+              ],
+              [
+                "B.plus.cnt.14",
+                -0.00023638312797832906
+              ],
+              [
+                "B.listen.cnt.30",
+                -0.00023746006892019778
+              ],
+              [
+                "B.rec.cnt.7",
+                -0.0002396552592998369
+              ],
+              [
+                "I.listen.nuniq.30",
+                -0.00024252508034250386
+              ],
+              [
+                "A.rec.cnt.7",
+                -0.00024377394440869282
+              ],
+              [
+                "I.plus.cnt.14",
+                -0.00024668710506459135
+              ],
+              [
+                "I.full.cnt.7",
+                -0.0002856334361817092
+              ],
+              [
+                "I.plus_org.cnt.7",
+                -0.000286207097555391
+              ],
+              [
+                "I.listen.sec.14",
+                -0.0003302441150848656
+              ]
+            ]
+          },
+          {
+            "round": 3,
+            "ndcg": 0.26232987592580326,
+            "n_features": 32,
+            "n_proposed": 25,
+            "n_valid": 22,
+            "accepted": [
+              [
+                "UI.like.cnt.7",
+                2.8251789127908822e-05
+              ],
+              [
+                "UI.listen.mean.30",
+                1.8206481494975613e-05
+              ],
+              [
+                "UI.plus_rec.decay.h5",
+                1.7943182781116063e-05
+              ]
+            ],
+            "rejected": [
+              [
+                "UI.dislike.cnt.5",
+                0.0
+              ],
+              [
+                "UI.undislike.cnt.3",
+                0.0
+              ],
+              [
+                "UI.unlike.cnt.3",
+                -2.740490023489528e-05
+              ],
+              [
+                "UI.skip.cnt.7",
+                -5.470008789856817e-05
+              ],
+              [
+                "UI.org.cnt.30",
+                -5.6788397651552636e-05
+              ],
+              [
+                "UI.rec.mean.7",
+                -5.794248367366195e-05
+              ],
+              [
+                "UI.full.cnt.7",
+                -5.9408853814391094e-05
+              ],
+              [
+                "UI.org.mean.14",
+                -6.0795630305726656e-05
+              ],
+              [
+                "d:ratio(UI.plus.cnt.7|UI.listen.cnt.7)",
+                -6.676803814331667e-05
+              ],
+              [
+                "UI.plus_org.cnt.14",
+                -6.685889685983937e-05
+              ],
+              [
+                "UI.skip.last.3",
+                -6.902710589459793e-05
+              ],
+              [
+                "UI.rec.cnt.30",
+                -7.097177695414292e-05
+              ],
+              [
+                "UI.plus.decay.h7",
+                -7.443106001103761e-05
+              ],
+              [
+                "UI.plus_rec.cnt.14",
+                -7.547485267925258e-05
+              ],
+              [
+                "UI.listen.decay.h7",
+                -7.897564860845363e-05
+              ],
+              [
+                "UI.plus_org.cnt.5",
+                -9.038299761626734e-05
+              ],
+              [
+                "UI.plus.cnt.14",
+                -0.00010704238086520212
+              ],
+              [
+                "UI.listen.cnt.14",
+                -0.0001171029038437299
+              ],
+              [
+                "UI.listen.mean.7",
+                -0.00012012177589318385
+              ]
+            ]
+          },
+          {
+            "round": 4,
+            "ndcg": 0.2679769378917117,
+            "n_features": 41,
+            "n_proposed": 25,
+            "n_valid": 16,
+            "accepted": [
+              [
+                "UA.listen.last.7",
+                0.00016249035815590895
+              ],
+              [
+                "UA.listen.mean.14",
+                8.751618067204259e-05
+              ],
+              [
+                "UA.listen.cnt.30",
+                5.7379694274134474e-05
+              ],
+              [
+                "UA.plus_rec.cnt.14",
+                4.600932985240891e-05
+              ],
+              [
+                "UA.plus.cnt.30",
+                4.4394036433054174e-05
+              ],
+              [
+                "UB.like.decay.h7",
+                3.5219985778184304e-05
+              ],
+              [
+                "U.listen.cnt.7",
+                3.521029610986659e-05
+              ],
+              [
+                "UB.listen.cnt.14",
+                2.9464943297669022e-05
+              ],
+              [
+                "UI.plus_rec.decay.h14",
+                1.3729463965495015e-05
+              ]
+            ],
+            "rejected": [
+              [
+                "UB.plus.cnt.7",
+                4.936266696980995e-06
+              ],
+              [
+                "UI.org.mean.30",
+                -3.23603395847305e-05
+              ],
+              [
+                "UI.plus_org.decay.h14",
+                -4.832473143467908e-05
+              ],
+              [
+                "UI.org.cnt.14",
+                -4.869291406492393e-05
+              ],
+              [
+                "UI.full.cnt.30",
+                -5.09872910168796e-05
+              ],
+              [
+                "U.plus.cnt.14",
+                -8.092094856354537e-05
+              ],
+              [
+                "UI.listen.mean.14",
+                -8.350245596103201e-05
+              ]
+            ]
+          },
+          {
+            "round": 5,
+            "ndcg": 0.2679769378917117,
+            "n_features": 41,
+            "n_proposed": 25,
+            "n_valid": 22,
+            "accepted": [],
+            "rejected": [
+              [
+                "UI.unlike.cnt.7",
+                6.709146358918616e-06
+              ],
+              [
+                "B.listen.mean.30",
+                5.880717569184402e-06
+              ],
+              [
+                "UI.undislike.cnt.5",
+                0.0
+              ],
+              [
+                "d:urank(UA.listen.mean.30)",
+                -8.390224949528235e-07
+              ],
+              [
+                "UI.plus.first.7",
+                -3.294329973840826e-06
+              ],
+              [
+                "UB.dislike.decay.h14",
+                -1.4757620470512434e-05
+              ],
+              [
+                "UB.dislike.cnt.30",
+                -1.5266001304192756e-05
+              ],
+              [
+                "UI.plus.decay.h3",
+                -2.2747914839388317e-05
+              ],
+              [
+                "A.listen.nuniq.30",
+                -2.6619766693131153e-05
+              ],
+              [
+                "UA.plus_org.cnt.14",
+                -4.083889942324559e-05
+              ],
+              [
+                "UI.listen.sec.7",
+                -4.727080239658177e-05
+              ],
+              [
+                "A.plus.cnt.30",
+                -4.7431886321391836e-05
+              ],
+              [
+                "A.listen.mean.30",
+                -6.0242191081166796e-05
+              ],
+              [
+                "UI.full.cnt.3",
+                -6.707512508466462e-05
+              ],
+              [
+                "UA.plus_org.decay.h7",
+                -7.711688202582945e-05
+              ],
+              [
+                "d:ratio(UI.plus.cnt.14|U.listen.cnt.14)",
+                -7.98638872842039e-05
+              ],
+              [
+                "UI.plus_org.decay.h5",
+                -8.02745618044276e-05
+              ],
+              [
+                "d:ratio(UA.listen.nuniq.60|U.listen.cnt.60)",
+                -9.501301665448825e-05
+              ],
+              [
+                "UI.rec.cnt.7",
+                -0.00010942833704302712
+              ],
+              [
+                "UI.plus_rec.cnt.10",
+                -0.000144672020960801
+              ],
+              [
+                "B.listen.nuniq.60",
+                -0.00015652092369897175
+              ],
+              [
+                "d:diff(UA.plus.cnt.30|U.plus.cnt.30)",
+                -0.00019723323278036942
+              ]
+            ]
+          },
+          {
+            "round": 6,
+            "ndcg": 0.26864907160555307,
+            "n_features": 44,
+            "n_proposed": 25,
+            "n_valid": 17,
+            "accepted": [
+              [
+                "A.like.cnt.all",
+                0.00018844734063300228
+              ],
+              [
+                "UI.plus.first.14",
+                3.826148313126887e-05
+              ],
+              [
+                "UI.unlike.cnt.14",
+                1.8769191444639732e-05
+              ]
+            ],
+            "rejected": [
+              [
+                "UA.listen.mean.30",
+                1.917737063594771e-06
+              ],
+              [
+                "UA.plus_org.cnt.7",
+                -1.5773003687713505e-05
+              ],
+              [
+                "UI.org.cnt.7",
+                -2.8922661740482525e-05
+              ],
+              [
+                "UI.dislike.cnt.7",
+                -3.15267262085972e-05
+              ],
+              [
+                "UI.plus_rec.decay.h3",
+                -3.438021383556089e-05
+              ],
+              [
+                "UI.plus.last.7",
+                -3.7275902507516445e-05
+              ],
+              [
+                "UA.listen.sec.30",
+                -3.897368878738594e-05
+              ],
+              [
+                "UA.like.cnt.7",
+                -4.2915603064547225e-05
+              ],
+              [
+                "UA.plus.cnt.14",
+                -4.428638906880944e-05
+              ],
+              [
+                "UI.like.last.7",
+                -4.800837106067046e-05
+              ],
+              [
+                "UA.listen.nuniq.30",
+                -5.843713709813292e-05
+              ],
+              [
+                "UI.plus_org.cnt.7",
+                -5.9835592746998456e-05
+              ],
+              [
+                "UA.listen.nuniq.14",
+                -6.831850701968789e-05
+              ],
+              [
+                "UI.rec.cnt.14",
+                -7.713237199422074e-05
+              ]
+            ]
+          },
+          {
+            "round": 7,
+            "ndcg": 0.2682667788178,
+            "n_features": 45,
+            "n_proposed": 25,
+            "n_valid": 11,
+            "accepted": [
+              [
+                "d:urank(UA.plus.cnt.30)",
+                1.2248227934275047e-05
+              ]
+            ],
+            "rejected": [
+              [
+                "UI.dislike.cnt.14",
+                -2.348918864245042e-05
+              ],
+              [
+                "UI.plus_rec.cnt.30",
+                -2.9612880586060708e-05
+              ],
+              [
+                "UI.unlike.cnt.5",
+                -3.328254470497116e-05
+              ],
+              [
+                "UI.plus_rec.decay.h7",
+                -4.035093979898319e-05
+              ],
+              [
+                "UI.like.last.14",
+                -4.400132437393234e-05
+              ],
+              [
+                "UI.org.mean.7",
+                -6.205525214961205e-05
+              ],
+              [
+                "UI.plus.cnt.30",
+                -6.572215108721635e-05
+              ],
+              [
+                "d:ratio(UI.plus.cnt.14|U.listen.cnt.30)",
+                -8.021056291401818e-05
+              ],
+              [
+                "d:diff(UA.listen.cnt.30|U.listen.cnt.30)",
+                -9.567677087971016e-05
+              ],
+              [
+                "UI.plus.cnt.5",
+                -9.867793369486288e-05
+              ]
+            ]
+          },
+          {
+            "round": 8,
+            "ndcg": 0.2679728851553577,
+            "n_features": 47,
+            "n_proposed": 25,
+            "n_valid": 14,
+            "accepted": [
+              [
+                "d:urank(UB.like.cnt.14)",
+                0.00019767537043596795
+              ],
+              [
+                "UA.listen.cnt.60",
+                2.7184759433057648e-05
+              ]
+            ],
+            "rejected": [
+              [
+                "UA.plus_rec.cnt.30",
+                -7.519600877359256e-06
+              ],
+              [
+                "UA.listen.nuniq.all",
+                -9.740747043185394e-06
+              ],
+              [
+                "UB.dislike.cnt.14",
+                -2.5880315376175522e-05
+              ],
+              [
+                "UI.listen.cnt.30",
+                -3.598223137307732e-05
+              ],
+              [
+                "UB.listen.sec.30",
+                -4.0765081638527434e-05
+              ],
+              [
+                "UB.like.cnt.14",
+                -4.727322038128312e-05
+              ],
+              [
+                "UI.plus.last.5",
+                -4.788534523733623e-05
+              ],
+              [
+                "I.listen.mean.14",
+                -5.22961283939416e-05
+              ],
+              [
+                "UI.plus.first.5",
+                -6.571659827309118e-05
+              ],
+              [
+                "I.listen.nuniq.60",
+                -0.00021125642403180267
+              ],
+              [
+                "I.listen.cnt.30",
+                -0.0002308474640254632
+              ],
+              [
+                "d:ratio(I.plus.cnt.14|U.listen.cnt.30)",
+                -0.00024955176961094505
+              ]
+            ]
+          }
+        ],
+        "invalid": 6,
+        "duplicates": 42
+      },
+      "oneshot_A_seed2": {
+        "rounds": [
+          {
+            "round": 1,
+            "ndcg": 0.2734827400619314,
+            "n_features": 183,
+            "n_proposed": 60,
+            "n_valid": 60,
+            "accepted": [
+              [
+                "U.listen.cnt.5",
+                0.0
+              ],
+              [
+                "U.plus.cnt.5",
+                0.0
+              ],
+              [
+                "U.skip.cnt.5",
+                0.0
+              ],
+              [
+                "U.rec.cnt.5",
+                0.0
+              ],
+              [
+                "U.listen.mean.5",
+                0.0
+              ],
+              [
+                "U.listen.sec.5",
+                0.0
+              ],
+              [
+                "U.listen.nuniq.5",
+                0.0
+              ],
+              [
+                "U.listen.last.5",
+                0.0
+              ],
+              [
+                "U.listen.first.5",
+                0.0
+              ],
+              [
+                "U.org.cnt.7",
+                0.0
+              ],
+              [
+                "U.org.cnt.30",
+                0.0
+              ],
+              [
+                "U.plus_org.cnt.7",
+                0.0
+              ],
+              [
+                "U.plus_org.cnt.30",
+                0.0
+              ],
+              [
+                "U.plus_rec.cnt.7",
+                0.0
+              ],
+              [
+                "U.plus_rec.cnt.30",
+                0.0
+              ],
+              [
+                "U.like.cnt.7",
+                0.0
+              ],
+              [
+                "U.dislike.cnt.7",
+                0.0
+              ],
+              [
+                "U.unlike.cnt.7",
+                0.0
+              ],
+              [
+                "U.undislike.cnt.7",
+                0.0
+              ],
+              [
+                "I.listen.cnt.5",
+                0.0
+              ],
+              [
+                "I.plus.cnt.5",
+                0.0
+              ],
+              [
+                "I.skip.cnt.5",
+                0.0
+              ],
+              [
+                "I.org.cnt.7",
+                0.0
+              ],
+              [
+                "I.plus_org.cnt.7",
+                0.0
+              ],
+              [
+                "I.plus_rec.cnt.7",
+                0.0
+              ],
+              [
+                "I.listen.mean.5",
+                0.0
+              ],
+              [
+                "I.listen.sec.5",
+                0.0
+              ],
+              [
+                "I.listen.nuniq.5",
+                0.0
+              ],
+              [
+                "I.listen.last.5",
+                0.0
+              ],
+              [
+                "I.listen.first.5",
+                0.0
+              ],
+              [
+                "UI.plus.decay.h5",
+                0.0
+              ],
+              [
+                "UI.plus.decay.h10",
+                0.0
+              ],
+              [
+                "UI.plus.decay.h14",
+                0.0
+              ],
+              [
+                "UI.listen.decay.h5",
+                0.0
+              ],
+              [
+                "UI.listen.decay.h10",
+                0.0
+              ],
+              [
+                "UI.listen.decay.h14",
+                0.0
+              ],
+              [
+                "UI.skip.decay.h5",
+                0.0
+              ],
+              [
+                "UI.skip.decay.h10",
+                0.0
+              ],
+              [
+                "UI.org.cnt.7",
+                0.0
+              ],
+              [
+                "UI.org.cnt.30",
+                0.0
+              ],
+              [
+                "UI.full.cnt.7",
+                0.0
+              ],
+              [
+                "UI.full.cnt.30",
+                0.0
+              ],
+              [
+                "UI.plus_org.cnt.7",
+                0.0
+              ],
+              [
+                "UI.plus_org.cnt.30",
+                0.0
+              ],
+              [
+                "UI.plus_rec.cnt.7",
+                0.0
+              ],
+              [
+                "UI.plus_rec.cnt.30",
+                0.0
+              ],
+              [
+                "d:ratio(UI.plus.cnt.5|U.plus.cnt.5)",
+                0.0
+              ],
+              [
+                "d:ratio(UI.skip.cnt.5|U.skip.cnt.5)",
+                0.0
+              ],
+              [
+                "d:ratio(UI.listen.mean.5|U.listen.mean.5)",
+                0.0
+              ],
+              [
+                "d:diff(UI.plus.cnt.5|UI.listen.cnt.5)",
+                0.0
+              ],
+              [
+                "d:diff(UI.skip.cnt.5|UI.listen.cnt.5)",
+                0.0
+              ],
+              [
+                "d:urank(UI.plus.cnt.5)",
+                0.0
+              ],
+              [
+                "d:urank(UI.listen.last.5)",
+                0.0
+              ],
+              [
+                "d:urank(UI.plus.decay.h5)",
+                0.0
+              ],
+              [
+                "UA.plus.decay.h5",
+                0.0
+              ],
+              [
+                "UA.plus.decay.h10",
+                0.0
+              ],
+              [
+                "UA.listen.decay.h5",
+                0.0
+              ],
+              [
+                "UB.plus.decay.h5",
+                0.0
+              ],
+              [
+                "B.listen.cnt.7",
+                0.0
+              ],
+              [
+                "B.listen.cnt.30",
+                0.0
+              ]
+            ],
+            "rejected": []
+          }
+        ],
+        "invalid": 0,
+        "duplicates": 0
+      },
+      "oneshot_B_seed2": {
+        "rounds": [
+          {
+            "round": 1,
+            "ndcg": 0.26526364692880067,
+            "n_features": 123,
+            "n_proposed": 115,
+            "n_valid": 115,
+            "accepted": [
+              [
+                "U.listen.cnt.7",
+                0.0
+              ],
+              [
+                "U.listen.mean.30",
+                0.0
+              ],
+              [
+                "U.listen.sec.14",
+                0.0
+              ],
+              [
+                "U.listen.last.3",
+                0.0
+              ],
+              [
+                "U.listen.first.5",
+                0.0
+              ],
+              [
+                "U.listen.decay.h7",
+                0.0
+              ],
+              [
+                "U.listen.nuniq.30",
+                0.0
+              ],
+              [
+                "U.org.cnt.7",
+                0.0
+              ],
+              [
+                "U.org.mean.14",
+                0.0
+              ],
+              [
+                "U.org.last.5",
+                0.0
+              ],
+              [
+                "U.rec.cnt.7",
+                0.0
+              ],
+              [
+                "U.rec.mean.14",
+                0.0
+              ],
+              [
+                "U.rec.last.3",
+                0.0
+              ],
+              [
+                "U.plus.cnt.7",
+                0.0
+              ],
+              [
+                "U.plus.last.3",
+                0.0
+              ],
+              [
+                "U.skip.cnt.7",
+                0.0
+              ],
+              [
+                "U.full.cnt.7",
+                0.0
+              ],
+              [
+                "U.like.cnt.7",
+                0.0
+              ],
+              [
+                "U.dislike.cnt.7",
+                0.0
+              ],
+              [
+                "U.unlike.cnt.7",
+                0.0
+              ],
+              [
+                "U.undislike.cnt.7",
+                0.0
+              ],
+              [
+                "I.listen.cnt.7",
+                0.0
+              ],
+              [
+                "I.listen.mean.30",
+                0.0
+              ],
+              [
+                "I.listen.sec.14",
+                0.0
+              ],
+              [
+                "I.listen.last.3",
+                0.0
+              ],
+              [
+                "I.listen.first.5",
+                0.0
+              ],
+              [
+                "I.listen.decay.h7",
+                0.0
+              ],
+              [
+                "I.listen.nuniq.30",
+                0.0
+              ],
+              [
+                "I.org.cnt.7",
+                0.0
+              ],
+              [
+                "I.org.mean.14",
+                0.0
+              ],
+              [
+                "I.rec.cnt.7",
+                0.0
+              ],
+              [
+                "I.rec.mean.14",
+                0.0
+              ],
+              [
+                "I.plus.cnt.7",
+                0.0
+              ],
+              [
+                "I.plus.last.3",
+                0.0
+              ],
+              [
+                "I.skip.cnt.7",
+                0.0
+              ],
+              [
+                "I.full.cnt.7",
+                0.0
+              ],
+              [
+                "I.like.cnt.7",
+                0.0
+              ],
+              [
+                "I.dislike.cnt.7",
+                0.0
+              ],
+              [
+                "UI.listen.cnt.7",
+                0.0
+              ],
+              [
+                "UI.listen.mean.30",
+                0.0
+              ],
+              [
+                "UI.listen.sec.14",
+                0.0
+              ],
+              [
+                "UI.listen.last.3",
+                0.0
+              ],
+              [
+                "UI.listen.first.5",
+                0.0
+              ],
+              [
+                "UI.listen.decay.h7",
+                0.0
+              ],
+              [
+                "UI.plus.cnt.7",
+                0.0
+              ],
+              [
+                "UI.plus.last.3",
+                0.0
+              ],
+              [
+                "UI.skip.cnt.7",
+                0.0
+              ],
+              [
+                "UI.full.cnt.7",
+                0.0
+              ],
+              [
+                "UI.org.cnt.7",
+                0.0
+              ],
+              [
+                "UI.rec.cnt.7",
+                0.0
+              ],
+              [
+                "UI.like.cnt.7",
+                0.0
+              ],
+              [
+                "UI.dislike.cnt.7",
+                0.0
+              ],
+              [
+                "UI.unlike.cnt.7",
+                0.0
+              ],
+              [
+                "UI.undislike.cnt.7",
+                0.0
+              ],
+              [
+                "UA.listen.cnt.7",
+                0.0
+              ],
+              [
+                "UA.listen.mean.30",
+                0.0
+              ],
+              [
+                "UA.listen.last.3",
+                0.0
+              ],
+              [
+                "UA.listen.nuniq.30",
+                0.0
+              ],
+              [
+                "UA.plus.cnt.7",
+                0.0
+              ],
+              [
+                "UA.plus.last.3",
+                0.0
+              ],
+              [
+                "UA.org.cnt.7",
+                0.0
+              ],
+              [
+                "UA.rec.cnt.7",
+                0.0
+              ],
+              [
+                "UA.like.cnt.7",
+                0.0
+              ],
+              [
+                "UB.listen.cnt.7",
+                0.0
+              ],
+              [
+                "UB.listen.mean.30",
+                0.0
+              ],
+              [
+                "UB.listen.last.3",
+                0.0
+              ],
+              [
+                "UB.listen.nuniq.30",
+                0.0
+              ],
+              [
+                "UB.plus.cnt.7",
+                0.0
+              ],
+              [
+                "UB.plus.last.3",
+                0.0
+              ],
+              [
+                "UB.org.cnt.7",
+                0.0
+              ],
+              [
+                "UB.rec.cnt.7",
+                0.0
+              ],
+              [
+                "A.listen.cnt.7",
+                0.0
+              ],
+              [
+                "A.listen.mean.30",
+                0.0
+              ],
+              [
+                "A.listen.nuniq.30",
+                0.0
+              ],
+              [
+                "A.plus.cnt.7",
+                0.0
+              ],
+              [
+                "A.org.cnt.7",
+                0.0
+              ],
+              [
+                "A.rec.cnt.7",
+                0.0
+              ],
+              [
+                "A.like.cnt.7",
+                0.0
+              ],
+              [
+                "B.listen.cnt.7",
+                0.0
+              ],
+              [
+                "B.listen.mean.30",
+                0.0
+              ],
+              [
+                "B.listen.nuniq.30",
+                0.0
+              ],
+              [
+                "B.plus.cnt.7",
+                0.0
+              ],
+              [
+                "B.org.cnt.7",
+                0.0
+              ],
+              [
+                "B.rec.cnt.7",
+                0.0
+              ],
+              [
+                "B.like.cnt.7",
+                0.0
+              ],
+              [
+                "d:ratio(UI.plus.cnt.7|U.plus.cnt.7)",
+                0.0
+              ],
+              [
+                "d:ratio(UI.listen.cnt.7|U.listen.cnt.7)",
+                0.0
+              ],
+              [
+                "d:ratio(I.plus.cnt.7|U.plus.cnt.7)",
+                0.0
+              ],
+              [
+                "d:ratio(I.listen.cnt.7|U.listen.cnt.7)",
+                0.0
+              ],
+              [
+                "d:ratio(A.plus.cnt.7|U.plus.cnt.7)",
+                0.0
+              ],
+              [
+                "d:ratio(B.plus.cnt.7|U.plus.cnt.7)",
+                0.0
+              ],
+              [
+                "d:diff(UI.plus.cnt.7|U.plus.cnt.7)",
+                0.0
+              ],
+              [
+                "d:diff(UI.listen.cnt.7|U.listen.cnt.7)",
+                0.0
+              ],
+              [
+                "d:diff(I.plus.cnt.7|U.plus.cnt.7)",
+                0.0
+              ],
+              [
+                "d:diff(I.listen.cnt.7|U.listen.cnt.7)",
+                0.0
+              ],
+              [
+                "d:diff(A.plus.cnt.7|U.plus.cnt.7)",
+                0.0
+              ],
+              [
+                "d:diff(B.plus.cnt.7|U.plus.cnt.7)",
+                0.0
+              ],
+              [
+                "d:urank(UI.plus.cnt.7)",
+                0.0
+              ],
+              [
+                "d:urank(UI.listen.cnt.7)",
+                0.0
+              ],
+              [
+                "d:urank(I.plus.cnt.7)",
+                0.0
+              ],
+              [
+                "d:urank(I.listen.cnt.7)",
+                0.0
+              ],
+              [
+                "d:urank(A.plus.cnt.7)",
+                0.0
+              ],
+              [
+                "d:urank(B.plus.cnt.7)",
+                0.0
+              ],
+              [
+                "d:ratio(UI.plus.cnt.14|U.plus.cnt.14)",
+                0.0
+              ],
+              [
+                "d:ratio(UI.listen.mean.30|U.listen.mean.30)",
+                0.0
+              ],
+              [
+                "d:diff(UI.listen.mean.30|U.listen.mean.30)",
+                0.0
+              ],
+              [
+                "d:diff(UI.plus.last.3|U.plus.last.3)",
+                0.0
+              ],
+              [
+                "d:ratio(UA.plus.cnt.7|U.plus.cnt.7)",
+                0.0
+              ],
+              [
+                "d:diff(UA.plus.cnt.7|U.plus.cnt.7)",
+                0.0
+              ],
+              [
+                "d:urank(UA.plus.cnt.7)",
+                0.0
+              ],
+              [
+                "d:ratio(UB.plus.cnt.7|U.plus.cnt.7)",
+                0.0
+              ],
+              [
+                "d:diff(UB.plus.cnt.7|U.plus.cnt.7)",
+                0.0
+              ],
+              [
+                "d:urank(UB.plus.cnt.7)",
+                0.0
+              ],
+              [
+                "d:ratio(UI.listen.decay.h7|U.listen.decay.h7)",
+                0.0
+              ],
+              [
+                "d:diff(UI.listen.decay.h7|U.listen.decay.h7)",
+                0.0
+              ]
+            ],
+            "rejected": []
+          }
+        ],
+        "invalid": 0,
+        "duplicates": 0
+      },
+      "iterative_A_seed2": {
+        "rounds": [
+          {
+            "round": 1,
+            "ndcg": 0.26995664175461237,
+            "n_features": 125,
+            "n_proposed": 20,
+            "n_valid": 20,
+            "accepted": [
+              [
+                "U.listen.last.7",
+                3.453743455281155e-05
+              ],
+              [
+                "UI.plus.decay.h14",
+                1.5262444116370677e-05
+              ]
+            ],
+            "rejected": [
+              [
+                "UA.plus.nuniq.7",
+                4.356644058373105e-06
+              ],
+              [
+                "UI.plus.decay.h3",
+                -9.738536658393526e-06
+              ],
+              [
+                "UI.plus.decay.h7",
+                -1.2144496181809572e-05
+              ],
+              [
+                "UI.plus.last.30",
+                -1.5936543994093944e-05
+              ],
+              [
+                "UI.listen.decay.h14",
+                -1.750080473000848e-05
+              ],
+              [
+                "UI.listen.last.7",
+                -2.3696428183839213e-05
+              ],
+              [
+                "UA.plus.nuniq.30",
+                -3.0115582246775796e-05
+              ],
+              [
+                "UI.dislike.last.all",
+                -3.314399092069209e-05
+              ],
+              [
+                "UI.listen.first.7",
+                -3.6455673634055996e-05
+              ],
+              [
+                "UI.listen.decay.h7",
+                -3.654260956040267e-05
+              ],
+              [
+                "UI.listen.decay.h3",
+                -4.2253865116664846e-05
+              ],
+              [
+                "UI.plus.last.7",
+                -4.526551807182422e-05
+              ],
+              [
+                "d:ratio(UI.plus.decay.h7|U.plus.decay.h7)",
+                -5.5679661665086755e-05
+              ],
+              [
+                "I.plus.decay.h7",
+                -5.992931698467485e-05
+              ],
+              [
+                "I.listen.last.7",
+                -6.430831354661826e-05
+              ],
+              [
+                "U.plus.decay.h14",
+                -7.829833822300958e-05
+              ],
+              [
+                "U.plus.decay.h7",
+                -8.52702192316035e-05
+              ],
+              [
+                "UI.skip.last.all",
+                -0.00012156494771231596
+              ]
+            ]
+          },
+          {
+            "round": 2,
+            "ndcg": 0.2728887820427939,
+            "n_features": 130,
+            "n_proposed": 20,
+            "n_valid": 18,
+            "accepted": [
+              [
+                "UI.org.cnt.7",
+                7.742964881651826e-05
+              ],
+              [
+                "U.listen.decay.h5",
+                4.8644615608217645e-05
+              ],
+              [
+                "U.plus.decay.h5",
+                4.678782604428111e-05
+              ],
+              [
+                "UI.listen.first.14",
+                3.9133483122233415e-05
+              ],
+              [
+                "B.listen.nuniq.14",
+                1.5920486009957102e-05
+              ]
+            ],
+            "rejected": [
+              [
+                "B.listen.cnt.14",
+                5.910411543852412e-06
+              ],
+              [
+                "UI.listen.last.14",
+                -3.408445190977716e-06
+              ],
+              [
+                "A.listen.cnt.14",
+                -6.793049137948648e-06
+              ],
+              [
+                "UB.plus.last.30",
+                -1.3262102604799653e-05
+              ],
+              [
+                "UI.dislike.last.30",
+                -1.4648862652816286e-05
+              ],
+              [
+                "UI.full.cnt.7",
+                -3.0244932612721875e-05
+              ],
+              [
+                "d:ratio(UI.plus.cnt.14|U.plus.cnt.14)",
+                -3.477585083441759e-05
+              ],
+              [
+                "UA.plus.decay.h5",
+                -3.594383597169126e-05
+              ],
+              [
+                "A.listen.nuniq.14",
+                -4.6202417696816767e-05
+              ],
+              [
+                "I.full.cnt.7",
+                -6.785470762488144e-05
+              ],
+              [
+                "UA.listen.nuniq.14",
+                -6.908302923921972e-05
+              ],
+              [
+                "UB.listen.nuniq.30",
+                -8.524931937556324e-05
+              ],
+              [
+                "U.full.cnt.7",
+                -0.00013909076658938369
+              ]
+            ]
+          },
+          {
+            "round": 3,
+            "ndcg": 0.2708293707842287,
+            "n_features": 131,
+            "n_proposed": 20,
+            "n_valid": 18,
+            "accepted": [
+              [
+                "d:ratio(U.plus.cnt.14|U.listen.cnt.14)",
+                1.4617752193468725e-05
+              ]
+            ],
+            "rejected": [
+              [
+                "U.listen.decay.h7",
+                8.224644657689462e-06
+              ],
+              [
+                "U.listen.last.14",
+                2.830704022377395e-06
+              ],
+              [
+                "U.listen.mean.14",
+                -3.160164566279322e-06
+              ],
+              [
+                "UI.like.cnt.7",
+                -7.108728087068528e-06
+              ],
+              [
+                "d:urank(UI.plus.cnt.14)",
+                -1.5203918767470181e-05
+              ],
+              [
+                "UI.plus.last.14",
+                -2.2239720112005035e-05
+              ],
+              [
+                "UI.dislike.cnt.14",
+                -2.906219208939631e-05
+              ],
+              [
+                "UI.unlike.cnt.7",
+                -2.974447167297667e-05
+              ],
+              [
+                "UI.listen.sec.7",
+                -4.081379136525176e-05
+              ],
+              [
+                "UI.listen.decay.h10",
+                -5.790332777008689e-05
+              ],
+              [
+                "I.plus.cnt.14",
+                -6.63348884555881e-05
+              ],
+              [
+                "UI.listen.mean.7",
+                -7.902007854512783e-05
+              ],
+              [
+                "UI.org.cnt.14",
+                -7.989223290735814e-05
+              ],
+              [
+                "I.listen.cnt.14",
+                -8.504925167907018e-05
+              ],
+              [
+                "U.listen.cnt.14",
+                -9.731646497038171e-05
+              ],
+              [
+                "U.plus.cnt.14",
+                -9.910657902714726e-05
+              ],
+              [
+                "U.listen.nuniq.14",
+                -0.00019349863926190758
+              ]
+            ]
+          },
+          {
+            "round": 4,
+            "ndcg": 0.2715571750381592,
+            "n_features": 133,
+            "n_proposed": 20,
+            "n_valid": 15,
+            "accepted": [
+              [
+                "UA.listen.mean.14",
+                4.5070910014932686e-05
+              ],
+              [
+                "U.plus_rec.cnt.7",
+                2.63507200195523e-05
+              ]
+            ],
+            "rejected": [
+              [
+                "UI.listen.decay.h21",
+                4.936746085371091e-06
+              ],
+              [
+                "UI.listen.last.21",
+                1.900892151379674e-06
+              ],
+              [
+                "UI.undislike.cnt.7",
+                0.0
+              ],
+              [
+                "UI.plus.decay.h10",
+                -3.241849290597232e-06
+              ],
+              [
+                "U.plus_org.cnt.7",
+                -1.0063980856261923e-05
+              ],
+              [
+                "UB.listen.cnt.14",
+                -1.1329422743316941e-05
+              ],
+              [
+                "UA.plus.cnt.14",
+                -2.058652823030971e-05
+              ],
+              [
+                "d:ratio(UI.plus.cnt.14|UI.listen.cnt.14)",
+                -2.935274467461002e-05
+              ],
+              [
+                "A.plus.cnt.14",
+                -3.0973806365602874e-05
+              ],
+              [
+                "UI.listen.mean.14",
+                -3.666501814955647e-05
+              ],
+              [
+                "UI.full.cnt.14",
+                -3.892715572975658e-05
+              ],
+              [
+                "UI.rec.cnt.14",
+                -4.383258365309173e-05
+              ],
+              [
+                "UI.plus.cnt.5",
+                -7.793443759260277e-05
+              ]
+            ]
+          },
+          {
+            "round": 5,
+            "ndcg": 0.2724128897902149,
+            "n_features": 134,
+            "n_proposed": 20,
+            "n_valid": 12,
+            "accepted": [
+              [
+                "d:diff(UI.listen.last.all|UI.listen.first.all)",
+                8.022464017901076e-05
+              ]
+            ],
+            "rejected": [
+              [
+                "UI.unlike.cnt.30",
+                -2.2613735027210424e-05
+              ],
+              [
+                "I.full.cnt.30",
+                -2.2967355328529226e-05
+              ],
+              [
+                "UI.dislike.last.7",
+                -2.9861451367796388e-05
+              ],
+              [
+                "UI.plus_rec.cnt.14",
+                -3.7848858034705835e-05
+              ],
+              [
+                "UI.full.cnt.30",
+                -4.340406851036094e-05
+              ],
+              [
+                "UI.plus_org.cnt.7",
+                -5.3487942920038556e-05
+              ],
+              [
+                "I.plus_org.cnt.7",
+                -5.371232979214935e-05
+              ],
+              [
+                "I.full.cnt.14",
+                -6.871265613761501e-05
+              ],
+              [
+                "I.plus_rec.cnt.7",
+                -8.225877370918178e-05
+              ],
+              [
+                "I.unlike.cnt.30",
+                -8.247213320841662e-05
+              ],
+              [
+                "d:ratio(UI.plus_org.cnt.7|U.plus.cnt.7)",
+                -0.00013943488346190858
+              ]
+            ]
+          },
+          {
+            "round": 6,
+            "ndcg": 0.2706815838195081,
+            "n_features": 135,
+            "n_proposed": 20,
+            "n_valid": 9,
+            "accepted": [
+              [
+                "I.listen.nuniq.all",
+                2.18294464839619e-05
+              ]
+            ],
+            "rejected": [
+              [
+                "U.plus_org.cnt.14",
+                4.995577477268087e-06
+              ],
+              [
+                "U.rec.cnt.14",
+                -2.8860427643551123e-06
+              ],
+              [
+                "UI.plus.decay.h5",
+                -2.390596901677422e-05
+              ],
+              [
+                "I.listen.mean.all",
+                -3.113306545218797e-05
+              ],
+              [
+                "I.rec.cnt.30",
+                -4.747757572576283e-05
+              ],
+              [
+                "UI.plus_org.cnt.14",
+                -5.797025711781756e-05
+              ],
+              [
+                "U.org.cnt.7",
+                -5.9135472088106544e-05
+              ],
+              [
+                "I.rec.cnt.7",
+                -7.169162673176244e-05
+              ]
+            ]
+          }
+        ],
+        "invalid": 2,
+        "duplicates": 26
+      },
+      "iterative_B_seed2": {
+        "rounds": [
+          {
+            "round": 1,
+            "ndcg": 0.24865167554906822,
+            "n_features": 25,
+            "n_proposed": 25,
+            "n_valid": 25,
+            "accepted": [
+              [
+                "UI.plus.decay.h7",
+                0.0010968549759845514
+              ],
+              [
+                "UI.plus.decay.h14",
+                0.0009357360740769038
+              ],
+              [
+                "UI.listen.mean.30",
+                0.0008909218897346638
+              ],
+              [
+                "UI.listen.sec.30",
+                0.0008240545186064263
+              ],
+              [
+                "d:ratio(UI.plus.cnt.7|U.plus.cnt.7)",
+                0.0007890122605341554
+              ],
+              [
+                "UI.full.cnt.30",
+                0.0006746049315638214
+              ],
+              [
+                "UB.listen.cnt.14",
+                0.0003061754192885402
+              ],
+              [
+                "UI.skip.cnt.7",
+                0.00027149353873559545
+              ],
+              [
+                "UI.plus.cnt.7",
+                0.00020720382066835574
+              ],
+              [
+                "d:urank(UI.listen.mean.14)",
+                0.00019150404508702645
+              ],
+              [
+                "UA.plus.cnt.7",
+                0.00018677014683607385
+              ],
+              [
+                "UA.listen.cnt.14",
+                0.00018369488126707134
+              ],
+              [
+                "UI.listen.last.7",
+                0.00014455152721290498
+              ],
+              [
+                "UI.listen.cnt.14",
+                0.0001000169891770264
+              ],
+              [
+                "U.like.cnt.30",
+                9.126745214302345e-05
+              ],
+              [
+                "U.dislike.cnt.30",
+                3.1380977241701746e-05
+              ],
+              [
+                "I.listen.mean.14",
+                3.0473342127718128e-05
+              ]
+            ],
+            "rejected": [
+              [
+                "A.listen.cnt.30",
+                -0.0001064162774530586
+              ],
+              [
+                "U.plus.cnt.14",
+                -0.00018950071242429534
+              ],
+              [
+                "B.listen.cnt.30",
+                -0.00024047450245828772
+              ],
+              [
+                "I.listen.cnt.30",
+                -0.00024660501582213223
+              ],
+              [
+                "I.plus.cnt.14",
+                -0.00025052594703711684
+              ],
+              [
+                "A.plus.cnt.14",
+                -0.00025210799435412823
+              ],
+              [
+                "U.listen.cnt.30",
+                -0.0002808799563403519
+              ],
+              [
+                "I.full.cnt.7",
+                -0.0003055280747802369
+              ]
+            ]
+          },
+          {
+            "round": 2,
+            "ndcg": 0.26391214842486443,
+            "n_features": 32,
+            "n_proposed": 25,
+            "n_valid": 24,
+            "accepted": [
+              [
+                "UI.like.cnt.7",
+                0.00047182150246841137
+              ],
+              [
+                "UI.plus_org.cnt.14",
+                0.00031384703619891097
+              ],
+              [
+                "UI.org.cnt.30",
+                0.0001953433406257088
+              ],
+              [
+                "UI.org.mean.30",
+                0.00018604998039745135
+              ],
+              [
+                "UI.listen.first.30",
+                8.1705663588727e-05
+              ],
+              [
+                "UI.listen.last.14",
+                6.207536256702673e-05
+              ],
+              [
+                "UI.plus.decay.h3",
+                1.4444172046906845e-05
+              ]
+            ],
+            "rejected": [
+              [
+                "UI.listen.mean.60",
+                -7.441581615641457e-07
+              ],
+              [
+                "UI.unlike.cnt.30",
+                -1.611828241487867e-05
+              ],
+              [
+                "UI.listen.sec.7",
+                -1.976280316948187e-05
+              ],
+              [
+                "UI.dislike.cnt.7",
+                -2.1483652664577857e-05
+              ],
+              [
+                "UI.plus.decay.h5",
+                -2.244609873705561e-05
+              ],
+              [
+                "UI.listen.mean.14",
+                -2.3908997704463752e-05
+              ],
+              [
+                "UI.undislike.cnt.30",
+                -2.9479164415646686e-05
+              ],
+              [
+                "UI.listen.cnt.7",
+                -4.271920857668032e-05
+              ],
+              [
+                "UI.full.cnt.7",
+                -4.7568096301409124e-05
+              ],
+              [
+                "UI.listen.sec.14",
+                -5.1577389839185805e-05
+              ],
+              [
+                "UI.plus.cnt.14",
+                -5.3350554357373126e-05
+              ],
+              [
+                "UI.listen.mean.7",
+                -6.35771461061918e-05
+              ],
+              [
+                "d:diff(UI.listen.mean.30|U.listen.mean.30)",
+                -7.458841276203332e-05
+              ],
+              [
+                "d:ratio(UI.plus.cnt.14|U.plus.cnt.14)",
+                -8.051478015008717e-05
+              ],
+              [
+                "UI.rec.mean.30",
+                -0.0001256011755299269
+              ],
+              [
+                "UI.plus_rec.cnt.14",
+                -0.00019069103592486703
+              ],
+              [
+                "UI.rec.cnt.30",
+                -0.0002093952923503395
+              ]
+            ]
+          },
+          {
+            "round": 3,
+            "ndcg": 0.26391931367981786,
+            "n_features": 33,
+            "n_proposed": 25,
+            "n_valid": 20,
+            "accepted": [
+              [
+                "UI.listen.cnt.60",
+                6.52858719133731e-05
+              ]
+            ],
+            "rejected": [
+              [
+                "UI.like.cnt.14",
+                5.350690096633803e-06
+              ],
+              [
+                "UI.unlike.cnt.14",
+                5.025120202117872e-06
+              ],
+              [
+                "UI.listen.last.30",
+                1.8163507120583233e-07
+              ],
+              [
+                "UI.undislike.cnt.14",
+                0.0
+              ],
+              [
+                "UI.org.decay.h7",
+                -2.497350768793094e-06
+              ],
+              [
+                "UI.dislike.cnt.14",
+                -1.256127553667108e-05
+              ],
+              [
+                "UI.skip.cnt.30",
+                -1.564818892257902e-05
+              ],
+              [
+                "UI.listen.first.14",
+                -1.8410436129739916e-05
+              ],
+              [
+                "UI.skip.cnt.14",
+                -2.6443674156773067e-05
+              ],
+              [
+                "UI.listen.cnt.30",
+                -2.69204294309211e-05
+              ],
+              [
+                "UI.listen.decay.h7",
+                -3.491427631024946e-05
+              ],
+              [
+                "UI.plus_org.cnt.7",
+                -4.986285976507632e-05
+              ],
+              [
+                "UI.full.cnt.14",
+                -5.022565717385796e-05
+              ],
+              [
+                "UI.plus.cnt.30",
+                -5.7311259527126346e-05
+              ],
+              [
+                "UI.rec.cnt.14",
+                -5.7353622163441864e-05
+              ],
+              [
+                "UI.plus_org.cnt.30",
+                -6.22518538227479e-05
+              ],
+              [
+                "d:ratio(UI.plus.cnt.14|U.like.cnt.30)",
+                -7.798192497598944e-05
+              ],
+              [
+                "UI.plus_rec.cnt.7",
+                -8.50971317540028e-05
+              ],
+              [
+                "d:diff(UI.listen.mean.14|U.like.cnt.30)",
+                -0.00012841882596401066
+              ]
+            ]
+          },
+          {
+            "round": 4,
+            "ndcg": 0.2662843554100329,
+            "n_features": 38,
+            "n_proposed": 25,
+            "n_valid": 16,
+            "accepted": [
+              [
+                "UI.like.decay.h7",
+                0.00017291302218239157
+              ],
+              [
+                "UI.plus_org.decay.h3",
+                3.0096541351276596e-05
+              ],
+              [
+                "UI.listen.cnt.21",
+                1.4834498220678283e-05
+              ],
+              [
+                "UI.unlike.cnt.7",
+                1.4798675170929476e-05
+              ],
+              [
+                "UI.plus_org.decay.h7",
+                1.4503441556873442e-05
+              ]
+            ],
+            "rejected": [
+              [
+                "UI.listen.first.7",
+                8.94707757093105e-06
+              ],
+              [
+                "UI.dislike.cnt.30",
+                7.128152059332482e-06
+              ],
+              [
+                "d:diff(UI.listen.cnt.14|UI.listen.cnt.7)",
+                6.141680301940955e-06
+              ],
+              [
+                "d:ratio(UI.like.cnt.7|U.like.cnt.7)",
+                4.712071595802669e-06
+              ],
+              [
+                "UI.undislike.cnt.7",
+                0.0
+              ],
+              [
+                "UI.org.cnt.7",
+                -6.539497513030623e-06
+              ],
+              [
+                "UI.plus_rec.decay.h7",
+                -8.366074279814173e-06
+              ],
+              [
+                "UI.listen.cnt.45",
+                -1.2774735615089794e-05
+              ],
+              [
+                "UI.full.decay.h14",
+                -1.7627510383283473e-05
+              ],
+              [
+                "UI.full.decay.h7",
+                -2.29837616623485e-05
+              ],
+              [
+                "UI.org.cnt.14",
+                -2.8163354806015617e-05
+              ]
+            ]
+          },
+          {
+            "round": 5,
+            "ndcg": 0.26487935994900713,
+            "n_features": 39,
+            "n_proposed": 25,
+            "n_valid": 7,
+            "accepted": [
+              [
+                "d:urank(UI.plus_rec.cnt.14)",
+                3.020205235640394e-05
+              ]
+            ],
+            "rejected": [
+              [
+                "d:ratio(UI.like.cnt.7|U.like.cnt.30)",
+                9.272137963367566e-06
+              ],
+              [
+                "UI.full.decay.h3",
+                -7.93706169638364e-06
+              ],
+              [
+                "UI.dislike.last.7",
+                -1.8470950642363038e-05
+              ],
+              [
+                "UI.listen.decay.h3",
+                -3.404046766197766e-05
+              ],
+              [
+                "UI.like.last.7",
+                -3.707702091920728e-05
+              ],
+              [
+                "UI.org.last.7",
+                -5.4133597245042964e-05
+              ]
+            ]
+          },
+          {
+            "round": 6,
+            "ndcg": 0.26580753335284646,
+            "n_features": 40,
+            "n_proposed": 25,
+            "n_valid": 21,
+            "accepted": [
+              [
+                "B.listen.mean.30",
+                1.4210367354328124e-05
+              ]
+            ],
+            "rejected": [
+              [
+                "UI.plus_rec.decay.h5",
+                -3.4743568087802768e-06
+              ],
+              [
+                "UI.dislike.decay.h14",
+                -1.6848231656541035e-05
+              ],
+              [
+                "UI.unlike.decay.h14",
+                -1.8851169277439572e-05
+              ],
+              [
+                "d:urank(I.listen.cnt.14)",
+                -2.9807637242418306e-05
+              ],
+              [
+                "UB.plus.cnt.7",
+                -3.400235025724507e-05
+              ],
+              [
+                "d:urank(A.plus.cnt.14)",
+                -3.759297057681632e-05
+              ],
+              [
+                "A.plus.cnt.7",
+                -4.21071033319953e-05
+              ],
+              [
+                "UI.plus_org.cnt.21",
+                -4.452101379839868e-05
+              ],
+              [
+                "UI.full.decay.h5",
+                -4.4728363568447005e-05
+              ],
+              [
+                "d:diff(UI.listen.mean.30|UI.listen.mean.14)",
+                -4.5292931881157905e-05
+              ],
+              [
+                "A.listen.cnt.14",
+                -4.957417160977862e-05
+              ],
+              [
+                "d:ratio(UI.plus_rec.cnt.7|U.plus.cnt.7)",
+                -5.889614438939206e-05
+              ],
+              [
+                "UI.like.decay.h14",
+                -6.530385212197287e-05
+              ],
+              [
+                "UI.rec.cnt.7",
+                -7.731081046052912e-05
+              ],
+              [
+                "A.listen.mean.30",
+                -7.843588953154734e-05
+              ],
+              [
+                "UA.plus_org.cnt.14",
+                -8.544591046452665e-05
+              ],
+              [
+                "B.listen.cnt.14",
+                -0.0002368738984532548
+              ],
+              [
+                "I.listen.nuniq.30",
+                -0.0002609840205280711
+              ],
+              [
+                "B.plus.cnt.7",
+                -0.00026311363460199133
+              ],
+              [
+                "U.listen.nuniq.30",
+                -0.00039205174898426787
+              ]
+            ]
+          },
+          {
+            "round": 7,
+            "ndcg": 0.26596072619402406,
+            "n_features": 41,
+            "n_proposed": 25,
+            "n_valid": 12,
+            "accepted": [
+              [
+                "d:ratio(UI.listen.cnt.30|U.listen.cnt.30)",
+                3.644221412257842e-05
+              ]
+            ],
+            "rejected": [
+              [
+                "A.like.cnt.30",
+                6.343418728099737e-06
+              ],
+              [
+                "UB.listen.mean.60",
+                4.063228581735467e-06
+              ],
+              [
+                "UA.like.cnt.14",
+                -7.784665128074408e-07
+              ],
+              [
+                "d:diff(UI.plus.cnt.14|UI.plus.cnt.7)",
+                -1.4269962605450992e-06
+              ],
+              [
+                "UI.dislike.last.30",
+                -1.7735345790581558e-06
+              ],
+              [
+                "UI.unlike.decay.h5",
+                -9.357367080353729e-06
+              ],
+              [
+                "A.listen.cnt.7",
+                -9.56468030910429e-06
+              ],
+              [
+                "UA.plus.decay.h5",
+                -3.134129210269343e-05
+              ],
+              [
+                "UI.skip.last.14",
+                -3.6843668175218225e-05
+              ],
+              [
+                "UI.listen.cnt.5",
+                -6.200051853136324e-05
+              ],
+              [
+                "B.plus.cnt.14",
+                -0.00021294380489755849
+              ]
+            ]
+          },
+          {
+            "round": 8,
+            "ndcg": 0.2666417767923007,
+            "n_features": 42,
+            "n_proposed": 25,
+            "n_valid": 10,
+            "accepted": [
+              [
+                "A.plus.cnt.30",
+                2.088970958774583e-05
+              ]
+            ],
+            "rejected": [
+              [
+                "d:ratio(UI.plus_rec.cnt.14|U.plus.cnt.14)",
+                -1.162303223903316e-05
+              ],
+              [
+                "d:urank(I.plus.cnt.30)",
+                -3.234081480021911e-05
+              ],
+              [
+                "UB.like.cnt.7",
+                -4.8166698887769366e-05
+              ],
+              [
+                "UI.skip.last.7",
+                -5.4833492810407725e-05
+              ],
+              [
+                "UB.plus.cnt.14",
+                -7.330965015592272e-05
+              ],
+              [
+                "UA.like.decay.h7",
+                -0.00010761038223905395
+              ],
+              [
+                "B.plus.cnt.30",
+                -0.00011880022344851193
+              ],
+              [
+                "UI.skip.decay.h14",
+                -0.00016377554381147297
+              ],
+              [
+                "B.like.cnt.30",
+                -0.0002055440968809219
+              ]
+            ]
+          }
+        ],
+        "invalid": 14,
+        "duplicates": 51
+      }
+    },
+    "llm_usage": {
+      "seed0_oneshot": {
+        "calls": 2,
+        "tokens_in": 3241,
+        "tokens_out": 10571,
+        "seconds": 28.85849905014038,
+        "by_source": {
+          "cloud-1": 2
+        }
+      },
+      "seed1_oneshot": {
+        "calls": 2,
+        "tokens_in": 3241,
+        "tokens_out": 5907,
+        "seconds": 16.67428755760193,
+        "by_source": {
+          "cloud-1": 2
+        }
+      },
+      "seed1_iterative": {
+        "calls": 14,
+        "tokens_in": 30328,
+        "tokens_out": 27309,
+        "seconds": 115.07811284065247,
+        "by_source": {
+          "cloud-1": 14
+        }
+      },
+      "seed2_oneshot": {
+        "calls": 2,
+        "tokens_in": 3241,
+        "tokens_out": 7891,
+        "seconds": 31.083099126815796,
+        "by_source": {
+          "cloud-1": 2
+        }
+      },
+      "seed2_iterative": {
+        "calls": 14,
+        "tokens_in": 30120,
+        "tokens_out": 27741,
+        "seconds": 104.14767527580261,
+        "by_source": {
+          "cloud-1": 14
+        }
+      }
+    },
+    "selection_cost": {
+      "fits": 28,
+      "fit_seconds": 148.3,
+      "boost_evals": 468,
+      "boost_seconds": 199.4
+    },
+    "proxy_cost": {
+      "fits": 45,
+      "fit_seconds": 647.5,
+      "load_seconds": 345.6
+    }
+  }
+}

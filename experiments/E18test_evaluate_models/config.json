@@ -1,0 +1,73 @@
+{
+  "split": "test",
+  "days": [
+    293,
+    294,
+    295,
+    296,
+    297,
+    298,
+    299
+  ],
+  "sets": [
+    "manual",
+    "A1_A",
+    "A1_B",
+    "A2_A",
+    "A2_B",
+    "A3_A",
+    "A3_B",
+    "A4",
+    "A5_A",
+    "A5_B",
+    "H_als",
+    "H_gcn",
+    "H_both"
+  ],
+  "extra": {
+    "SEQ": "experiments/E15_sequence_final/per_group_test.npz"
+  },
+  "n_boot": 1000,
+  "pairs": [
+    [
+      "A2_A",
+      "A1_A"
+    ],
+    [
+      "A2_B",
+      "A1_B"
+    ],
+    [
+      "A2_A",
+      "A3_A"
+    ],
+    [
+      "A2_B",
+      "A3_B"
+    ],
+    [
+      "A2_A",
+      "A5_A"
+    ],
+    [
+      "A2_B",
+      "A5_B"
+    ],
+    [
+      "A2_A",
+      "A4"
+    ],
+    [
+      "A2_B",
+      "A2_A"
+    ],
+    [
+      "A1_B",
+      "A1_A"
+    ],
+    [
+      "H_als",
+      "H_gcn"
+    ]
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "model": "gpt-oss:120b",
+  "seed": 0,
+  "scenarios": {
+    "A": {
+      "max_total": 60,
+      "rounds": 6,
+      "per_round": 20
+    },
+    "B": {
+      "max_total": 115,
+      "rounds": 8,
+      "per_round": 25
+    }
+  },
+  "user_frac": 0.2
+}

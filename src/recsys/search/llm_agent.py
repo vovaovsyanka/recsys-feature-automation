@@ -62,12 +62,14 @@ TASK = """Данные и задача.
 
 def parse_specs(text: str) -> list[str]:
     match = re.search(r"\{.*\}", text, re.S)
-    if not match:
-        return []
     try:
-        payload = json.loads(match.group(0))
+        payload = json.loads(match.group(0)) if match else None
     except json.JSONDecodeError:
-        return []
+        payload = None
+    if payload is None:
+        # ответ оборван по лимиту токенов (в E14 так потерялся весь ответ oneshot для сценария B): берём закрытые строки списка
+        start = text.find('"features"')
+        return re.findall(r'"([^"\n]+)"', text[start:])[1:] if start >= 0 else []
     out = []
     for item in payload.get("features") or payload.get("specs") or []:
         if isinstance(item, dict):
@@ -129,7 +131,7 @@ def run_agent(px: Proxy, base: list[str], client: LLMClient, cost: S.Cost, mode:
         if n_ask <= 0:
             break
         prompt = build_prompt(current, run.rounds if mode == "iterative" else [], n_ask)
-        reply = client.chat(SYSTEM, prompt)
+        reply = client.chat(SYSTEM, prompt, max_tokens=12000 if mode == "oneshot" else 4000)   # модель тратит токены на рассуждение
         proposed = parse_specs(reply.text)
         valid = []
         for spec in proposed:
