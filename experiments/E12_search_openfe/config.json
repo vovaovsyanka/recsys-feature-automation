@@ -1,0 +1,8 @@
+{
+  "user_frac": 0.2,
+  "q": 3,
+  "stage2_keep": 300,
+  "val_sub": 0.25,
+  "k_augment": 60,
+  "k_replace": 115
+}

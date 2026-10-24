@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "id": "E15",
+    "name": "sequence_extra",
+    "title": "Модель над историей событий: вариант extra",
+    "status": "ok",
+    "started_utc": "2026-10-23T08:14:59+00:00",
+    "finished_utc": "2026-10-23T08:24:44+00:00",
+    "wall_seconds": 585.85,
+    "cpu_seconds_process": 595.02,
+    "peak_rss_gb": 5.4,
+    "stages": [
+      {
+        "stage": "load_history",
+        "wall_seconds": 5.16,
+        "cpu_seconds": 28.34,
+        "rss_gb_after": 5.4
+      },
+      {
+        "stage": "load_groups",
+        "wall_seconds": 5.85,
+        "cpu_seconds": 9.14,
+        "rss_gb_after": 4.46
+      },
+      {
+        "stage": "эпоха 0",
+        "wall_seconds": 172.83,
+        "cpu_seconds": 166.77,
+        "rss_gb_after": 5.2
+      },
+      {
+        "stage": "val после эпохи 0",
+        "wall_seconds": 18.41,
+        "cpu_seconds": 17.94,
+        "rss_gb_after": 5.22
+      },
+      {
+        "stage": "эпоха 1",
+        "wall_seconds": 172.13,
+        "cpu_seconds": 167.72,
+        "rss_gb_after": 5.17
+      },
+      {
+        "stage": "val после эпохи 1",
+        "wall_seconds": 18.57,
+        "cpu_seconds": 18.25,
+        "rss_gb_after": 5.22
+      },
+      {
+        "stage": "эпоха 2",
+        "wall_seconds": 171.79,
+        "cpu_seconds": 166.86,
+        "rss_gb_after": 5.18
+      },
+      {
+        "stage": "val после эпохи 2",
+        "wall_seconds": 18.73,
+        "cpu_seconds": 18.16,
+        "rss_gb_after": 5.22
+      }
+    ]
+  },
+  "results": {
+    "parameters_millions": 15.866713,
+    "val_by_epoch": [
+      {
+        "ndcg@10": 0.254517650838646,
+        "recall@10": 0.14707085718169735,
+        "ndcg@100": 0.2925489288031764,
+        "recall@100": 0.3773343096665156,
+        "auc": 0.8122918554906698,
+        "logloss": 0.19012220203876495,
+        "n_groups": 31688,
+        "epoch": 0,
+        "train_loss": 0.4098367742264587,
+        "gpu_peak_mb": 1819.0712890625
+      },
+      {
+        "ndcg@10": 0.25673854235490756,
+        "recall@10": 0.14834150047125966,
+        "ndcg@100": 0.2947843739361078,
+        "recall@100": 0.3793789599731838,
+        "auc": 0.8119165763976633,
+        "logloss": 0.18174952268600464,
+        "n_groups": 31688,
+        "epoch": 1,
+        "train_loss": 0.39280508446670304,
+        "gpu_peak_mb": 1880.33056640625
+      },
+      {
+        "ndcg@10": 0.2569589640520271,
+        "recall@10": 0.14881959792564667,
+        "ndcg@100": 0.2949799068655035,
+        "recall@100": 0.3792969358399473,
+        "auc": 0.8094945163739453,
+        "logloss": 0.19800955057144165,
+        "n_groups": 31688,
+        "epoch": 2,
+        "train_loss": 0.3792640636775597,
+        "gpu_peak_mb": 1880.33056640625
+      }
+    ],
+    "val_metrics_best_epoch": {
+      "ndcg@10": 0.2569589640520271,
+      "recall@10": 0.14881959792564667,
+      "ndcg@100": 0.2949799068655035,
+      "recall@100": 0.3792969358399473,
+      "auc": 0.8094945163739453,
+      "logloss": 0.19800955057144165,
+      "n_groups": 31688,
+      "epoch": 2,
+      "train_loss": 0.3792640636775597,
+      "gpu_peak_mb": 1880.33056640625
+    }
+  }
+}

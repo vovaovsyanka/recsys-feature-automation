@@ -1,0 +1,295 @@
+{
+  "meta": {
+    "id": "E20",
+    "name": "feature_cost",
+    "title": "Стоимость расчёта признаков по ключу и агрегату",
+    "status": "ok",
+    "started_utc": "2026-10-23T21:26:29+00:00",
+    "finished_utc": "2026-10-23T21:28:51+00:00",
+    "wall_seconds": 142.06,
+    "cpu_seconds_process": 960.56,
+    "peak_rss_gb": 21.46,
+    "stages": [
+      {
+        "stage": "setup",
+        "wall_seconds": 3.12,
+        "cpu_seconds": 23.88,
+        "rss_gb_after": 18.41
+      },
+      {
+        "stage": "by_key_agg",
+        "wall_seconds": 125.93,
+        "cpu_seconds": 850.41,
+        "rss_gb_after": 21.46
+      },
+      {
+        "stage": "by_window",
+        "wall_seconds": 3.67,
+        "cpu_seconds": 22.05,
+        "rss_gb_after": 20.9
+      },
+      {
+        "stage": "batch_scaling",
+        "wall_seconds": 9.25,
+        "cpu_seconds": 64.2,
+        "rss_gb_after": 18.8
+      }
+    ]
+  },
+  "results": {
+    "seconds_per_feature_by_key_agg": {
+      "U.cnt": {
+        "batch_per_feature": 0.010878721872965494,
+        "single_feature": 0.03428109486897787,
+        "n": 12
+      },
+      "U.mean": {
+        "batch_per_feature": 0.007043063640594482,
+        "single_feature": 0.03617095947265625,
+        "n": 12
+      },
+      "U.sec": {
+        "batch_per_feature": 0.010341366132100424,
+        "single_feature": 0.029518842697143555,
+        "n": 12
+      },
+      "U.last": {
+        "batch_per_feature": 0.009377082188924154,
+        "single_feature": 0.028845469156901043,
+        "n": 12
+      },
+      "U.first": {
+        "batch_per_feature": 0.008811632792154947,
+        "single_feature": 0.03097701072692871,
+        "n": 12
+      },
+      "U.decay": {
+        "batch_per_feature": 0.012795329093933105,
+        "single_feature": 0.05502486228942871,
+        "n": 12
+      },
+      "U.nuniq": {
+        "batch_per_feature": 0.15948742628097534,
+        "single_feature": 0.2965346972147624,
+        "n": 12
+      },
+      "I.cnt": {
+        "batch_per_feature": 0.09643723567326863,
+        "single_feature": 0.3872886498769124,
+        "n": 12
+      },
+      "I.mean": {
+        "batch_per_feature": 0.11110848188400269,
+        "single_feature": 0.26616517702738446,
+        "n": 12
+      },
+      "I.sec": {
+        "batch_per_feature": 0.09123889605204265,
+        "single_feature": 0.10926365852355957,
+        "n": 12
+      },
+      "I.last": {
+        "batch_per_feature": 0.1017571489016215,
+        "single_feature": 0.1748796304066976,
+        "n": 12
+      },
+      "I.first": {
+        "batch_per_feature": 0.12414634227752686,
+        "single_feature": 0.2437292734781901,
+        "n": 12
+      },
+      "I.decay": {
+        "batch_per_feature": 0.17681201299031576,
+        "single_feature": 0.9886700312296549,
+        "n": 12
+      },
+      "I.nuniq": {
+        "batch_per_feature": 0.26038577159245807,
+        "single_feature": 0.7173253695170084,
+        "n": 12
+      },
+      "UI.cnt": {
+        "batch_per_feature": 0.11043439308802287,
+        "single_feature": 0.44207119941711426,
+        "n": 12
+      },
+      "UI.mean": {
+        "batch_per_feature": 0.11391009887059529,
+        "single_feature": 0.42887012163798016,
+        "n": 12
+      },
+      "UI.sec": {
+        "batch_per_feature": 0.19079814354578653,
+        "single_feature": 0.9652976195017496,
+        "n": 12
+      },
+      "UI.last": {
+        "batch_per_feature": 0.198441743850708,
+        "single_feature": 0.8763167063395182,
+        "n": 12
+      },
+      "UI.first": {
+        "batch_per_feature": 0.1926159461339315,
+        "single_feature": 0.40983931223551434,
+        "n": 12
+      },
+      "UI.decay": {
+        "batch_per_feature": 0.2374754548072815,
+        "single_feature": 1.7885488669077556,
+        "n": 12
+      },
+      "UA.cnt": {
+        "batch_per_feature": 0.20014097293217978,
+        "single_feature": 0.9286798636118571,
+        "n": 12
+      },
+      "UA.mean": {
+        "batch_per_feature": 0.08827483654022217,
+        "single_feature": 0.35603610674540204,
+        "n": 12
+      },
+      "UA.sec": {
+        "batch_per_feature": 0.1602038542429606,
+        "single_feature": 0.2783307234446208,
+        "n": 12
+      },
+      "UA.last": {
+        "batch_per_feature": 0.05868520339330038,
+        "single_feature": 0.399669885635376,
+        "n": 12
+      },
+      "UA.first": {
+        "batch_per_feature": 0.07530142863591512,
+        "single_feature": 0.29655106862386066,
+        "n": 12
+      },
+      "UA.decay": {
+        "batch_per_feature": 0.22438836097717285,
+        "single_feature": 1.5057933330535889,
+        "n": 12
+      },
+      "UA.nuniq": {
+        "batch_per_feature": 0.2744142413139343,
+        "single_feature": 0.4859253565470378,
+        "n": 12
+      },
+      "UB.cnt": {
+        "batch_per_feature": 0.18261659145355225,
+        "single_feature": 0.3810913562774658,
+        "n": 12
+      },
+      "UB.mean": {
+        "batch_per_feature": 0.25412189960479736,
+        "single_feature": 0.8296003341674805,
+        "n": 12
+      },
+      "UB.sec": {
+        "batch_per_feature": 0.17970790465672812,
+        "single_feature": 0.5282932917277018,
+        "n": 12
+      },
+      "UB.last": {
+        "batch_per_feature": 0.09428703784942627,
+        "single_feature": 0.49191538492838544,
+        "n": 12
+      },
+      "UB.first": {
+        "batch_per_feature": 0.09192230304082234,
+        "single_feature": 0.5488987763722738,
+        "n": 12
+      },
+      "UB.decay": {
+        "batch_per_feature": 0.22690878311793009,
+        "single_feature": 1.7112614313761394,
+        "n": 12
+      },
+      "UB.nuniq": {
+        "batch_per_feature": 0.243291437625885,
+        "single_feature": 0.34919166564941406,
+        "n": 12
+      },
+      "A.cnt": {
+        "batch_per_feature": 0.0320927103360494,
+        "single_feature": 0.060352484385172524,
+        "n": 12
+      },
+      "A.mean": {
+        "batch_per_feature": 0.013074517250061035,
+        "single_feature": 0.0566872755686442,
+        "n": 12
+      },
+      "A.sec": {
+        "batch_per_feature": 0.034008920192718506,
+        "single_feature": 0.04762538274129232,
+        "n": 12
+      },
+      "A.last": {
+        "batch_per_feature": 0.027438104152679443,
+        "single_feature": 0.03946057955423991,
+        "n": 12
+      },
+      "A.first": {
+        "batch_per_feature": 0.01675341526667277,
+        "single_feature": 0.0553587277730306,
+        "n": 12
+      },
+      "A.decay": {
+        "batch_per_feature": 0.05629146099090576,
+        "single_feature": 0.33534828821818036,
+        "n": 12
+      },
+      "A.nuniq": {
+        "batch_per_feature": 0.08592869838078816,
+        "single_feature": 0.3173063596089681,
+        "n": 12
+      },
+      "B.cnt": {
+        "batch_per_feature": 0.03205925226211548,
+        "single_feature": 0.1613614559173584,
+        "n": 12
+      },
+      "B.mean": {
+        "batch_per_feature": 0.03889284531275431,
+        "single_feature": 0.15575790405273438,
+        "n": 12
+      },
+      "B.sec": {
+        "batch_per_feature": 0.0747413436571757,
+        "single_feature": 0.11822811762491862,
+        "n": 12
+      },
+      "B.last": {
+        "batch_per_feature": 0.024988293647766113,
+        "single_feature": 0.09487549463907878,
+        "n": 12
+      },
+      "B.first": {
+        "batch_per_feature": 0.024967034657796223,
+        "single_feature": 0.07010118166605632,
+        "n": 12
+      },
+      "B.decay": {
+        "batch_per_feature": 0.12439427773157756,
+        "single_feature": 0.6641480127970377,
+        "n": 12
+      },
+      "B.nuniq": {
+        "batch_per_feature": 0.23556520541508993,
+        "single_feature": 0.7513545354207357,
+        "n": 12
+      }
+    },
+    "UI_cnt_seconds_per_feature_by_window": {
+      "1": 0.052266200383504234,
+      "7": 0.10907419522603352,
+      "30": 0.10361929734547932,
+      "all": 0.3471678892771403
+    },
+    "UA_cnt_batch_total_seconds": {
+      "1": 0.44374871253967285,
+      "5": 0.6535398960113525,
+      "20": 2.9150121212005615,
+      "80": 5.229045867919922
+    }
+  }
+}

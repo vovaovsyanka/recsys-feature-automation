@@ -1,0 +1,28 @@
+{
+ "A4": [
+  "U.listen.decay.h21",
+  "U.plus.decay.h3",
+  "U.skip.decay.h14",
+  "U.rec.decay.h90",
+  "U.like.decay.h90",
+  "U.dislike.decay.h90",
+  "I.listen.decay.h90",
+  "I.plus.decay.h60",
+  "I.skip.decay.h60",
+  "I.like.decay.h7",
+  "I.dislike.decay.h1",
+  "UI.listen.decay.h30",
+  "UI.plus.decay.h30",
+  "UI.skip.decay.h1",
+  "UI.like.decay.h90",
+  "UI.dislike.decay.h14",
+  "UA.listen.decay.h21",
+  "UA.plus.decay.h21",
+  "UA.skip.decay.h14",
+  "UA.like.decay.h21",
+  "UB.listen.decay.h1",
+  "UB.plus.decay.h1",
+  "A.listen.decay.h60",
+  "A.plus.decay.h45"
+ ]
+}

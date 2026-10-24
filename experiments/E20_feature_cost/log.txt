@@ -1,0 +1,65 @@
+[E20] Стоимость расчёта признаков по ключу и агрегату
+  старт (UTC): 2026-10-23T21:26:29+00:00
+  версия кода: 17f6f31
+[E20] -> setup
+[E20] <- setup: 3.12 с
+[E20] -> by_key_agg
+U   cnt    batch 0.01s/feature  single 0.03s/feature
+U   mean   batch 0.01s/feature  single 0.04s/feature
+U   sec    batch 0.01s/feature  single 0.03s/feature
+U   last   batch 0.01s/feature  single 0.03s/feature
+U   first  batch 0.01s/feature  single 0.03s/feature
+U   decay  batch 0.01s/feature  single 0.06s/feature
+U   nuniq  batch 0.16s/feature  single 0.30s/feature
+I   cnt    batch 0.10s/feature  single 0.39s/feature
+I   mean   batch 0.11s/feature  single 0.27s/feature
+I   sec    batch 0.09s/feature  single 0.11s/feature
+I   last   batch 0.10s/feature  single 0.17s/feature
+I   first  batch 0.12s/feature  single 0.24s/feature
+I   decay  batch 0.18s/feature  single 0.99s/feature
+I   nuniq  batch 0.26s/feature  single 0.72s/feature
+UI  cnt    batch 0.11s/feature  single 0.44s/feature
+UI  mean   batch 0.11s/feature  single 0.43s/feature
+UI  sec    batch 0.19s/feature  single 0.97s/feature
+UI  last   batch 0.20s/feature  single 0.88s/feature
+UI  first  batch 0.19s/feature  single 0.41s/feature
+UI  decay  batch 0.24s/feature  single 1.79s/feature
+UA  cnt    batch 0.20s/feature  single 0.93s/feature
+UA  mean   batch 0.09s/feature  single 0.36s/feature
+UA  sec    batch 0.16s/feature  single 0.28s/feature
+UA  last   batch 0.06s/feature  single 0.40s/feature
+UA  first  batch 0.08s/feature  single 0.30s/feature
+UA  decay  batch 0.22s/feature  single 1.51s/feature
+UA  nuniq  batch 0.27s/feature  single 0.49s/feature
+UB  cnt    batch 0.18s/feature  single 0.38s/feature
+UB  mean   batch 0.25s/feature  single 0.83s/feature
+UB  sec    batch 0.18s/feature  single 0.53s/feature
+UB  last   batch 0.09s/feature  single 0.49s/feature
+UB  first  batch 0.09s/feature  single 0.55s/feature
+UB  decay  batch 0.23s/feature  single 1.71s/feature
+UB  nuniq  batch 0.24s/feature  single 0.35s/feature
+A   cnt    batch 0.03s/feature  single 0.06s/feature
+A   mean   batch 0.01s/feature  single 0.06s/feature
+A   sec    batch 0.03s/feature  single 0.05s/feature
+A   last   batch 0.03s/feature  single 0.04s/feature
+A   first  batch 0.02s/feature  single 0.06s/feature
+A   decay  batch 0.06s/feature  single 0.34s/feature
+A   nuniq  batch 0.09s/feature  single 0.32s/feature
+B   cnt    batch 0.03s/feature  single 0.16s/feature
+B   mean   batch 0.04s/feature  single 0.16s/feature
+B   sec    batch 0.07s/feature  single 0.12s/feature
+B   last   batch 0.02s/feature  single 0.09s/feature
+B   first  batch 0.02s/feature  single 0.07s/feature
+B   decay  batch 0.12s/feature  single 0.66s/feature
+B   nuniq  batch 0.24s/feature  single 0.75s/feature
+[E20] <- by_key_agg: 125.93 с
+[E20] -> by_window
+{'1': 0.052266200383504234, '7': 0.10907419522603352, '30': 0.10361929734547932, 'all': 0.3471678892771403}
+[E20] <- by_window: 3.67 с
+[E20] -> batch_scaling
+batch 1 0.4s total, 0.44s/feature
+batch 5 0.7s total, 0.13s/feature
+batch 20 2.9s total, 0.15s/feature
+batch 80 5.2s total, 0.07s/feature
+[E20] <- batch_scaling: 9.25 с
+[E20] ok; 142.1 с, CPU 960.6 с, пик RSS 21.46 ГБ

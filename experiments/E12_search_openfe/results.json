@@ -1,0 +1,490 @@
+{
+  "meta": {
+    "id": "E12",
+    "name": "search_openfe",
+    "title": "Поиск признаков: OpenFE",
+    "status": "ok",
+    "started_utc": "2026-10-23T06:59:16+00:00",
+    "finished_utc": "2026-10-23T08:01:45+00:00",
+    "wall_seconds": 3749.18,
+    "cpu_seconds_process": 25273.22,
+    "peak_rss_gb": 3.5,
+    "stages": [
+      {
+        "stage": "setup",
+        "wall_seconds": 0.62,
+        "cpu_seconds": 2.02,
+        "rss_gb_after": 2.07
+      },
+      {
+        "stage": "сценарий A: отбор",
+        "wall_seconds": 1856.82,
+        "cpu_seconds": 12537.11,
+        "rss_gb_after": 3.33
+      },
+      {
+        "stage": "сценарий A: обучение",
+        "wall_seconds": 26.74,
+        "cpu_seconds": 170.83,
+        "rss_gb_after": 3.08
+      },
+      {
+        "stage": "сценарий B: отбор",
+        "wall_seconds": 1841.76,
+        "cpu_seconds": 12420.95,
+        "rss_gb_after": 3.5
+      },
+      {
+        "stage": "сценарий B: обучение",
+        "wall_seconds": 23.18,
+        "cpu_seconds": 142.28,
+        "rss_gb_after": 3.5
+      }
+    ]
+  },
+  "results": {
+    "A3_A_selection_seconds": 1856.8205881118774,
+    "A3_A_cost": {
+      "fits": 2,
+      "fit_seconds": 18.7,
+      "boost_evals": 6510,
+      "boost_seconds": 1615.3
+    },
+    "A3_A_stage1_survivors": 1617,
+    "A3_A_top50": [
+      [
+        "U.like.first.2",
+        0.016004684204556446
+      ],
+      [
+        "UI.rec.decay.h2",
+        0.014706000775276175
+      ],
+      [
+        "U.listen.first.1",
+        0.013913177891597656
+      ],
+      [
+        "U.org.mean.1",
+        0.012985076345906642
+      ],
+      [
+        "U.listen.first.5",
+        0.012841942595308516
+      ],
+      [
+        "U.listen.first.21",
+        0.012559263679699728
+      ],
+      [
+        "U.like.first.90",
+        0.012316018944406138
+      ],
+      [
+        "U.like.first.5",
+        0.012271351434246604
+      ],
+      [
+        "U.listen.first.3",
+        0.012000829427367566
+      ],
+      [
+        "U.plus.first.21",
+        0.011488409081469147
+      ],
+      [
+        "U.listen.first.10",
+        0.010977186731914359
+      ],
+      [
+        "U.listen.first.7",
+        0.010499503795422785
+      ],
+      [
+        "U.plus.first.5",
+        0.01040120266463909
+      ],
+      [
+        "U.plus_org.cnt.90",
+        0.010004491756174535
+      ],
+      [
+        "UI.rec.last.all",
+        0.009641489775083454
+      ],
+      [
+        "U.skip.cnt.3",
+        0.009582718908026736
+      ],
+      [
+        "U.org.decay.h1",
+        0.009136929291977614
+      ],
+      [
+        "U.plus.first.7",
+        0.009097874271587354
+      ],
+      [
+        "UI.listen.first.14",
+        0.009086140249723994
+      ],
+      [
+        "U.rec.last.45",
+        0.00899265571445272
+      ],
+      [
+        "U.listen.nuniq.5",
+        0.008419703298552421
+      ],
+      [
+        "U.org.mean.5",
+        0.008373811124407942
+      ],
+      [
+        "U.rec.mean.1",
+        0.008302692120658697
+      ],
+      [
+        "d:urank(UI.plus.cnt.1)",
+        0.008288579564923442
+      ],
+      [
+        "d:ratio(U.org.cnt.30|U.listen.cnt.30)",
+        0.0082267687665387
+      ],
+      [
+        "U.org.last.60",
+        0.00777035622042038
+      ],
+      [
+        "d:ratio(U.listen.cnt.3|U.listen.cnt.14)",
+        0.007642784007353799
+      ],
+      [
+        "UI.like.last.all",
+        0.007346434289982677
+      ],
+      [
+        "U.unlike.cnt.45",
+        0.007331156178540118
+      ],
+      [
+        "UI.like.last.3",
+        0.007217933893180135
+      ],
+      [
+        "U.dislike.decay.h7",
+        0.007131823719811301
+      ],
+      [
+        "U.org.cnt.1",
+        0.007097249012980119
+      ],
+      [
+        "U.skip.decay.h30",
+        0.007043408832996396
+      ],
+      [
+        "U.org.mean.14",
+        0.00692475573741602
+      ],
+      [
+        "U.like.decay.h21",
+        0.006883524387797467
+      ],
+      [
+        "U.skip.last.5",
+        0.006850104939168647
+      ],
+      [
+        "U.org.decay.h60",
+        0.006724409299056526
+      ],
+      [
+        "U.plus_org.cnt.2",
+        0.006714133238094151
+      ],
+      [
+        "U.org.last.21",
+        0.006627714928619623
+      ],
+      [
+        "U.like.decay.h90",
+        0.006566250649765883
+      ],
+      [
+        "U.skip.cnt.all",
+        0.006534875520546908
+      ],
+      [
+        "U.plus_rec.cnt.all",
+        0.006489965564572666
+      ],
+      [
+        "d:ratio(U.listen.cnt.1|U.listen.cnt.7)",
+        0.006476472367303914
+      ],
+      [
+        "U.rec.last.2",
+        0.006364602490922289
+      ],
+      [
+        "d:urank(UI.plus.cnt.3)",
+        0.0063578587937672395
+      ],
+      [
+        "U.rec.last.21",
+        0.0063318678912933435
+      ],
+      [
+        "UB.listen.first.21",
+        0.006318102993707482
+      ],
+      [
+        "U.skip.last.3",
+        0.006267495221499638
+      ],
+      [
+        "U.listen.sec.2",
+        0.00604141143300423
+      ],
+      [
+        "U.org.last.1",
+        0.005999087099619119
+      ]
+    ],
+    "proxy_results": {
+      "A3, сценарий A: ручной + 60 по OpenFE": {
+        "tag": "A3, сценарий A: ручной + 60 по OpenFE",
+        "n_features": 183,
+        "ndcg10": 0.27559065598734656,
+        "ndcg100": 0.3096963979120597,
+        "auc": 0.8153294066039539,
+        "seconds": 20.336594104766846
+      },
+      "A3, сценарий B: 115 по OpenFE": {
+        "tag": "A3, сценарий B: 115 по OpenFE",
+        "n_features": 123,
+        "ndcg10": 0.275164550960386,
+        "ndcg100": 0.30836972672771307,
+        "auc": 0.8178872880714249,
+        "seconds": 16.15565586090088
+      }
+    },
+    "A3_B_selection_seconds": 1841.7689604759216,
+    "A3_B_cost": {
+      "fits": 2,
+      "fit_seconds": 11.6,
+      "boost_evals": 6724,
+      "boost_seconds": 1596.0
+    },
+    "A3_B_stage1_survivors": 1713,
+    "A3_B_top50": [
+      [
+        "d:urank(UI.listen.last.all)",
+        0.06343187358763487
+      ],
+      [
+        "d:ratio(UI.listen.cnt.7|U.listen.cnt.7)",
+        0.03097313629093283
+      ],
+      [
+        "d:ratio(UI.listen.cnt.5|U.listen.cnt.5)",
+        0.03093665988147891
+      ],
+      [
+        "d:ratio(UI.rec.cnt.7|UI.listen.cnt.7)",
+        0.02957363131532569
+      ],
+      [
+        "U.listen.nuniq.all",
+        0.027138325121425198
+      ],
+      [
+        "U.like.first.all",
+        0.024152280016868193
+      ],
+      [
+        "d:ratio(UI.listen.cnt.2|U.listen.cnt.2)",
+        0.02175767164956518
+      ],
+      [
+        "d:urank(UI.plus.last.all)",
+        0.01880917172957277
+      ],
+      [
+        "UI.rec.decay.h2",
+        0.018294499958630413
+      ],
+      [
+        "d:urank(UA.plus.cnt.1)",
+        0.01731160231039909
+      ],
+      [
+        "d:urank(UI.listen.cnt.1)",
+        0.017207590139770204
+      ],
+      [
+        "d:ratio(UB.org.cnt.30|UB.listen.cnt.30)",
+        0.01718664414271503
+      ],
+      [
+        "d:urank(UB.listen.last.all)",
+        0.014305482113549818
+      ],
+      [
+        "d:ratio(UI.like.cnt.all|UI.listen.cnt.all)",
+        0.01406092645843613
+      ],
+      [
+        "UI.like.first.14",
+        0.013557267742982765
+      ],
+      [
+        "d:ratio(UA.listen.nuniq.30|UA.listen.cnt.30)",
+        0.012205278463416682
+      ],
+      [
+        "U.plus.first.all",
+        0.012053383758715617
+      ],
+      [
+        "d:urank(UI.listen.cnt.7)",
+        0.011949028978286662
+      ],
+      [
+        "d:urank(UI.plus.cnt.1)",
+        0.011786715814421318
+      ],
+      [
+        "d:ratio(UI.listen.cnt.3|U.listen.cnt.3)",
+        0.011658278866870994
+      ],
+      [
+        "d:ratio(UI.org.cnt.7|UI.listen.cnt.7)",
+        0.010737348673311397
+      ],
+      [
+        "UI.full.decay.h1",
+        0.010438847466218119
+      ],
+      [
+        "UI.rec.last.30",
+        0.009718834065281415
+      ],
+      [
+        "d:ratio(UI.plus.cnt.7|U.plus.cnt.7)",
+        0.009690188730511019
+      ],
+      [
+        "U.listen.first.all",
+        0.00918160137908017
+      ],
+      [
+        "d:ratio(UI.plus.cnt.90|U.plus.cnt.90)",
+        0.00860841939281973
+      ],
+      [
+        "d:ratio(UI.like.cnt.30|UI.listen.cnt.30)",
+        0.008491381886126324
+      ],
+      [
+        "UI.rec.last.21",
+        0.00814383247953901
+      ],
+      [
+        "d:urank(UI.listen.cnt.3)",
+        0.008028416997997096
+      ],
+      [
+        "d:urank(UB.listen.cnt.1)",
+        0.007774286042311836
+      ],
+      [
+        "UI.rec.decay.h1",
+        0.0077299795919122515
+      ],
+      [
+        "UI.rec.last.14",
+        0.007713480612366452
+      ],
+      [
+        "d:ratio(UB.listen.cnt.1|U.listen.cnt.1)",
+        0.007597485862894004
+      ],
+      [
+        "UI.listen.sec.45",
+        0.007336176463539376
+      ],
+      [
+        "d:urank(UB.listen.cnt.3)",
+        0.007330332788653309
+      ],
+      [
+        "d:ratio(UB.listen.cnt.3|U.listen.cnt.3)",
+        0.0069082084669371815
+      ],
+      [
+        "UI.org.decay.h30",
+        0.006890564086461971
+      ],
+      [
+        "d:ratio(UI.plus.cnt.60|U.plus.cnt.60)",
+        0.006805918910614246
+      ],
+      [
+        "d:ratio(UI.plus.cnt.2|U.plus.cnt.2)",
+        0.0067948554539438094
+      ],
+      [
+        "d:urank(UB.listen.cnt.7)",
+        0.006682924140626746
+      ],
+      [
+        "d:ratio(UI.listen.cnt.30|U.listen.cnt.30)",
+        0.006459794834707464
+      ],
+      [
+        "d:ratio(UI.listen.cnt.45|U.listen.cnt.45)",
+        0.006224167253661933
+      ],
+      [
+        "UI.plus.decay.h30",
+        0.0062156636388191935
+      ],
+      [
+        "UI.plus.decay.h21",
+        0.00587727314965505
+      ],
+      [
+        "d:urank(UI.plus.decay.h1)",
+        0.005833577754625139
+      ],
+      [
+        "d:ratio(UI.plus.cnt.5|U.plus.cnt.5)",
+        0.005526056868137319
+      ],
+      [
+        "d:urank(UA.listen.cnt.3)",
+        0.0053913880254483
+      ],
+      [
+        "UI.listen.sec.90",
+        0.005376499971293742
+      ],
+      [
+        "UI.rec.last.all",
+        0.005208747046227818
+      ],
+      [
+        "d:urank(UI.plus.cnt.3)",
+        0.005135892600398904
+      ]
+    ],
+    "proxy_cost": {
+      "fits": 2,
+      "fit_seconds": 36.5,
+      "load_seconds": 433.4
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "meta": {
+    "id": "E16",
+    "name": "embeddings",
+    "title": "Векторные признаки: ALS и LightGCN по графу пользователь-трек-артист",
+    "status": "ok",
+    "started_utc": "2026-10-23T08:35:57+00:00",
+    "finished_utc": "2026-10-23T10:18:39+00:00",
+    "wall_seconds": 6162.15,
+    "cpu_seconds_process": 8906.7,
+    "peak_rss_gb": 4.41,
+    "stages": [
+      {
+        "stage": "load",
+        "wall_seconds": 0.29,
+        "cpu_seconds": 2.98,
+        "rss_gb_after": 2.4
+      },
+      {
+        "stage": "calibration",
+        "wall_seconds": 652.29,
+        "cpu_seconds": 1051.06,
+        "rss_gb_after": 4.3
+      },
+      {
+        "stage": "checkpoints",
+        "wall_seconds": 5509.39,
+        "cpu_seconds": 7852.62,
+        "rss_gb_after": 4.41
+      }
+    ]
+  },
+  "results": {
+    "graph_285": {
+      "users": 9159,
+      "items": 318177,
+      "edges": 8108721
+    },
+    "calibration": {
+      "als": {
+        "ndcg@10": 0.06238322550703869,
+        "ndcg@100": 0.12793618483039168,
+        "auc": 0.6045036199867538
+      },
+      "gcn_steps150": {
+        "ndcg@10": 0.03827112684379285,
+        "ndcg@100": 0.1114400012526101,
+        "auc": 0.5950797759499896
+      },
+      "gcn_steps300": {
+        "ndcg@10": 0.04765944029856795,
+        "ndcg@100": 0.12031026880645913,
+        "auc": 0.6067395919535447
+      },
+      "gcn_steps600": {
+        "ndcg@10": 0.05704676830712552,
+        "ndcg@100": 0.1286504696172034,
+        "auc": 0.6176825215286911
+      }
+    },
+    "gcn_steps_selected": 600
+  }
+}
