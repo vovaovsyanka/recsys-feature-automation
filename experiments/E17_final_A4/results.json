@@ -1,0 +1,175 @@
+{
+  "meta": {
+    "id": "E17",
+    "name": "final_A4",
+    "title": "Полная модель LightGBM: набор A4 (147 признаков), val",
+    "status": "ok",
+    "started_utc": "2026-10-23T03:07:14+00:00",
+    "finished_utc": "2026-10-23T03:36:32+00:00",
+    "wall_seconds": 1757.66,
+    "cpu_seconds_process": 13550.56,
+    "peak_rss_gb": 30.95,
+    "stages": [
+      {
+        "stage": "features",
+        "wall_seconds": 277.31,
+        "cpu_seconds": 2057.53,
+        "rss_gb_after": 19.76
+      },
+      {
+        "stage": "load_matrices",
+        "wall_seconds": 37.61,
+        "cpu_seconds": 96.73,
+        "rss_gb_after": 30.95
+      },
+      {
+        "stage": "train",
+        "wall_seconds": 1302.77,
+        "cpu_seconds": 10333.17,
+        "rss_gb_after": 28.54
+      },
+      {
+        "stage": "evaluate_val",
+        "wall_seconds": 139.9,
+        "cpu_seconds": 1063.09,
+        "rss_gb_after": 28.54
+      }
+    ]
+  },
+  "results": {
+    "feature_compute_seconds_new_features": 276.9764425754547,
+    "val_metrics": {
+      "ndcg@10": 0.29291434924415205,
+      "recall@10": 0.16795560672035162,
+      "ndcg@100": 0.32178100464557446,
+      "recall@100": 0.40007834805485526,
+      "auc": 0.8265957532291864,
+      "n_groups": 31688,
+      "best_iteration": 880,
+      "train_seconds": 1302.6692271232605,
+      "n_features": 147,
+      "top_features_gain": [
+        [
+          "d:urank(UI.plus.cnt.7)",
+          0.1795456677332842
+        ],
+        [
+          "d:urank(UI.listen.last.all)",
+          0.06540725756374914
+        ],
+        [
+          "d:ratio(U.listen.nuniq.30|U.listen.cnt.30)",
+          0.05156354281311014
+        ],
+        [
+          "UI.like.decay.h90",
+          0.05024591570765392
+        ],
+        [
+          "UI.listen.cnt.7",
+          0.03950894248899798
+        ],
+        [
+          "s1_rank",
+          0.039268258126924714
+        ],
+        [
+          "UI.plus.decay.h30",
+          0.03616508243908178
+        ],
+        [
+          "d:urank(UI.plus.cnt.30)",
+          0.03510054727248145
+        ],
+        [
+          "d:ratio(U.rec.cnt.30|U.listen.cnt.30)",
+          0.020687939329002782
+        ],
+        [
+          "UI.plus.cnt.7",
+          0.01976902061429565
+        ],
+        [
+          "d:urank(UI.plus.cnt.all)",
+          0.018583499588445074
+        ],
+        [
+          "d:ratio(U.rec.cnt.7|U.listen.cnt.7)",
+          0.01723250990827493
+        ],
+        [
+          "UI.listen.last.all",
+          0.016498919923658262
+        ],
+        [
+          "d:ratio(UI.listen.cnt.30|U.listen.cnt.30)",
+          0.01626439285788855
+        ],
+        [
+          "UB.plus.decay.h1",
+          0.015457156814269376
+        ],
+        [
+          "s1_score",
+          0.014964085533989731
+        ],
+        [
+          "UI.plus.last.all",
+          0.013244813856922015
+        ],
+        [
+          "UA.plus.decay.h21",
+          0.01168727475959417
+        ],
+        [
+          "UB.listen.decay.h1",
+          0.009395626117623537
+        ],
+        [
+          "I.listen.first.all",
+          0.008930326495552718
+        ],
+        [
+          "d:ratio(I.listen.cnt.30|A.listen.cnt.30)",
+          0.008796834538068173
+        ],
+        [
+          "UI.listen.first.all",
+          0.008658210681284955
+        ],
+        [
+          "UA.like.decay.h21",
+          0.007817452104876839
+        ],
+        [
+          "UA.listen.last.all",
+          0.007188958120931602
+        ],
+        [
+          "U.listen.decay.h21",
+          0.006538313019449445
+        ],
+        [
+          "U.listen.nuniq.30",
+          0.006412652888644799
+        ],
+        [
+          "d:ratio(UA.listen.cnt.30|U.listen.cnt.30)",
+          0.0062880618131143885
+        ],
+        [
+          "UA.plus.cnt.7",
+          0.006236787991636614
+        ],
+        [
+          "d:ratio(UB.listen.cnt.30|U.listen.cnt.30)",
+          0.006112611997041117
+        ],
+        [
+          "U.listen.nuniq.7",
+          0.006017950939851259
+        ]
+      ]
+    }
+  }
+}

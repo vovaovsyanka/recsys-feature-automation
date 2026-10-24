@@ -1,0 +1,175 @@
+{
+  "meta": {
+    "id": "E17",
+    "name": "final_A3_A",
+    "title": "Полная модель LightGBM: набор A3_A (183 признаков), val",
+    "status": "ok",
+    "started_utc": "2026-10-23T10:18:44+00:00",
+    "finished_utc": "2026-10-23T10:46:49+00:00",
+    "wall_seconds": 1685.02,
+    "cpu_seconds_process": 12869.97,
+    "peak_rss_gb": 26.86,
+    "stages": [
+      {
+        "stage": "features",
+        "wall_seconds": 126.32,
+        "cpu_seconds": 841.38,
+        "rss_gb_after": 13.74
+      },
+      {
+        "stage": "load_matrices",
+        "wall_seconds": 50.75,
+        "cpu_seconds": 127.97,
+        "rss_gb_after": 26.86
+      },
+      {
+        "stage": "train",
+        "wall_seconds": 1378.44,
+        "cpu_seconds": 10921.3,
+        "rss_gb_after": 25.13
+      },
+      {
+        "stage": "evaluate_val",
+        "wall_seconds": 129.44,
+        "cpu_seconds": 979.3,
+        "rss_gb_after": 25.13
+      }
+    ]
+  },
+  "results": {
+    "feature_compute_seconds_new_features": 125.98588514328003,
+    "val_metrics": {
+      "ndcg@10": 0.29543143117997883,
+      "recall@10": 0.16915276207350302,
+      "ndcg@100": 0.3243091679064386,
+      "recall@100": 0.4027446055306222,
+      "auc": 0.830527068963379,
+      "n_groups": 31688,
+      "best_iteration": 770,
+      "train_seconds": 1378.2997426986694,
+      "n_features": 183,
+      "top_features_gain": [
+        [
+          "d:urank(UI.plus.cnt.7)",
+          0.18446902643009117
+        ],
+        [
+          "d:urank(UI.listen.last.all)",
+          0.05610880023816839
+        ],
+        [
+          "UI.like.last.all",
+          0.05152410203261707
+        ],
+        [
+          "s1_rank",
+          0.04978546802843724
+        ],
+        [
+          "d:urank(UI.plus.cnt.3)",
+          0.037996071406115904
+        ],
+        [
+          "UI.listen.cnt.7",
+          0.035385377718510774
+        ],
+        [
+          "d:ratio(U.listen.nuniq.30|U.listen.cnt.30)",
+          0.033299512117232845
+        ],
+        [
+          "UI.rec.last.all",
+          0.03125383024997868
+        ],
+        [
+          "d:urank(UI.plus.cnt.all)",
+          0.021379649608151013
+        ],
+        [
+          "s1_score",
+          0.01980692846099942
+        ],
+        [
+          "d:ratio(UI.listen.cnt.30|U.listen.cnt.30)",
+          0.016633208619828477
+        ],
+        [
+          "d:urank(UI.plus.cnt.30)",
+          0.01641994360510005
+        ],
+        [
+          "UI.rec.decay.h2",
+          0.013948281629146861
+        ],
+        [
+          "UI.plus.last.all",
+          0.013040573393393467
+        ],
+        [
+          "UI.org.last.10",
+          0.01218644758677676
+        ],
+        [
+          "d:ratio(U.org.cnt.30|U.listen.cnt.30)",
+          0.011414039288948914
+        ],
+        [
+          "UB.plus.cnt.30",
+          0.011045073683017628
+        ],
+        [
+          "UI.like.last.3",
+          0.010117194809987774
+        ],
+        [
+          "UI.plus.cnt.all",
+          0.009502335660497244
+        ],
+        [
+          "d:ratio(U.rec.cnt.30|U.listen.cnt.30)",
+          0.009037690668724407
+        ],
+        [
+          "I.listen.first.all",
+          0.008913092404622848
+        ],
+        [
+          "d:ratio(UA.listen.cnt.30|U.listen.cnt.30)",
+          0.008499470050956333
+        ],
+        [
+          "U.org.decay.h60",
+          0.007895855913227248
+        ],
+        [
+          "d:ratio(I.listen.cnt.30|A.listen.cnt.30)",
+          0.007843667686833993
+        ],
+        [
+          "UI.plus.cnt.7",
+          0.0068676225923842375
+        ],
+        [
+          "U.listen.nuniq.30",
+          0.006835161690969292
+        ],
+        [
+          "UA.listen.last.all",
+          0.006806007957531402
+        ],
+        [
+          "d:urank(UI.plus.cnt.1)",
+          0.006271688590979741
+        ],
+        [
+          "UI.plus.first.14",
+          0.006251898126305385
+        ],
+        [
+          "d:ratio(U.rec.cnt.7|U.listen.cnt.7)",
+          0.006003918612533181
+        ]
+      ]
+    }
+  }
+}

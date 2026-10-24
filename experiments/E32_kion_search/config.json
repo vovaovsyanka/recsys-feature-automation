@@ -1,0 +1,16 @@
+{
+  "proxy_user_frac": 0.3,
+  "proxy_train": [
+    60,
+    72,
+    84,
+    96,
+    108,
+    120,
+    132,
+    141
+  ],
+  "k_augment": 40,
+  "k_replace": 81,
+  "pool_size": 1339
+}

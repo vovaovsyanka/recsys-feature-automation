@@ -1,0 +1,175 @@
+{
+  "meta": {
+    "id": "E17",
+    "name": "final_manual_s1",
+    "title": "Полная модель LightGBM: набор manual (123 признаков), val",
+    "status": "ok",
+    "started_utc": "2026-10-23T19:25:28+00:00",
+    "finished_utc": "2026-10-23T19:48:07+00:00",
+    "wall_seconds": 1359.08,
+    "cpu_seconds_process": 10214.64,
+    "peak_rss_gb": 13.48,
+    "stages": [
+      {
+        "stage": "features",
+        "wall_seconds": 0.39,
+        "cpu_seconds": 2.5,
+        "rss_gb_after": 2.13
+      },
+      {
+        "stage": "load_matrices",
+        "wall_seconds": 35.87,
+        "cpu_seconds": 88.77,
+        "rss_gb_after": 13.48
+      },
+      {
+        "stage": "train",
+        "wall_seconds": 1183.59,
+        "cpu_seconds": 9095.83,
+        "rss_gb_after": 11.59
+      },
+      {
+        "stage": "evaluate_val",
+        "wall_seconds": 139.15,
+        "cpu_seconds": 1027.52,
+        "rss_gb_after": 11.59
+      }
+    ]
+  },
+  "results": {
+    "feature_compute_seconds_new_features": 0.01759815216064453,
+    "val_metrics": {
+      "ndcg@10": 0.2898239117546807,
+      "recall@10": 0.16583047518758545,
+      "ndcg@100": 0.31984915955137,
+      "recall@100": 0.39913398373454784,
+      "auc": 0.8251617480732488,
+      "n_groups": 31688,
+      "best_iteration": 765,
+      "train_seconds": 1183.4848291873932,
+      "n_features": 123,
+      "top_features_gain": [
+        [
+          "d:urank(UI.plus.cnt.7)",
+          0.14660422786230184
+        ],
+        [
+          "s1_rank",
+          0.10371588530629061
+        ],
+        [
+          "d:urank(UI.listen.last.all)",
+          0.06292049985437013
+        ],
+        [
+          "UI.listen.cnt.7",
+          0.05072099951437025
+        ],
+        [
+          "d:ratio(U.listen.nuniq.30|U.listen.cnt.30)",
+          0.05051222826355597
+        ],
+        [
+          "UI.plus.last.all",
+          0.02934551670158178
+        ],
+        [
+          "s1_score",
+          0.027082078853728455
+        ],
+        [
+          "d:ratio(U.rec.cnt.30|U.listen.cnt.30)",
+          0.02311857682276859
+        ],
+        [
+          "d:diff(UI.like.cnt.all|UI.unlike.cnt.all)",
+          0.02302991441151869
+        ],
+        [
+          "UI.plus.cnt.7",
+          0.020969393769903193
+        ],
+        [
+          "UI.listen.first.all",
+          0.02001405999829787
+        ],
+        [
+          "UI.listen.last.all",
+          0.018326615005162396
+        ],
+        [
+          "d:ratio(UI.listen.cnt.30|U.listen.cnt.30)",
+          0.017265164799470382
+        ],
+        [
+          "d:ratio(U.rec.cnt.7|U.listen.cnt.7)",
+          0.01703470283112969
+        ],
+        [
+          "d:urank(UI.plus.cnt.all)",
+          0.015970117131166073
+        ],
+        [
+          "d:urank(UI.plus.cnt.30)",
+          0.015229671797885553
+        ],
+        [
+          "UI.listen.mean.all",
+          0.009462834794059658
+        ],
+        [
+          "UB.plus.cnt.30",
+          0.00927123051491796
+        ],
+        [
+          "d:ratio(I.listen.cnt.30|A.listen.cnt.30)",
+          0.009169427183711843
+        ],
+        [
+          "UI.like.cnt.all",
+          0.0091656860259471
+        ],
+        [
+          "I.listen.first.all",
+          0.008899176668920065
+        ],
+        [
+          "UI.listen.cnt.all",
+          0.0085211758395973
+        ],
+        [
+          "U.listen.nuniq.7",
+          0.008507949574812134
+        ],
+        [
+          "UA.listen.last.all",
+          0.008487928684052848
+        ],
+        [
+          "UA.plus.cnt.30",
+          0.007856779068003446
+        ],
+        [
+          "d:ratio(UA.listen.cnt.30|U.listen.cnt.30)",
+          0.007770537935481784
+        ],
+        [
+          "UB.listen.last.all",
+          0.007706494968951782
+        ],
+        [
+          "U.listen.nuniq.30",
+          0.007626509699132245
+        ],
+        [
+          "UI.listen.cnt.1",
+          0.00756876643339198
+        ],
+        [
+          "UA.plus.cnt.7",
+          0.007121271111245084
+        ]
+      ]
+    }
+  }
+}

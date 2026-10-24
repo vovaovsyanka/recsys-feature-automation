@@ -1,0 +1,23 @@
+[E17] Полная модель LightGBM: набор H_als (124 признаков), val
+  старт (UTC): 2026-10-23T18:12:02+00:00
+  версия кода: 17f6f31
+[E17] -> features
+[E17] <- features: 0.38 с
+[E17] -> load_matrices
+[E17] <- load_matrices: 36.27 с
+[E17] -> train
+[100]	val's ndcg@10: 0.424324
+[200]	val's ndcg@10: 0.430468
+[300]	val's ndcg@10: 0.432402
+[400]	val's ndcg@10: 0.433513
+[500]	val's ndcg@10: 0.433848
+[600]	val's ndcg@10: 0.434251
+[700]	val's ndcg@10: 0.434427
+[800]	val's ndcg@10: 0.434581
+[900]	val's ndcg@10: 0.435019
+[1000]	val's ndcg@10: 0.434818
+[E17] <- train: 1331.42 с
+[E17] -> evaluate_val
+{'ndcg@10': 0.2902, 'recall@10': 0.1661, 'ndcg@100': 0.3202, 'recall@100': 0.3999, 'auc': 0.8268, 'n_groups': 31688, 'best_iteration': 918, 'train_seconds': 1331.3021, 'n_features': 124}
+[E17] <- evaluate_val: 160.31 с
+[E17] ok; 1528.5 с, CPU 11634.7 с, пик RSS 12.8 ГБ

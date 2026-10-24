@@ -1,0 +1,175 @@
+{
+  "meta": {
+    "id": "E17",
+    "name": "final_A2_A",
+    "title": "Полная модель LightGBM: набор A2_A (183 признаков), val",
+    "status": "ok",
+    "started_utc": "2026-10-23T01:36:30+00:00",
+    "finished_utc": "2026-10-23T01:59:29+00:00",
+    "wall_seconds": 1379.25,
+    "cpu_seconds_process": 10551.02,
+    "peak_rss_gb": 19.11,
+    "stages": [
+      {
+        "stage": "features",
+        "wall_seconds": 0.36,
+        "cpu_seconds": 2.5,
+        "rss_gb_after": 2.09
+      },
+      {
+        "stage": "load_matrices",
+        "wall_seconds": 64.78,
+        "cpu_seconds": 182.91,
+        "rss_gb_after": 19.11
+      },
+      {
+        "stage": "train",
+        "wall_seconds": 1201.04,
+        "cpu_seconds": 9518.14,
+        "rss_gb_after": 15.93
+      },
+      {
+        "stage": "evaluate_val",
+        "wall_seconds": 112.99,
+        "cpu_seconds": 847.44,
+        "rss_gb_after": 15.94
+      }
+    ]
+  },
+  "results": {
+    "feature_compute_seconds_new_features": 0.01772928237915039,
+    "val_metrics": {
+      "ndcg@10": 0.29772696095222956,
+      "recall@10": 0.17028272183955712,
+      "ndcg@100": 0.32569084106413976,
+      "recall@100": 0.40359309202445875,
+      "auc": 0.829124859537121,
+      "n_groups": 31688,
+      "best_iteration": 635,
+      "train_seconds": 1200.9086382389069,
+      "n_features": 183,
+      "top_features_gain": [
+        [
+          "d:urank(UI.plus.decay.h3)",
+          0.1948725623998475
+        ],
+        [
+          "d:urank(UI.listen.last.all)",
+          0.042701683896638455
+        ],
+        [
+          "d:urank(UI.plus.decay.h7)",
+          0.02969036500140505
+        ],
+        [
+          "d:ratio(U.listen.nuniq.30|U.listen.cnt.30)",
+          0.026949710101989738
+        ],
+        [
+          "d:urank(UI.plus.decay.h1)",
+          0.02624053547478216
+        ],
+        [
+          "d:ratio(U.listen.nuniq.7|U.listen.cnt.7)",
+          0.02348237054298356
+        ],
+        [
+          "UI.org.decay.h7",
+          0.020049644955192212
+        ],
+        [
+          "UI.plus.decay.h90",
+          0.019034966791656914
+        ],
+        [
+          "d:urank(UI.listen.cnt.7)",
+          0.01792675090511984
+        ],
+        [
+          "d:urank(UI.plus.decay.h90)",
+          0.01726454196824793
+        ],
+        [
+          "UI.listen.decay.h3",
+          0.01678707773615803
+        ],
+        [
+          "d:urank(UI.plus.cnt.90)",
+          0.016674280660463257
+        ],
+        [
+          "UI.like.last.30",
+          0.016662321754204203
+        ],
+        [
+          "UI.like.last.45",
+          0.015504958565661513
+        ],
+        [
+          "UI.rec.last.60",
+          0.01276265739495013
+        ],
+        [
+          "d:ratio(UI.listen.cnt.7|U.listen.cnt.7)",
+          0.011607298753437353
+        ],
+        [
+          "d:ratio(UI.listen.cnt.5|U.listen.cnt.5)",
+          0.010907418191328164
+        ],
+        [
+          "UI.org.decay.h3",
+          0.010666213412165629
+        ],
+        [
+          "d:ratio(U.listen.nuniq.all|U.listen.cnt.all)",
+          0.010250440469807593
+        ],
+        [
+          "d:urank(UI.plus.decay.h30)",
+          0.009657559992391068
+        ],
+        [
+          "d:ratio(U.rec.cnt.30|U.listen.cnt.30)",
+          0.009459895512392244
+        ],
+        [
+          "d:ratio(UI.rec.cnt.all|UI.listen.cnt.all)",
+          0.0093370286229803
+        ],
+        [
+          "UI.rec.last.90",
+          0.00933245525055771
+        ],
+        [
+          "d:ratio(UB.plus.cnt.60|U.plus.cnt.60)",
+          0.009174682484594928
+        ],
+        [
+          "d:urank(UI.listen.cnt.3)",
+          0.009119477353759663
+        ],
+        [
+          "UI.like.first.30",
+          0.009028008478855399
+        ],
+        [
+          "I.listen.first.all",
+          0.008942150523483593
+        ],
+        [
+          "d:ratio(UI.plus.cnt.45|U.plus.cnt.45)",
+          0.008428428170121982
+        ],
+        [
+          "d:ratio(UI.plus.cnt.10|UA.plus.cnt.10)",
+          0.008141677769958593
+        ],
+        [
+          "d:ratio(I.listen.cnt.30|A.listen.cnt.30)",
+          0.007837902007619624
+        ]
+      ]
+    }
+  }
+}

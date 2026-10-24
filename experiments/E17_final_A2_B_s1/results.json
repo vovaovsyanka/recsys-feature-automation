@@ -1,0 +1,175 @@
+{
+  "meta": {
+    "id": "E17",
+    "name": "final_A2_B_s1",
+    "title": "Полная модель LightGBM: набор A2_B (123 признаков), val",
+    "status": "ok",
+    "started_utc": "2026-10-23T19:48:14+00:00",
+    "finished_utc": "2026-10-23T20:04:34+00:00",
+    "wall_seconds": 980.33,
+    "cpu_seconds_process": 7239.62,
+    "peak_rss_gb": 14.04,
+    "stages": [
+      {
+        "stage": "features",
+        "wall_seconds": 0.38,
+        "cpu_seconds": 2.98,
+        "rss_gb_after": 2.09
+      },
+      {
+        "stage": "load_matrices",
+        "wall_seconds": 61.88,
+        "cpu_seconds": 172.08,
+        "rss_gb_after": 14.04
+      },
+      {
+        "stage": "train",
+        "wall_seconds": 785.36,
+        "cpu_seconds": 6076.41,
+        "rss_gb_after": 11.86
+      },
+      {
+        "stage": "evaluate_val",
+        "wall_seconds": 132.64,
+        "cpu_seconds": 988.13,
+        "rss_gb_after": 11.87
+      }
+    ]
+  },
+  "results": {
+    "feature_compute_seconds_new_features": 0.01904463768005371,
+    "val_metrics": {
+      "ndcg@10": 0.2959307365428066,
+      "recall@10": 0.16909875974945776,
+      "ndcg@100": 0.32412981575803107,
+      "recall@100": 0.4022027111767744,
+      "auc": 0.8276566928320737,
+      "n_groups": 31688,
+      "best_iteration": 690,
+      "train_seconds": 785.2381918430328,
+      "n_features": 123,
+      "top_features_gain": [
+        [
+          "d:urank(UI.plus.decay.h3)",
+          0.15243233046929486
+        ],
+        [
+          "d:urank(UI.plus.decay.h7)",
+          0.06334626116200959
+        ],
+        [
+          "d:urank(UI.listen.last.all)",
+          0.04315530635500561
+        ],
+        [
+          "d:ratio(U.listen.nuniq.30|U.listen.cnt.30)",
+          0.03406653286365972
+        ],
+        [
+          "d:urank(UI.plus.decay.h1)",
+          0.03010519362220677
+        ],
+        [
+          "d:ratio(U.listen.nuniq.7|U.listen.cnt.7)",
+          0.027142932799225236
+        ],
+        [
+          "d:urank(UI.plus.cnt.90)",
+          0.021389184646017672
+        ],
+        [
+          "UI.plus.decay.h90",
+          0.019823843259649365
+        ],
+        [
+          "UI.org.decay.h5",
+          0.017828847194026793
+        ],
+        [
+          "d:urank(UI.listen.cnt.7)",
+          0.017220086946387807
+        ],
+        [
+          "UI.listen.decay.h3",
+          0.01567454512137976
+        ],
+        [
+          "d:urank(UI.plus.cnt.7)",
+          0.015311244637760657
+        ],
+        [
+          "d:ratio(UI.listen.cnt.7|U.listen.cnt.7)",
+          0.013523918876865222
+        ],
+        [
+          "d:urank(UI.plus.decay.h90)",
+          0.012935056126941647
+        ],
+        [
+          "d:urank(UI.listen.cnt.3)",
+          0.01202309035699544
+        ],
+        [
+          "d:ratio(I.plus.cnt.7|A.plus.cnt.7)",
+          0.01185553280966877
+        ],
+        [
+          "B.listen.first.all",
+          0.011236580026722117
+        ],
+        [
+          "d:urank(UI.plus.decay.h30)",
+          0.011035129122020175
+        ],
+        [
+          "UI.like.last.30",
+          0.010893194212227049
+        ],
+        [
+          "UI.rec.mean.45",
+          0.009956571736226787
+        ],
+        [
+          "d:ratio(U.listen.nuniq.all|U.listen.cnt.all)",
+          0.009821128300700966
+        ],
+        [
+          "d:ratio(UI.listen.cnt.5|U.listen.cnt.5)",
+          0.009667755009679821
+        ],
+        [
+          "d:urank(UA.listen.last.all)",
+          0.008377241686800024
+        ],
+        [
+          "d:ratio(UA.listen.nuniq.30|UA.listen.cnt.30)",
+          0.008205323852852636
+        ],
+        [
+          "UA.rec.mean.all",
+          0.00790137574800404
+        ],
+        [
+          "UI.org.decay.h3",
+          0.007843880385253715
+        ],
+        [
+          "UI.like.last.90",
+          0.00777610388416545
+        ],
+        [
+          "UI.like.last.45",
+          0.007694822201574008
+        ],
+        [
+          "UI.org.decay.h7",
+          0.00753908011358795
+        ],
+        [
+          "s1_rank",
+          0.007272163449094794
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "meta": {
+    "id": "E17",
+    "name": "final_A5_B",
+    "title": "Полная модель LightGBM: набор A5_B (50 признаков), val",
+    "status": "ok",
+    "started_utc": "2026-10-23T17:53:23+00:00",
+    "finished_utc": "2026-10-23T18:11:53+00:00",
+    "wall_seconds": 1110.09,
+    "cpu_seconds_process": 8237.11,
+    "peak_rss_gb": 21.78,
+    "stages": [
+      {
+        "stage": "features",
+        "wall_seconds": 312.72,
+        "cpu_seconds": 2153.47,
+        "rss_gb_after": 17.69
+      },
+      {
+        "stage": "load_matrices",
+        "wall_seconds": 15.67,
+        "cpu_seconds": 41.17,
+        "rss_gb_after": 21.78
+      },
+      {
+        "stage": "train",
+        "wall_seconds": 647.82,
+        "cpu_seconds": 5050.78,
+        "rss_gb_after": 20.13
+      },
+      {
+        "stage": "evaluate_val",
+        "wall_seconds": 133.78,
+        "cpu_seconds": 991.66,
+        "rss_gb_after": 20.13
+      }
+    ]
+  },
+  "results": {
+    "feature_compute_seconds_new_features": 312.321968793869,
+    "val_metrics": {
+      "ndcg@10": 0.28508490735080083,
+      "recall@10": 0.16416376717899636,
+      "ndcg@100": 0.3151151352625055,
+      "recall@100": 0.39300948463288515,
+      "auc": 0.818417175597629,
+      "n_groups": 31688,
+      "best_iteration": 754,
+      "train_seconds": 647.7730429172516,
+      "n_features": 50,
+      "top_features_gain": [
+        [
+          "d:urank(UI.plus.decay.h7)",
+          0.2123425770475653
+        ],
+        [
+          "UI.plus.decay.h7",
+          0.07477699350466724
+        ],
+        [
+          "UI.like.last.30",
+          0.0550562195526337
+        ],
+        [
+          "U.plus_org.cnt.30",
+          0.04947503580992488
+        ],
+        [
+          "s1_rank",
+          0.045184627034305876
+        ],
+        [
+          "UI.listen.cnt.7",
+          0.03417483198174738
+        ],
+        [
+          "s1_score",
+          0.03403509565971474
+        ],
+        [
+          "U.plus.decay.h3",
+          0.03362705038167371
+        ],
+        [
+          "UB.plus.decay.h3",
+          0.029363496487860904
+        ],
+        [
+          "UI.plus_rec.decay.h7",
+          0.02830231175377537
+        ],
+        [
+          "UI.plus_org.cnt.7",
+          0.027959218886756204
+        ],
+        [
+          "UI.listen.last.14",
+          0.026646614611306126
+        ],
+        [
+          "UI.plus.decay.h14",
+          0.025366509236283755
+        ],
+        [
+          "s2_score",
+          0.023456621241803526
+        ],
+        [
+          "UA.listen.mean.30",
+          0.02045726179458829
+        ],
+        [
+          "s2_rank",
+          0.019721012904343093
+        ],
+        [
+          "UI.rec.cnt.7",
+          0.01934377668697265
+        ],
+        [
+          "U.plus_rec.cnt.30",
+          0.01913098773606859
+        ],
+        [
+          "UI.plus.cnt.3",
+          0.018128018366111817
+        ],
+        [
+          "d:ratio(UI.plus.cnt.7|U.listen.cnt.30)",
+          0.017836101102912432
+        ],
+        [
+          "d:diff(UI.listen.mean.30|U.listen.mean.30)",
+          0.014381860930059914
+        ],
+        [
+          "UI.listen.last.5",
+          0.013855369970564897
+        ],
+        [
+          "d:urank(I.plus.decay.h14)",
+          0.013412026140791348
+        ],
+        [
+          "U.like.cnt.30",
+          0.012149731170009432
+        ],
+        [
+          "UI.like.cnt.14",
+          0.011331464675266389
+        ],
+        [
+          "U.listen.nuniq.all",
+          0.011210379251891868
+        ],
+        [
+          "UA.plus.decay.h7",
+          0.010815563816302748
+        ],
+        [
+          "d:ratio(UA.listen.cnt.14|U.listen.cnt.30)",
+          0.009188682917666785
+        ],
+        [
+          "UA.listen.sec.21",
+          0.007885273799913795
+        ],
+        [
+          "UI.listen.mean.30",
+          0.006907122692164292
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,26 @@
+[E31] KION: эвристики и LightGBM на ручных признаках (val)
+  старт (UTC): 2026-10-23T03:36:42+00:00
+  версия кода: 17f6f31
+[E31] -> features
+[E31] <- features: 0.02 с
+[E31] -> heuristics
+случайный порядок                              ndcg@10=0.0137  ndcg@100=0.0633  recall@100=0.2451  auc=0.5028
+популярность за 14 суток (s1_score)            ndcg@10=0.1278  ndcg@100=0.1784  recall@100=0.4053  auc=0.6737
+жанровое сродство (s2_score)                   ndcg@10=0.0800  ndcg@100=0.1180  recall@100=0.2689  auc=0.5481
+item-kNN (s3_score)                            ndcg@10=0.1210  ndcg@100=0.1785  recall@100=0.4126  auc=0.6919
+жанр пользователя (UA.listen.cnt.all)          ndcg@10=0.0158  ndcg@100=0.0695  recall@100=0.2620  auc=0.5409
+популярность за 7 суток (I.listen.cnt.7)       ndcg@10=0.1305  ndcg@100=0.1839  recall@100=0.4163  auc=0.7025
+популярность за 30 суток (I.listen.cnt.30)     ndcg@10=0.1250  ndcg@100=0.1767  recall@100=0.3915  auc=0.6742
+тренд популярности (I.listen.decay.h3)         ndcg@10=0.1316  ndcg@100=0.1859  recall@100=0.4188  auc=0.7036
+[E31] <- heuristics: 12.89 с
+[E31] -> load_matrices
+train (10643760, 87) доля позитивов 0.0273 val (2575369, 87)
+[E31] <- load_matrices: 27.31 с
+[E31] -> train
+[100]	val's ndcg@10: 0.427278
+[200]	val's ndcg@10: 0.428467
+[E31] <- train: 270.11 с
+[E31] -> evaluate_val
+{'ndcg@10': 0.1544, 'recall@10': 0.2276, 'ndcg@100': 0.2216, 'recall@100': 0.4936, 'auc': 0.8149, 'n_groups': 10430, 'best_iteration': 185, 'train_seconds': 270.0574}
+[E31] <- evaluate_val: 9.89 с
+[E31] ok; 320.4 с, CPU 2292.0 с, пик RSS 7.9 ГБ

@@ -1,0 +1,175 @@
+{
+  "meta": {
+    "id": "E17",
+    "name": "final_A5_A",
+    "title": "Полная модель LightGBM: набор A5_A (129 признаков), val",
+    "status": "ok",
+    "started_utc": "2026-10-23T17:30:59+00:00",
+    "finished_utc": "2026-10-23T17:53:13+00:00",
+    "wall_seconds": 1334.45,
+    "cpu_seconds_process": 10056.25,
+    "peak_rss_gb": 14.37,
+    "stages": [
+      {
+        "stage": "features",
+        "wall_seconds": 0.77,
+        "cpu_seconds": 2.7,
+        "rss_gb_after": 2.06
+      },
+      {
+        "stage": "load_matrices",
+        "wall_seconds": 37.79,
+        "cpu_seconds": 89.97,
+        "rss_gb_after": 14.37
+      },
+      {
+        "stage": "train",
+        "wall_seconds": 1164.07,
+        "cpu_seconds": 8985.89,
+        "rss_gb_after": 12.03
+      },
+      {
+        "stage": "evaluate_val",
+        "wall_seconds": 131.75,
+        "cpu_seconds": 977.67,
+        "rss_gb_after": 12.04
+      }
+    ]
+  },
+  "results": {
+    "feature_compute_seconds_new_features": 0.04711461067199707,
+    "val_metrics": {
+      "ndcg@10": 0.2940167173633818,
+      "recall@10": 0.16827992892886015,
+      "ndcg@100": 0.32286609502676084,
+      "recall@100": 0.4012248554507718,
+      "auc": 0.8284157103215927,
+      "n_groups": 31688,
+      "best_iteration": 733,
+      "train_seconds": 1163.9524009227753,
+      "n_features": 129,
+      "top_features_gain": [
+        [
+          "d:urank(UI.plus.cnt.7)",
+          0.14707495349014021
+        ],
+        [
+          "UI.plus_org.cnt.7",
+          0.08183179525845867
+        ],
+        [
+          "d:urank(UI.listen.last.all)",
+          0.06901151999118596
+        ],
+        [
+          "s1_rank",
+          0.051419785461423555
+        ],
+        [
+          "UI.like.decay.h7",
+          0.0466879381451998
+        ],
+        [
+          "d:ratio(U.listen.nuniq.30|U.listen.cnt.30)",
+          0.04154204523539988
+        ],
+        [
+          "UI.plus.decay.h14",
+          0.03076086083655886
+        ],
+        [
+          "d:urank(UI.plus.cnt.30)",
+          0.02519303053948432
+        ],
+        [
+          "d:ratio(U.rec.cnt.30|U.listen.cnt.30)",
+          0.02055219983849942
+        ],
+        [
+          "d:urank(UI.plus.cnt.all)",
+          0.019564748982592847
+        ],
+        [
+          "UI.listen.cnt.7",
+          0.017434163361383256
+        ],
+        [
+          "d:ratio(UI.listen.cnt.30|U.listen.cnt.30)",
+          0.01622294986859059
+        ],
+        [
+          "UI.listen.last.all",
+          0.01549213236138229
+        ],
+        [
+          "UI.plus.last.all",
+          0.015481846772476082
+        ],
+        [
+          "d:ratio(U.rec.cnt.7|U.listen.cnt.7)",
+          0.01444669479322941
+        ],
+        [
+          "UI.plus.cnt.7",
+          0.013535006231597538
+        ],
+        [
+          "s1_score",
+          0.012065643224035421
+        ],
+        [
+          "UI.listen.first.all",
+          0.01031880488819911
+        ],
+        [
+          "I.listen.first.all",
+          0.009661732188067868
+        ],
+        [
+          "UA.listen.mean.30",
+          0.00952143900501771
+        ],
+        [
+          "U.plus_org.cnt.30",
+          0.008905396491700374
+        ],
+        [
+          "d:diff(UI.like.cnt.all|UI.unlike.cnt.all)",
+          0.008685928277972498
+        ],
+        [
+          "UI.listen.decay.h30",
+          0.0084611731970984
+        ],
+        [
+          "d:ratio(I.listen.cnt.30|A.listen.cnt.30)",
+          0.008379877576670204
+        ],
+        [
+          "UA.listen.last.all",
+          0.0077964564162302415
+        ],
+        [
+          "U.listen.nuniq.30",
+          0.007310085244511125
+        ],
+        [
+          "U.listen.sec.7",
+          0.006982485157448233
+        ],
+        [
+          "UA.plus.cnt.7",
+          0.006916807644254907
+        ],
+        [
+          "UI.listen.mean.all",
+          0.0067569762773896465
+        ],
+        [
+          "UB.plus.cnt.30",
+          0.006638557211818036
+        ]
+      ]
+    }
+  }
+}

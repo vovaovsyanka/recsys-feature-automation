@@ -1,0 +1,20 @@
+[E17] Полная модель LightGBM: набор H_both (126 признаков), val
+  старт (UTC): 2026-10-23T19:04:09+00:00
+  версия кода: 17f6f31
+[E17] -> features
+[E17] <- features: 0.39 с
+[E17] -> load_matrices
+[E17] <- load_matrices: 36.42 с
+[E17] -> train
+[100]	val's ndcg@10: 0.42471
+[200]	val's ndcg@10: 0.430387
+[300]	val's ndcg@10: 0.432433
+[400]	val's ndcg@10: 0.433458
+[500]	val's ndcg@10: 0.433641
+[600]	val's ndcg@10: 0.434156
+[700]	val's ndcg@10: 0.434183
+[E17] <- train: 1108.82 с
+[E17] -> evaluate_val
+{'ndcg@10': 0.2897, 'recall@10': 0.1656, 'ndcg@100': 0.3201, 'recall@100': 0.4001, 'auc': 0.8267, 'n_groups': 31688, 'best_iteration': 681, 'train_seconds': 1108.6945, 'n_features': 126}
+[E17] <- evaluate_val: 126.13 с
+[E17] ok; 1271.8 с, CPU 9566.5 с, пик RSS 13.87 ГБ

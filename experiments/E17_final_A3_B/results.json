@@ -1,0 +1,175 @@
+{
+  "meta": {
+    "id": "E17",
+    "name": "final_A3_B",
+    "title": "Полная модель LightGBM: набор A3_B (123 признаков), val",
+    "status": "ok",
+    "started_utc": "2026-10-23T10:46:59+00:00",
+    "finished_utc": "2026-10-23T11:12:00+00:00",
+    "wall_seconds": 1501.17,
+    "cpu_seconds_process": 11630.81,
+    "peak_rss_gb": 28.88,
+    "stages": [
+      {
+        "stage": "features",
+        "wall_seconds": 334.54,
+        "cpu_seconds": 2677.73,
+        "rss_gb_after": 17.14
+      },
+      {
+        "stage": "load_matrices",
+        "wall_seconds": 50.48,
+        "cpu_seconds": 152.3,
+        "rss_gb_after": 28.88
+      },
+      {
+        "stage": "train",
+        "wall_seconds": 991.85,
+        "cpu_seconds": 7862.75,
+        "rss_gb_after": 26.38
+      },
+      {
+        "stage": "evaluate_val",
+        "wall_seconds": 124.23,
+        "cpu_seconds": 938.0,
+        "rss_gb_after": 26.38
+      }
+    ]
+  },
+  "results": {
+    "feature_compute_seconds_new_features": 334.20928621292114,
+    "val_metrics": {
+      "ndcg@10": 0.2926684442351002,
+      "recall@10": 0.1680831787965659,
+      "ndcg@100": 0.3213113761918725,
+      "recall@100": 0.39903323130743884,
+      "auc": 0.8322745174267695,
+      "n_groups": 31688,
+      "best_iteration": 675,
+      "train_seconds": 991.7393686771393,
+      "n_features": 123,
+      "top_features_gain": [
+        [
+          "d:urank(UI.plus.decay.h1)",
+          0.12379792102155991
+        ],
+        [
+          "d:urank(UI.listen.cnt.7)",
+          0.1095488593432152
+        ],
+        [
+          "d:urank(UI.listen.last.all)",
+          0.044586682215266474
+        ],
+        [
+          "UI.listen.decay.h3",
+          0.043639258817081354
+        ],
+        [
+          "UI.org.decay.h3",
+          0.03567176856470786
+        ],
+        [
+          "s1_rank",
+          0.0320021776286862
+        ],
+        [
+          "UI.plus.decay.h30",
+          0.028526011178095903
+        ],
+        [
+          "d:ratio(UA.listen.nuniq.30|UA.listen.cnt.30)",
+          0.020320024403026833
+        ],
+        [
+          "d:ratio(UI.plus.cnt.90|U.plus.cnt.90)",
+          0.01818399111105904
+        ],
+        [
+          "s1_score",
+          0.017202323413724897
+        ],
+        [
+          "d:ratio(UI.plus.cnt.60|U.plus.cnt.60)",
+          0.016258900634066462
+        ],
+        [
+          "UI.plus.decay.h3",
+          0.015628412605047565
+        ],
+        [
+          "d:ratio(UI.listen.cnt.30|U.listen.cnt.30)",
+          0.014791865568310695
+        ],
+        [
+          "UI.like.decay.h3",
+          0.013450782786274764
+        ],
+        [
+          "UI.full.decay.h7",
+          0.012729926733128205
+        ],
+        [
+          "UI.plus.decay.h21",
+          0.012101461204977723
+        ],
+        [
+          "s2_rank",
+          0.012068166530183578
+        ],
+        [
+          "UI.rec.last.60",
+          0.0115328243922762
+        ],
+        [
+          "d:ratio(UI.listen.cnt.7|U.listen.cnt.7)",
+          0.011311874622527371
+        ],
+        [
+          "d:ratio(UI.plus.cnt.7|U.plus.cnt.7)",
+          0.01110403860785696
+        ],
+        [
+          "UI.like.first.30",
+          0.010731552296180825
+        ],
+        [
+          "d:urank(UA.listen.cnt.3)",
+          0.01051176164336254
+        ],
+        [
+          "d:urank(UB.listen.last.all)",
+          0.0102859006950687
+        ],
+        [
+          "U.listen.nuniq.all",
+          0.01012758977958646
+        ],
+        [
+          "UI.listen.sec.60",
+          0.009607558296498845
+        ],
+        [
+          "d:ratio(UI.plus.cnt.5|U.plus.cnt.5)",
+          0.009454932606773124
+        ],
+        [
+          "UB.plus.last.60",
+          0.008974326127595137
+        ],
+        [
+          "UB.listen.mean.45",
+          0.008754642694346334
+        ],
+        [
+          "d:ratio(I.listen.cnt.30|I.listen.cnt.all)",
+          0.008465520790913644
+        ],
+        [
+          "UI.like.first.14",
+          0.008016231424983323
+        ]
+      ]
+    }
+  }
+}

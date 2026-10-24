@@ -1,0 +1,175 @@
+{
+  "meta": {
+    "id": "E17",
+    "name": "final_H_both",
+    "title": "Полная модель LightGBM: набор H_both (126 признаков), val",
+    "status": "ok",
+    "started_utc": "2026-10-23T19:04:09+00:00",
+    "finished_utc": "2026-10-23T19:25:21+00:00",
+    "wall_seconds": 1271.85,
+    "cpu_seconds_process": 9566.48,
+    "peak_rss_gb": 13.87,
+    "stages": [
+      {
+        "stage": "features",
+        "wall_seconds": 0.39,
+        "cpu_seconds": 2.69,
+        "rss_gb_after": 2.1
+      },
+      {
+        "stage": "load_matrices",
+        "wall_seconds": 36.42,
+        "cpu_seconds": 91.03,
+        "rss_gb_after": 13.87
+      },
+      {
+        "stage": "train",
+        "wall_seconds": 1108.82,
+        "cpu_seconds": 8548.2,
+        "rss_gb_after": 11.77
+      },
+      {
+        "stage": "evaluate_val",
+        "wall_seconds": 126.13,
+        "cpu_seconds": 924.53,
+        "rss_gb_after": 11.78
+      }
+    ]
+  },
+  "results": {
+    "feature_compute_seconds_new_features": 0.018038272857666016,
+    "val_metrics": {
+      "ndcg@10": 0.28971700632809333,
+      "recall@10": 0.16558465963587,
+      "ndcg@100": 0.3200918744871942,
+      "recall@100": 0.40010950144315743,
+      "auc": 0.826665566153371,
+      "n_groups": 31688,
+      "best_iteration": 681,
+      "train_seconds": 1108.6944768428802,
+      "n_features": 126,
+      "top_features_gain": [
+        [
+          "d:urank(UI.plus.cnt.7)",
+          0.22574721430428019
+        ],
+        [
+          "d:urank(UI.listen.last.all)",
+          0.055722349756551125
+        ],
+        [
+          "UI.listen.cnt.7",
+          0.04792432101078103
+        ],
+        [
+          "d:ratio(U.listen.nuniq.30|U.listen.cnt.30)",
+          0.03980424686109499
+        ],
+        [
+          "s1_rank",
+          0.03754134904875977
+        ],
+        [
+          "s1_score",
+          0.03471357974949336
+        ],
+        [
+          "UI.listen.last.all",
+          0.025403288766138593
+        ],
+        [
+          "UI.plus.last.all",
+          0.02383700959713301
+        ],
+        [
+          "d:ratio(U.rec.cnt.7|U.listen.cnt.7)",
+          0.021091911009040974
+        ],
+        [
+          "d:diff(UI.like.cnt.all|UI.unlike.cnt.all)",
+          0.020807180412966225
+        ],
+        [
+          "d:ratio(U.rec.cnt.30|U.listen.cnt.30)",
+          0.020171643105096764
+        ],
+        [
+          "UI.listen.first.all",
+          0.019080007153229418
+        ],
+        [
+          "d:urank(UI.plus.cnt.all)",
+          0.01802315562100082
+        ],
+        [
+          "d:ratio(UI.listen.cnt.30|U.listen.cnt.30)",
+          0.01636486772410924
+        ],
+        [
+          "d:urank(UI.plus.cnt.30)",
+          0.015604140360644924
+        ],
+        [
+          "ext:als.ui",
+          0.013571442308378704
+        ],
+        [
+          "UB.plus.cnt.30",
+          0.012702653077141662
+        ],
+        [
+          "UI.like.cnt.all",
+          0.011309040158698234
+        ],
+        [
+          "UI.plus.cnt.7",
+          0.010262972750877845
+        ],
+        [
+          "I.listen.first.all",
+          0.009775202717925086
+        ],
+        [
+          "UI.plus.cnt.all",
+          0.007906416911217969
+        ],
+        [
+          "d:ratio(I.listen.cnt.30|A.listen.cnt.30)",
+          0.007869139932021249
+        ],
+        [
+          "UB.listen.last.all",
+          0.007638039298566205
+        ],
+        [
+          "U.listen.cnt.30",
+          0.0075141118225526635
+        ],
+        [
+          "UA.plus.cnt.7",
+          0.007396298447462504
+        ],
+        [
+          "UI.listen.mean.all",
+          0.007264014066180232
+        ],
+        [
+          "UI.listen.cnt.1",
+          0.0071680736932924986
+        ],
+        [
+          "UA.listen.last.all",
+          0.007111471752961457
+        ],
+        [
+          "U.listen.nuniq.7",
+          0.0071076695306015545
+        ],
+        [
+          "U.rec.cnt.7",
+          0.0067516918901516605
+        ]
+      ]
+    }
+  }
+}

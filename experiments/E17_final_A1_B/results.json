@@ -1,0 +1,175 @@
+{
+  "meta": {
+    "id": "E17",
+    "name": "final_A1_B",
+    "title": "Полная модель LightGBM: набор A1_B (123 признаков), val",
+    "status": "ok",
+    "started_utc": "2026-10-23T01:59:36+00:00",
+    "finished_utc": "2026-10-23T02:31:58+00:00",
+    "wall_seconds": 1941.93,
+    "cpu_seconds_process": 15108.7,
+    "peak_rss_gb": 31.47,
+    "stages": [
+      {
+        "stage": "features",
+        "wall_seconds": 537.37,
+        "cpu_seconds": 4176.62,
+        "rss_gb_after": 20.28
+      },
+      {
+        "stage": "load_matrices",
+        "wall_seconds": 32.44,
+        "cpu_seconds": 96.38,
+        "rss_gb_after": 31.47
+      },
+      {
+        "stage": "train",
+        "wall_seconds": 1222.24,
+        "cpu_seconds": 9694.92,
+        "rss_gb_after": 27.99
+      },
+      {
+        "stage": "evaluate_val",
+        "wall_seconds": 149.8,
+        "cpu_seconds": 1140.73,
+        "rss_gb_after": 27.99
+      }
+    ]
+  },
+  "results": {
+    "feature_compute_seconds_new_features": 537.0183482170105,
+    "val_metrics": {
+      "ndcg@10": 0.288503514532379,
+      "recall@10": 0.16615147292202398,
+      "ndcg@100": 0.31879222807950125,
+      "recall@100": 0.3975543382040936,
+      "auc": 0.8262551269049766,
+      "n_groups": 31688,
+      "best_iteration": 877,
+      "train_seconds": 1222.1355431079865,
+      "n_features": 123,
+      "top_features_gain": [
+        [
+          "d:urank(UI.plus.decay.h1)",
+          0.18495564857903304
+        ],
+        [
+          "UI.org.decay.h5",
+          0.14097867902681216
+        ],
+        [
+          "s1_rank",
+          0.04953101087920208
+        ],
+        [
+          "d:urank(UI.plus.cnt.90)",
+          0.04797106743412256
+        ],
+        [
+          "UI.like.decay.h10",
+          0.04652321488826784
+        ],
+        [
+          "s1_score",
+          0.029870798523574108
+        ],
+        [
+          "d:urank(UI.plus.cnt.3)",
+          0.018979095064189842
+        ],
+        [
+          "d:ratio(UB.plus.cnt.10|U.plus.cnt.10)",
+          0.014985579391424211
+        ],
+        [
+          "UB.like.first.90",
+          0.012748082723725119
+        ],
+        [
+          "U.plus.nuniq.5",
+          0.012721077299475003
+        ],
+        [
+          "U.listen.nuniq.45",
+          0.01191791438887013
+        ],
+        [
+          "UA.plus.cnt.30",
+          0.01190993989259333
+        ],
+        [
+          "UB.rec.decay.h1",
+          0.011801368720848426
+        ],
+        [
+          "d:ratio(UB.plus.cnt.90|U.plus.cnt.90)",
+          0.011537429884711388
+        ],
+        [
+          "UI.plus_org.cnt.5",
+          0.011268775516423643
+        ],
+        [
+          "U.listen.mean.7",
+          0.010837841368203219
+        ],
+        [
+          "U.listen.cnt.all",
+          0.010738972615166603
+        ],
+        [
+          "UI.listen.sec.10",
+          0.010713391885347241
+        ],
+        [
+          "UI.plus_org.cnt.14",
+          0.010442051471486606
+        ],
+        [
+          "UB.listen.mean.all",
+          0.010378233433452072
+        ],
+        [
+          "UA.rec.last.60",
+          0.010362419916357902
+        ],
+        [
+          "UI.org.decay.h45",
+          0.009561460730565869
+        ],
+        [
+          "U.org.last.1",
+          0.00950882403187062
+        ],
+        [
+          "UI.full.cnt.all",
+          0.009498640702125727
+        ],
+        [
+          "s2_rank",
+          0.009415675453320236
+        ],
+        [
+          "UA.rec.decay.h45",
+          0.009123471100547582
+        ],
+        [
+          "UB.rec.mean.all",
+          0.009024868379375451
+        ],
+        [
+          "UB.rec.mean.30",
+          0.008984472129528236
+        ],
+        [
+          "B.plus.first.30",
+          0.007679441478258378
+        ],
+        [
+          "UI.rec.cnt.60",
+          0.007448197009275212
+        ]
+      ]
+    }
+  }
+}

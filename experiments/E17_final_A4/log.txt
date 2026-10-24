@@ -1,0 +1,22 @@
+[E17] Полная модель LightGBM: набор A4 (147 признаков), val
+  старт (UTC): 2026-10-23T03:07:14+00:00
+  версия кода: 17f6f31
+[E17] -> features
+[E17] <- features: 277.31 с
+[E17] -> load_matrices
+[E17] <- load_matrices: 37.61 с
+[E17] -> train
+[100]	val's ndcg@10: 0.428222
+[200]	val's ndcg@10: 0.433558
+[300]	val's ndcg@10: 0.435445
+[400]	val's ndcg@10: 0.436517
+[500]	val's ndcg@10: 0.436697
+[600]	val's ndcg@10: 0.43688
+[700]	val's ndcg@10: 0.43731
+[800]	val's ndcg@10: 0.43746
+[900]	val's ndcg@10: 0.437745
+[E17] <- train: 1302.77 с
+[E17] -> evaluate_val
+{'ndcg@10': 0.2929, 'recall@10': 0.168, 'ndcg@100': 0.3218, 'recall@100': 0.4001, 'auc': 0.8266, 'n_groups': 31688, 'best_iteration': 880, 'train_seconds': 1302.6692, 'n_features': 147}
+[E17] <- evaluate_val: 139.9 с
+[E17] ok; 1757.7 с, CPU 13550.6 с, пик RSS 30.95 ГБ

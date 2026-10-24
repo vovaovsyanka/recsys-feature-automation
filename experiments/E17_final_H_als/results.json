@@ -1,0 +1,175 @@
+{
+  "meta": {
+    "id": "E17",
+    "name": "final_H_als",
+    "title": "Полная модель LightGBM: набор H_als (124 признаков), val",
+    "status": "ok",
+    "started_utc": "2026-10-23T18:12:02+00:00",
+    "finished_utc": "2026-10-23T18:37:30+00:00",
+    "wall_seconds": 1528.46,
+    "cpu_seconds_process": 11634.67,
+    "peak_rss_gb": 12.8,
+    "stages": [
+      {
+        "stage": "features",
+        "wall_seconds": 0.38,
+        "cpu_seconds": 2.52,
+        "rss_gb_after": 2.08
+      },
+      {
+        "stage": "load_matrices",
+        "wall_seconds": 36.27,
+        "cpu_seconds": 89.77,
+        "rss_gb_after": 12.8
+      },
+      {
+        "stage": "train",
+        "wall_seconds": 1331.42,
+        "cpu_seconds": 10344.34,
+        "rss_gb_after": 11.61
+      },
+      {
+        "stage": "evaluate_val",
+        "wall_seconds": 160.31,
+        "cpu_seconds": 1198.0,
+        "rss_gb_after": 11.61
+      }
+    ]
+  },
+  "results": {
+    "feature_compute_seconds_new_features": 0.016046524047851562,
+    "val_metrics": {
+      "ndcg@10": 0.29023771606751136,
+      "recall@10": 0.1660592497731752,
+      "ndcg@100": 0.3201875590649102,
+      "recall@100": 0.3999253142630483,
+      "auc": 0.8267690191975418,
+      "n_groups": 31688,
+      "best_iteration": 918,
+      "train_seconds": 1331.302085161209,
+      "n_features": 124,
+      "top_features_gain": [
+        [
+          "d:urank(UI.plus.cnt.7)",
+          0.17846365499987576
+        ],
+        [
+          "s1_rank",
+          0.07594681659970601
+        ],
+        [
+          "d:urank(UI.listen.last.all)",
+          0.05849599410842445
+        ],
+        [
+          "UI.listen.cnt.7",
+          0.05174446864693762
+        ],
+        [
+          "d:ratio(U.listen.nuniq.30|U.listen.cnt.30)",
+          0.04685362436886599
+        ],
+        [
+          "s1_score",
+          0.026626054102011763
+        ],
+        [
+          "d:ratio(U.rec.cnt.30|U.listen.cnt.30)",
+          0.022194232271193694
+        ],
+        [
+          "UI.plus.last.all",
+          0.021819521403665602
+        ],
+        [
+          "d:diff(UI.like.cnt.all|UI.unlike.cnt.all)",
+          0.020877302869272814
+        ],
+        [
+          "UI.listen.last.all",
+          0.02020443763666241
+        ],
+        [
+          "UI.listen.first.all",
+          0.0196080957134938
+        ],
+        [
+          "d:urank(UI.plus.cnt.all)",
+          0.018820392943678075
+        ],
+        [
+          "d:ratio(U.rec.cnt.7|U.listen.cnt.7)",
+          0.01687436492217916
+        ],
+        [
+          "d:ratio(UI.listen.cnt.30|U.listen.cnt.30)",
+          0.016044880337424933
+        ],
+        [
+          "ext:als.ui",
+          0.01497950455126649
+        ],
+        [
+          "d:urank(UI.plus.cnt.30)",
+          0.012471119513211172
+        ],
+        [
+          "UB.plus.cnt.30",
+          0.01218249012594403
+        ],
+        [
+          "UI.like.cnt.all",
+          0.010770945342212226
+        ],
+        [
+          "I.listen.first.all",
+          0.010594463404194227
+        ],
+        [
+          "UA.plus.cnt.30",
+          0.009961642008275744
+        ],
+        [
+          "UI.plus.cnt.7",
+          0.008988889569533202
+        ],
+        [
+          "UA.listen.last.all",
+          0.008721419336280704
+        ],
+        [
+          "UI.listen.cnt.1",
+          0.008483705732313992
+        ],
+        [
+          "d:ratio(I.listen.cnt.30|A.listen.cnt.30)",
+          0.008034775675714376
+        ],
+        [
+          "UA.listen.mean.30",
+          0.007629416766178178
+        ],
+        [
+          "UI.listen.sec.all",
+          0.007417065923040345
+        ],
+        [
+          "U.listen.nuniq.7",
+          0.007406208499037386
+        ],
+        [
+          "UB.listen.last.all",
+          0.007167670169751373
+        ],
+        [
+          "UI.listen.mean.all",
+          0.007094745930558632
+        ],
+        [
+          "U.listen.nuniq.30",
+          0.0067541580595411495
+        ]
+      ]
+    }
+  }
+}
